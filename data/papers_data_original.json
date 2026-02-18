@@ -1,0 +1,1108 @@
+[
+    {
+        "Title": "KG^2: Learning to Reason Science Exam Questions with Contextual Knowledge Graph Embeddings",
+        "Authors": "Hanjun Dai, Le Song, Kamil Toraman, Yuyu Zhang",
+        "Abstract": "The AI2 Reasoning Challenge (ARC), a new benchmark dataset for question\nanswering (QA) has been recently released. ARC only contains natural science\nquestions authored for human exams, which are hard to answer and require\nadvanced logic reasoning. On the ARC Challenge Set, existing state-of-the-art\nQA systems fail to significantly outperform random baseline, reflecting the\ndifficult nature of this task. In this paper, we propose a novel framework for\nanswering science exam questions, which mimics human solving process in an\nopen-book exam. To address the reasoning challenge, we construct contextual\nknowledge graphs respectively for the question itself and supporting sentences.\nOur model learns to reason with neural embeddings of both knowledge graphs.\nExperiments on the ARC Challenge Set show that our model outperforms the\nprevious state-of-the-art QA systems.",
+        "PDF URL": "http://arxiv.org/pdf/1805.12393v1.pdf",
+        "Datasets": [
+            [
+                "ARC (AI2 Reasoning Challenge)"
+            ],
+            [
+                "SNLI"
+            ]
+        ],
+        "Tasks": [
+            [
+                "ARC"
+            ],
+            [
+                "Question Answering"
+            ],
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "AI2 Reasoning Challenge"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Incorporating Literals into Knowledge Graph Embeddings",
+        "Authors": "Jens Lehmann, Mohammad Asif Khan, Denis Lukovnikov, Asja Fischer, Agustinus Kristiadi",
+        "Abstract": "Knowledge graphs, on top of entities and their relationships, contain other important elements: literals. Literals encode interesting properties (e.g. the height) of entities that are not captured by links between entities alone. Most of the existing work on embedding (or latent feature) based knowledge graph analysis focuses mainly on the relations between entities. In this work, we study the effect of incorporating literal information into existing link prediction methods. Our approach, which we name LiteralE, is an extension that can be plugged into existing latent feature methods. LiteralE merges entity embeddings with their literal information using a learnable, parametrized function, such as a simple linear or nonlinear transformation, or a multilayer neural network. We extend several popular embedding models based on LiteralE and evaluate their performance on the task of link prediction. Despite its simplicity, LiteralE proves to be an effective way to incorporate literal information into existing embedding based methods, improving their performance on different standard datasets, which we augmented with their literals and provide as testbed for further research.",
+        "PDF URL": "https://arxiv.org/pdf/1802.00934v3.pdf",
+        "Datasets": [
+            [
+                "FB15k-237"
+            ],
+            [
+                "FB15k"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Entity Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Adversarial Contrastive Estimation",
+        "Authors": "Yanshuai Cao, Avishek Joey Bose, Huan Ling",
+        "Abstract": "Learning by contrasting positive and negative samples is a general strategy\nadopted by many methods. Noise contrastive estimation (NCE) for word embeddings\nand translating embeddings for knowledge graphs are examples in NLP employing\nthis approach. In this work, we view contrastive learning as an abstraction of\nall such methods and augment the negative sampler into a mixture distribution\ncontaining an adversarially learned sampler. The resulting adaptive sampler\nfinds harder negative examples, which forces the main model to learn a better\nrepresentation of the data. We evaluate our proposal on learning word\nembeddings, order embeddings and knowledge graph embeddings and observe both\nfaster convergence and improved results on multiple metrics.",
+        "PDF URL": "http://arxiv.org/pdf/1805.03642v3.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Contrastive Learning"
+            ],
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Word Embeddings"
+            ],
+            [
+                "Learning Word Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "KBGAN: Adversarial Learning for Knowledge Graph Embeddings",
+        "Authors": "William Yang Wang, Liwei Cai",
+        "Abstract": "We introduce KBGAN, an adversarial learning framework to improve the\nperformances of a wide range of existing knowledge graph embedding models.\nBecause knowledge graphs typically only contain positive facts, sampling useful\nnegative training examples is a non-trivial task. Replacing the head or tail\nentity of a fact with a uniformly randomly selected entity is a conventional\nmethod for generating negative facts, but the majority of the generated\nnegative facts can be easily discriminated from positive facts, and will\ncontribute little towards the training. Inspired by generative adversarial\nnetworks (GANs), we use one knowledge graph embedding model as a negative\nsample generator to assist the training of our desired model, which acts as the\ndiscriminator in GANs. This framework is independent of the concrete form of\ngenerator and discriminator, and therefore can utilize a wide variety of\nknowledge graph embedding models as its building blocks. In experiments, we\nadversarially train two translation-based models, TransE and TransD, each with\nassistance from one of the two probability-based models, DistMult and ComplEx.\nWe evaluate the performances of KBGAN on the link prediction task, using three\nknowledge base completion datasets: FB15k-237, WN18 and WN18RR. Experimental\nresults show that adversarial training substantially improves the performances\nof target embedding models under various settings.",
+        "PDF URL": "http://arxiv.org/pdf/1711.04071v3.pdf",
+        "Datasets": [
+            [
+                "WN18RR"
+            ],
+            [
+                "FB15k"
+            ],
+            [
+                "WN18"
+            ],
+            [
+                "FB15k-237"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Graph Embedding"
+            ],
+            [
+                "Knowledge Base Completion"
+            ],
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Knowledge Graph Embedding"
+            ]
+        ]
+    },
+    {
+        "Title": "Convolutional 2D Knowledge Graph Embeddings",
+        "Authors": "Pontus Stenetorp, Sebastian Riedel, Tim Dettmers, Pasquale Minervini",
+        "Abstract": "Link prediction for knowledge graphs is the task of predicting missing\nrelationships between entities. Previous work on link prediction has focused on\nshallow, fast models which can scale to large knowledge graphs. However, these\nmodels learn less expressive features than deep, multi-layer models -- which\npotentially limits performance. In this work, we introduce ConvE, a multi-layer\nconvolutional network model for link prediction, and report state-of-the-art\nresults for several established datasets. We also show that the model is highly\nparameter efficient, yielding the same performance as DistMult and R-GCN with\n8x and 17x fewer parameters. Analysis of our model suggests that it is\nparticularly effective at modelling nodes with high indegree -- which are\ncommon in highly-connected, complex knowledge graphs such as Freebase and\nYAGO3. In addition, it has been noted that the WN18 and FB15k datasets suffer\nfrom test set leakage, due to inverse relations from the training set being\npresent in the test set -- however, the extent of this issue has so far not\nbeen quantified. We find this problem to be severe: a simple rule-based model\ncan achieve state-of-the-art results on both WN18 and FB15k. To ensure that\nmodels are evaluated on datasets where simply exploiting inverse relations\ncannot yield competitive results, we investigate and validate several commonly\nused datasets -- deriving robust variants where necessary. We then perform\nexperiments on these robust datasets for our own and several previously\nproposed models and find that ConvE achieves state-of-the-art Mean Reciprocal\nRank across most datasets.",
+        "PDF URL": "http://arxiv.org/pdf/1707.01476v6.pdf",
+        "Datasets": [
+            [
+                "YAGO"
+            ],
+            [
+                "YAGO3-10"
+            ],
+            [
+                "UMLS"
+            ],
+            [
+                "WN18RR"
+            ],
+            [
+                "FB15k"
+            ],
+            [
+                "FB15k-237"
+            ],
+            [
+                "WN18"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ]
+        ]
+    },
+    {
+        "Title": "Answering Visual-Relational Queries in Web-Extracted Knowledge Graphs",
+        "Authors": "Roberto J. L\u00f3pez-Sastre, Roberto Gonz\u00e1lez, Alberto Garc\u00eda-Dur\u00e1n, Daniel O\u00f1oro-Rubio, Mathias Niepert",
+        "Abstract": "A visual-relational knowledge graph (KG) is a multi-relational graph whose entities are associated with images. We explore novel machine learning approaches for answering visual-relational queries in web-extracted knowledge graphs. To this end, we have created ImageGraph, a KG with 1,330 relation types, 14,870 entities, and 829,931 images crawled from the web. With visual-relational KGs such as ImageGraph one can introduce novel probabilistic query types in which images are treated as first-class citizens. Both the prediction of relations between unseen images as well as multi-relational image retrieval can be expressed with specific families of visual-relational queries. We introduce novel combinations of convolutional networks and knowledge graph embedding methods to answer such queries. We also explore a zero-shot learning scenario where an image of an entirely new entity is linked with multiple relations to entities of an existing KG. The resulting multi-relational grounding of unseen entity images into a knowledge graph serves as a semantic entity representation. We conduct experiments to demonstrate that the proposed methods can answer these visual-relational queries efficiently and accurately.",
+        "PDF URL": "https://arxiv.org/pdf/1709.02314v6.pdf",
+        "Datasets": [
+            [
+                "Visual Genome"
+            ],
+            [
+                "FB15k"
+            ],
+            [
+                "ImageNet"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Retrieval"
+            ],
+            [
+                "Graph Embedding"
+            ],
+            [
+                "Image Retrieval"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Knowledge Graph Embedding"
+            ],
+            [
+                "Zero-Shot Learning"
+            ],
+            [
+                "Representation Learning"
+            ]
+        ]
+    },
+    {
+        "Title": "Expeditious Generation of Knowledge Graph Embeddings",
+        "Authors": "Edgard Marx, Alexander Bigerl, Andr\u00e9 Valdestilhas, Stefano Ruberto, Diego Esteves, Tommaso Soru, Diego Moussallem",
+        "Abstract": "Knowledge Graph Embedding methods aim at representing entities and relations\nin a knowledge base as points or vectors in a continuous vector space. Several\napproaches using embeddings have shown promising results on tasks such as link\nprediction, entity recommendation, question answering, and triplet\nclassification. However, only a few methods can compute low-dimensional\nembeddings of very large knowledge bases without needing state-of-the-art\ncomputational resources. In this paper, we propose KG2Vec, a simple and fast\napproach to Knowledge Graph Embedding based on the skip-gram model. Instead of\nusing a predefined scoring function, we learn it relying on Long Short-Term\nMemories. We show that our embeddings achieve results comparable with the most\nscalable approaches on knowledge graph completion as well as on a new metric.\nYet, KG2Vec can embed large graphs in lesser time by processing more than 250\nmillion triples in less than 7 hours on common hardware.",
+        "PDF URL": "http://arxiv.org/pdf/1803.07828v2.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Graph Embedding"
+            ],
+            [
+                "Question Answering"
+            ],
+            [
+                "Knowledge Graph Completion"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Knowledge Graph Embedding"
+            ],
+            [
+                "Triplet"
+            ]
+        ]
+    },
+    {
+        "Title": "Learning Knowledge Graph Embeddings with Type Regularizer",
+        "Authors": "Vivi Nastase, Bhushan Kotnis",
+        "Abstract": "Learning relations based on evidence from knowledge bases relies on\nprocessing the available relation instances. Many relations, however, have\nclear domain and range, which we hypothesize could help learn a better, more\ngeneralizing, model. We include such information in the RESCAL model in the\nform of a regularization factor added to the loss function that takes into\naccount the types (categories) of the entities that appear as arguments to\nrelations in the knowledge base. We note increased performance compared to the\nbaseline model in terms of mean reciprocal rank and hits@N, N = 1, 3, 10.\nFurthermore, we discover scenarios that significantly impact the effectiveness\nof the type regularizer.",
+        "PDF URL": "http://arxiv.org/pdf/1706.09278v2.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Vocal Bursts Type Prediction"
+            ]
+        ]
+    },
+    {
+        "Title": "Analysis of the Impact of Negative Sampling on Link Prediction in Knowledge Graphs",
+        "Authors": "Vivi Nastase, Bhushan Kotnis",
+        "Abstract": "Knowledge graphs are large, useful, but incomplete knowledge repositories.\nThey encode knowledge through entities and relations which define each other\nthrough the connective structure of the graph. This has inspired methods for\nthe joint embedding of entities and relations in continuous low-dimensional\nvector spaces, that can be used to induce new edges in the graph, i.e., link\nprediction in knowledge graphs. Learning these representations relies on\ncontrasting positive instances with negative ones. Knowledge graphs include\nonly positive relation instances, leaving the door open for a variety of\nmethods for selecting negative examples. In this paper we present an empirical\nstudy on the impact of negative sampling on the learned embeddings, assessed\nthrough the task of link prediction. We use state-of-the-art knowledge graph\nembeddings -- \\rescal , TransE, DistMult and ComplEX -- and evaluate on\nbenchmark datasets -- FB15k and WN18. We compare well known methods for\nnegative sampling and additionally propose embedding based sampling methods. We\nnote a marked difference in the impact of these sampling methods on the two\ndatasets, with the \"traditional\" corrupting positives method leading to best\nresults on WN18, while embedding based methods benefiting the task on FB15k.",
+        "PDF URL": "http://arxiv.org/pdf/1708.06816v2.pdf",
+        "Datasets": [
+            [
+                "FB15k"
+            ],
+            [
+                "NELL"
+            ],
+            [
+                "WN18"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ]
+        ]
+    },
+    {
+        "Title": "DeepPath: A Reinforcement Learning Method for Knowledge Graph Reasoning",
+        "Authors": "William Yang Wang, Wenhan Xiong, Thien Hoang",
+        "Abstract": "We study the problem of learning to reason in large scale knowledge graphs\n(KGs). More specifically, we describe a novel reinforcement learning framework\nfor learning multi-hop relational paths: we use a policy-based agent with\ncontinuous states based on knowledge graph embeddings, which reasons in a KG\nvector space by sampling the most promising relation to extend its path. In\ncontrast to prior work, our approach includes a reward function that takes the\naccuracy, diversity, and efficiency into consideration. Experimentally, we show\nthat our proposed method outperforms a path-ranking based algorithm and\nknowledge graph embedding methods on Freebase and Never-Ending Language\nLearning datasets.",
+        "PDF URL": "http://arxiv.org/pdf/1707.06690v3.pdf",
+        "Datasets": [
+            [
+                "NELL"
+            ],
+            [
+                "NELL-995"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Graph Embedding"
+            ],
+            [
+                "reinforcement-learning"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Diversity"
+            ],
+            [
+                "Knowledge Graph Embedding"
+            ],
+            [
+                "Reinforcement Learning"
+            ],
+            [
+                "Reinforcement Learning (RL)"
+            ]
+        ]
+    },
+    {
+        "Title": "Inducing Interpretability in Knowledge Graph Embeddings",
+        "Authors": "Partha Pratim Talukdar, Chandrahas, Cibi Pragadeesh, Tathagata Sengupta",
+        "Abstract": "We study the problem of inducing interpretability in KG embeddings.\nSpecifically, we explore the Universal Schema (Riedel et al., 2013) and propose\na method to induce interpretability. There have been many vector space models\nproposed for the problem, however, most of these methods don't address the\ninterpretability (semantics) of individual dimensions. In this work, we study\nthis problem and propose a method for inducing interpretability in KG\nembeddings using entity co-occurrence statistics. The proposed method\nsignificantly improves the interpretability, while maintaining comparable\nperformance in other KG tasks.",
+        "PDF URL": "http://arxiv.org/pdf/1712.03547v1.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Knowledge Graph Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Fast Linear Model for Knowledge Graph Embeddings",
+        "Authors": "Maximilian Nickel, Edouard Grave, Armand Joulin, Piotr Bojanowski, Tomas Mikolov",
+        "Abstract": "This paper shows that a simple baseline based on a Bag-of-Words (BoW)\nrepresentation learns surprisingly good knowledge graph embeddings. By casting\nknowledge base completion and question answering as supervised classification\nproblems, we observe that modeling co-occurences of entities and relations\nleads to state-of-the-art performance with a training time of a few minutes\nusing the open sourced library fastText.",
+        "PDF URL": "http://arxiv.org/pdf/1710.10881v1.pdf",
+        "Datasets": [
+            [
+                "WN18"
+            ],
+            [
+                "FB15k"
+            ],
+            [
+                "WikiMovies"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "model"
+            ],
+            [
+                "Question Answering"
+            ],
+            [
+                "Knowledge Base Completion"
+            ],
+            [
+                "General Classification"
+            ]
+        ]
+    },
+    {
+        "Title": "Complex and Holographic Embeddings of Knowledge Graphs: A Comparison",
+        "Authors": "Maximilian Nickel, Th\u00e9o Trouillon",
+        "Abstract": "Embeddings of knowledge graphs have received significant attention due to\ntheir excellent performance for tasks like link prediction and entity\nresolution. In this short paper, we are providing a comparison of two\nstate-of-the-art knowledge graph embeddings for which their equivalence has\nrecently been established, i.e., ComplEx and HolE [Nickel, Rosasco, and Poggio,\n2016; Trouillon et al., 2016; Hayashi and Shimbo, 2017]. First, we briefly\nreview both models and discuss how their scoring functions are equivalent. We\nthen analyze the discrepancy of results reported in the original articles, and\nshow experimentally that they are likely due to the use of different loss\nfunctions. In further experiments, we evaluate the ability of both models to\nembed symmetric and antisymmetric patterns. Finally, we discuss advantages and\ndisadvantages of both models and under which conditions one would be preferable\nto the other.",
+        "PDF URL": "http://arxiv.org/pdf/1707.01475v2.pdf",
+        "Datasets": [
+            [
+                "WN18"
+            ],
+            [
+                "FB15k"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Articles"
+            ],
+            [
+                "Entity Resolution"
+            ]
+        ]
+    },
+    {
+        "Title": "Multilingual Knowledge Graph Embeddings for Cross-lingual Knowledge Alignment",
+        "Authors": "Carlo Zaniolo, Yingtao Tian, Mohan Yang, Muhao Chen",
+        "Abstract": "Many recent works have demonstrated the benefits of knowledge graph\nembeddings in completing monolingual knowledge graphs. Inasmuch as related\nknowledge bases are built in several different languages, achieving\ncross-lingual knowledge alignment will help people in constructing a coherent\nknowledge base, and assist machines in dealing with different expressions of\nentity relationships across diverse human languages. Unfortunately, achieving\nthis highly desirable crosslingual alignment by human labor is very costly and\nerrorprone. Thus, we propose MTransE, a translation-based model for\nmultilingual knowledge graph embeddings, to provide a simple and automated\nsolution. By encoding entities and relations of each language in a separated\nembedding space, MTransE provides transitions for each embedding vector to its\ncross-lingual counterparts in other spaces, while preserving the\nfunctionalities of monolingual embeddings. We deploy three different techniques\nto represent cross-lingual transitions, namely axis calibration, translation\nvectors, and linear transformations, and derive five variants for MTransE using\ndifferent loss functions. Our models can be trained on partially aligned\ngraphs, where just a small portion of triples are aligned with their\ncross-lingual counterparts. The experiments on cross-lingual entity matching\nand triple-wise alignment verification show promising results, with some\nvariants consistently outperforming others on different tasks. We also explore\nhow MTransE preserves the key properties of its monolingual counterpart TransE.",
+        "PDF URL": "http://arxiv.org/pdf/1611.03954v3.pdf",
+        "Datasets": [
+            [
+                "DBP15K"
+            ],
+            [
+                "MMKG"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Entity Alignment"
+            ],
+            [
+                "Translation"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Learning Symmetric Collaborative Dialogue Agents with Dynamic Knowledge Graph Embeddings",
+        "Authors": "Anusha Balakrishnan, Percy Liang, Mihail Eric, He He",
+        "Abstract": "We study a symmetric collaborative dialogue setting in which two agents, each\nwith private knowledge, must strategically communicate to achieve a common\ngoal. The open-ended dialogue state in this setting poses new challenges for\nexisting dialogue systems. We collected a dataset of 11K human-human dialogues,\nwhich exhibits interesting lexical, semantic, and strategic elements. To model\nboth structured knowledge and unstructured language, we propose a neural model\nwith dynamic knowledge graph embeddings that evolve as the dialogue progresses.\nAutomatic and human evaluations show that our model is both more effective at\nachieving the goal and more human-like than baseline neural and rule-based\nmodels.",
+        "PDF URL": "http://arxiv.org/pdf/1704.07130v1.pdf",
+        "Datasets": [
+            [
+                "MutualFriends"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graph Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Knowledge-Based Distant Regularization in Learning Probabilistic Models",
+        "Authors": "Kosuke Akimoto, Naoya Takeishi",
+        "Abstract": "Exploiting the appropriate inductive bias based on the knowledge of data is\nessential for achieving good performance in statistical machine learning. In\npractice, however, the domain knowledge of interest often provides information\non the relationship of data attributes only distantly, which hinders direct\nutilization of such domain knowledge in popular regularization methods. In this\npaper, we propose the knowledge-based distant regularization framework, in\nwhich we utilize the distant information encoded in a knowledge graph for\nregularization of probabilistic model estimation. In particular, we propose to\nimpose prior distributions on model parameters specified by knowledge graph\nembeddings. As an instance of the proposed framework, we present the factor\nanalysis model with the knowledge-based distant regularization. We show the\nresults of preliminary experiments on the improvement of the generalization\ncapability of such model.",
+        "PDF URL": "http://arxiv.org/pdf/1806.11332v1.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Inductive Bias"
+            ]
+        ]
+    },
+    {
+        "Title": "Embedding Models for Episodic Knowledge Graphs",
+        "Authors": "Erik Daxberger, Yunpu Ma, Volker Tresp",
+        "Abstract": "In recent years a number of large-scale triple-oriented knowledge graphs have\nbeen generated and various models have been proposed to perform learning in\nthose graphs. Most knowledge graphs are static and reflect the world in its\ncurrent state. In reality, of course, the state of the world is changing: a\nhealthy person becomes diagnosed with a disease and a new president is\ninaugurated. In this paper, we extend models for static knowledge graphs to\ntemporal knowledge graphs. This enables us to store episodic data and to\ngeneralize to new facts (inductive learning). We generalize leading learning\nmodels for static knowledge graphs (i.e., Tucker, RESCAL, HolE, ComplEx,\nDistMult) to temporal knowledge graphs. In particular, we introduce a new\ntensor model, ConT, with superior generalization performance. The performances\nof all proposed models are analyzed on two different datasets: the Global\nDatabase of Events, Language, and Tone (GDELT) and the database for Integrated\nConflict Early Warning System (ICEWS). We argue that temporal knowledge graph\nembeddings might be models also for cognitive episodic memory (facts we\nremember and can recollect) and that a semantic memory (current facts we know)\ncan be generated from episodic memory by a marginalization operation. We\nvalidate this episodic-to-semantic projection hypothesis with the ICEWS\ndataset.",
+        "PDF URL": "http://arxiv.org/pdf/1807.00228v2.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Inductive Learning"
+            ]
+        ]
+    },
+    {
+        "Title": "Seq2RDF: An end-to-end application for deriving Triples from Natural Language Text",
+        "Authors": "Heng Ji, Deborah L. McGuinness, Tongtao Zhang, Yue Liu, Zhicheng Liang",
+        "Abstract": "We present an end-to-end approach that takes unstructured textual input and\ngenerates structured output compliant with a given vocabulary. Inspired by\nrecent successes in neural machine translation, we treat the triples within a\ngiven knowledge graph as an independent graph language and propose an\nencoder-decoder framework with an attention mechanism that leverages knowledge\ngraph embeddings. Our model learns the mapping from natural language text to\ntriple representation in the form of subject-predicate-object using the\nselected knowledge graph vocabulary. Experiments on three different data sets\nshow that we achieve competitive F1-Measures over the baselines using our\nsimple yet effective approach. A demo video is included.",
+        "PDF URL": "http://arxiv.org/pdf/1807.01763v3.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Decoder"
+            ],
+            [
+                "Translation"
+            ]
+        ]
+    },
+    {
+        "Title": "Hypernetwork Knowledge Graph Embeddings",
+        "Authors": "Timothy M. Hospedales, Ivana Bala\u017eevi\u0107, Carl Allen",
+        "Abstract": "Knowledge graphs are graphical representations of large databases of facts, which typically suffer from incompleteness. Inferring missing relations (links) between entities (nodes) is the task of link prediction. A recent state-of-the-art approach to link prediction, ConvE, implements a convolutional neural network to extract features from concatenated subject and relation vectors. Whilst results are impressive, the method is unintuitive and poorly understood. We propose a hypernetwork architecture that generates simplified relation-specific convolutional filters that (i) outperforms ConvE and all previous approaches across standard datasets; and (ii) can be framed as tensor factorization and thus set within a well established family of factorization models for link prediction. We thus demonstrate that convolution simply offers a convenient computational means of introducing sparsity and parameter tying to find an effective trade-off between non-linear expressiveness and the number of parameters to learn.",
+        "PDF URL": "https://arxiv.org/pdf/1808.07018v5.pdf",
+        "Datasets": [
+            [
+                "WN18RR"
+            ],
+            [
+                "FB15k"
+            ],
+            [
+                "WN18"
+            ],
+            [
+                "FB15k-237"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Prediction"
+            ],
+            [
+                "Relation"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ]
+        ]
+    },
+    {
+        "Title": "Multi-Hop Knowledge Graph Reasoning with Reward Shaping",
+        "Authors": "Xi Victoria Lin, Richard Socher, Caiming Xiong",
+        "Abstract": "Multi-hop reasoning is an effective approach for query answering (QA) over\nincomplete knowledge graphs (KGs). The problem can be formulated in a\nreinforcement learning (RL) setup, where a policy-based agent sequentially\nextends its inference path until it reaches a target. However, in an incomplete\nKG environment, the agent receives low-quality rewards corrupted by false\nnegatives in the training data, which harms generalization at test time.\nFurthermore, since no golden action sequence is used for training, the agent\ncan be misled by spurious search trajectories that incidentally lead to the\ncorrect answer. We propose two modeling advances to address both issues: (1) we\nreduce the impact of false negative supervision by adopting a pretrained\none-hop embedding model to estimate the reward of unobserved facts; (2) we\ncounter the sensitivity to spurious paths of on-policy RL by forcing the agent\nto explore a diverse set of paths using randomly generated edge masks. Our\napproach significantly improves over existing path-based KGQA models on several\nbenchmark datasets and is comparable or better than embedding-based models.",
+        "PDF URL": "http://arxiv.org/pdf/1808.10568v2.pdf",
+        "Datasets": [
+            [
+                "NELL-995"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Reinforcement Learning"
+            ],
+            [
+                "Reinforcement Learning (RL)"
+            ]
+        ]
+    },
+    {
+        "Title": "MOHONE: Modeling Higher Order Network Effects in KnowledgeGraphs via Network Infused Embeddings",
+        "Authors": "Vivek Kulkarni, Hao Yu, William Wang",
+        "Abstract": "Many knowledge graph embedding methods operate on triples and are therefore\nimplicitly limited by a very local view of the entire knowledge graph. We\npresent a new framework MOHONE to effectively model higher order network\neffects in knowledge-graphs, thus enabling one to capture varying degrees of\nnetwork connectivity (from the local to the global). Our framework is generic,\nexplicitly models the network scale, and captures two different aspects of\nsimilarity in networks: (a) shared local neighborhood and (b) structural\nrole-based similarity. First, we introduce methods that learn network\nrepresentations of entities in the knowledge graph capturing these varied\naspects of similarity. We then propose a fast, efficient method to incorporate\nthe information captured by these network representations into existing\nknowledge graph embeddings. We show that our method consistently and\nsignificantly improves the performance on link prediction of several different\nknowledge-graph embedding methods including TRANSE, TRANSD, DISTMULT, and\nCOMPLEX(by at least 4 points or 17% in some cases).",
+        "PDF URL": "http://arxiv.org/pdf/1811.00198v1.pdf",
+        "Datasets": [
+            [
+                "FB15k-237"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Knowledge Graph Embedding"
+            ],
+            [
+                "Graph Embedding"
+            ]
+        ]
+    },
+    {
+        "Title": "DOLORES: Deep Contextualized Knowledge Graph Embeddings",
+        "Authors": "William Yang Wang, Vivek Kulkarni, Haoyu Wang",
+        "Abstract": "We introduce a new method DOLORES for learning knowledge graph embeddings\nthat effectively captures contextual cues and dependencies among entities and\nrelations. First, we note that short paths on knowledge graphs comprising of\nchains of entities and relations can encode valuable information regarding\ntheir contextual usage. We operationalize this notion by representing knowledge\ngraphs not as a collection of triples but as a collection of entity-relation\nchains, and learn embeddings for entities and relations using deep neural\nmodels that capture such contextual usage. In particular, our model is based on\nBi-Directional LSTMs and learn deep representations of entities and relations\nfrom constructed entity-relation chains. We show that these representations can\nvery easily be incorporated into existing models to significantly advance the\nstate of the art on several knowledge graph prediction tasks like link\nprediction, triple classification, and missing relation type prediction (in\nsome cases by at least 9.5%).",
+        "PDF URL": "http://arxiv.org/pdf/1811.00147v1.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Triple Classification"
+            ],
+            [
+                "Prediction"
+            ],
+            [
+                "Type prediction"
+            ],
+            [
+                "Relation"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ]
+        ]
+    },
+    {
+        "Title": "Modelling Salient Features as Directions in Fine-Tuned Semantic Spaces",
+        "Authors": "Ond{\\v{r}}ej Ku{\\v{z}}elka, Thomas Ager, Steven Schockaert",
+        "Abstract": "In this paper we consider semantic spaces consisting of objects from some particular domain (e.g. IMDB movie reviews). Various authors have observed that such semantic spaces often model salient features (e.g. how scary a movie is) as directions. These feature directions allow us to rank objects according to how much they have the corresponding feature, and can thus play an important role in interpretable classifiers, recommendation systems, or entity-oriented search engines, among others. Methods for learning semantic spaces, however, are mostly aimed at modelling similarity. In this paper, we argue that there is an inherent trade-off between capturing similarity and faithfully modelling features as directions. Following this observation, we propose a simple method to fine-tune existing semantic spaces, with the aim of improving the quality of their feature directions. Crucially, our method is fully unsupervised, requiring only a bag-of-words representation of the objects as input.",
+        "PDF URL": "https://aclanthology.org/K18-1051.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Recommendation Systems"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Word Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Towards Understanding the Geometry of Knowledge Graph Embeddings",
+        "Authors": "rahas}, {Ch, Partha Talukdar, Aditya Sharma",
+        "Abstract": "Knowledge Graph (KG) embedding has emerged as a very active area of research over the last few years, resulting in the development of several embedding methods. These KG embedding methods represent KG entities and relations as vectors in a high-dimensional space. Despite this popularity and effectiveness of KG embeddings in various tasks (e.g., link prediction), geometric understanding of such embeddings (i.e., arrangement of entity and relation vectors in vector space) is unexplored {--} we fill this gap in the paper. We initiate a study to analyze the geometry of KG embeddings and correlate it with task performance and other hyperparameters. To the best of our knowledge, this is the first study of its kind. Through extensive experiments on real-world datasets, we discover several insights. For example, we find that there are sharp differences between the geometry of embeddings learnt by different classes of KG embeddings methods. We hope that this initial study will inspire other follow-up research on this important but unexplored problem.",
+        "PDF URL": "https://aclanthology.org/P18-1012.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Word Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Multimodal Named Entity Disambiguation for Noisy Social Media Posts",
+        "Authors": "Seungwhan Moon, Leonardo Neves, Vitor Carvalho",
+        "Abstract": "We introduce the new Multimodal Named Entity Disambiguation (MNED) task for multimodal social media posts such as Snapchat or Instagram captions, which are composed of short captions with accompanying images. Social media posts bring significant challenges for disambiguation tasks because 1) ambiguity not only comes from polysemous entities, but also from inconsistent or incomplete notations, 2) very limited context is provided with surrounding words, and 3) there are many emerging entities often unseen during training. To this end, we build a new dataset called SnapCaptionsKB, a collection of Snapchat image captions submitted to public and crowd-sourced stories, with named entity mentions fully annotated and linked to entities in an external knowledge base. We then build a deep zeroshot multimodal network for MNED that 1) extracts contexts from both text and image, and 2) predicts correct entity in the knowledge graph embeddings space, allowing for zeroshot disambiguation of entities unseen in training set as well. The proposed model significantly outperforms the state-of-the-art text-only NED models, showing efficacy and potentials of the MNED task.",
+        "PDF URL": "https://aclanthology.org/P18-1186.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Entity Disambiguation"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Image Captioning"
+            ],
+            [
+                "Opinion Mining"
+            ]
+        ]
+    },
+    {
+        "Title": "Recognizing Mentions of Adverse Drug Reaction in Social Media Using Knowledge-Infused Recurrent Models",
+        "Authors": "Pablo Mendes, Gabriel Stanovsky, Daniel Gruhl",
+        "Abstract": "Recognizing mentions of Adverse Drug Reactions (ADR) in social media is challenging: ADR mentions are context-dependent and include long, varied and unconventional descriptions as compared to more formal medical symptom terminology. We use the CADEC corpus to train a recurrent neural network (RNN) transducer, integrated with knowledge graph embeddings of DBpedia, and show the resulting model to be highly accurate (93.4 F1). Furthermore, even when lacking high quality expert annotations, we show that by employing an active learning technique and using purpose built annotation tools, we can train the RNN to perform well (83.9 F1).",
+        "PDF URL": "https://aclanthology.org/E17-1014.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Active Learning"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Sparsity and Noise: Where Knowledge Graph Embeddings Fall Short",
+        "Authors": "Lise Getoor, Jay Pujara, Eriq Augustine",
+        "Abstract": "Knowledge graph (KG) embedding techniques use structured relationships between entities to learn low-dimensional representations of entities and relations. One prominent goal of these approaches is to improve the quality of knowledge graphs by removing errors and adding missing facts. Surprisingly, most embedding techniques have been evaluated on benchmark datasets consisting of dense and reliable subsets of human-curated KGs, which tend to be fairly complete and have few errors. In this paper, we consider the problem of applying embedding techniques to KGs extracted from text, which are often incomplete and contain errors. We compare the sparsity and unreliability of different KGs and perform empirical experiments demonstrating how embedding approaches degrade as sparsity and unreliability increase.",
+        "PDF URL": "https://aclanthology.org/D17-1184.pdf",
+        "Datasets": [
+            [
+                "WN18"
+            ],
+            [
+                "FB15k"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Question Answering"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Entity Hierarchy Embedding",
+        "Authors": "Yuntian Deng, PoYao Huang, Zhiting Hu, Eric Xing, Yingkai Gao",
+        "Abstract": "",
+        "PDF URL": "https://aclanthology.org/P15-1125.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Machine Translation"
+            ],
+            [
+                "Entity Linking"
+            ],
+            [
+                "Information Retrieval"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Metric Learning"
+            ],
+            [
+                "Sentiment Analysis"
+            ]
+        ]
+    },
+    {
+        "Title": "Binarized Knowledge Graph Embeddings",
+        "Authors": "Koki Kishimoto, Katsuhiko Hayashi, Genki Akai, Masashi Shimbo, Kazunori Komatani",
+        "Abstract": "Tensor factorization has become an increasingly popular approach to knowledge\ngraph completion(KGC), which is the task of automatically predicting missing\nfacts in a knowledge graph. However, even with a simple model like\nCANDECOMP/PARAFAC(CP) tensor decomposition, KGC on existing knowledge graphs is\nimpractical in resource-limited environments, as a large amount of memory is\nrequired to store parameters represented as 32-bit or 64-bit floating point\nnumbers. This limitation is expected to become more stringent as existing\nknowledge graphs, which are already huge, keep steadily growing in scale. To\nreduce the memory requirement, we present a method for binarizing the\nparameters of the CP tensor decomposition by introducing a quantization\nfunction to the optimization problem. This method replaces floating\npoint-valued parameters with binary ones after training, which drastically\nreduces the model size at run time. We investigate the trade-off between the\nquality and size of tensor factorization models for several KGC benchmark\ndatasets. In our experiments, the proposed method successfully reduced the\nmodel size by more than an order of magnitude while maintaining the task\nperformance. Moreover, a fast score computation technique can be developed with\nbitwise operations.",
+        "PDF URL": "http://arxiv.org/pdf/1902.02970v1.pdf",
+        "Datasets": [
+            [
+                "WN18"
+            ],
+            [
+                "FB15k"
+            ],
+            [
+                "WN18RR"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Quantization"
+            ],
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Completion"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Tensor Decomposition"
+            ]
+        ]
+    },
+    {
+        "Title": "Long-tail Relation Extraction via Knowledge Graph Embeddings and Graph Convolution Networks",
+        "Authors": "Wei zhang, Ningyu Zhang, Huajun Chen, Guanying Wang, Shumin Deng, Zhanlin Sun, Xi Chen",
+        "Abstract": "We propose a distance supervised relation extraction approach for\nlong-tailed, imbalanced data which is prevalent in real-world settings. Here,\nthe challenge is to learn accurate \"few-shot\" models for classes existing at\nthe tail of the class distribution, for which little data is available.\nInspired by the rich semantic correlations between classes at the long tail and\nthose at the head, we take advantage of the knowledge from data-rich classes at\nthe head of the distribution to boost the performance of the data-poor classes\nat the tail. First, we propose to leverage implicit relational knowledge among\nclass labels from knowledge graph embeddings and learn explicit relational\nknowledge using graph convolution networks. Second, we integrate that\nrelational knowledge into relation extraction model by coarse-to-fine\nknowledge-aware attention mechanism. We demonstrate our results for a\nlarge-scale benchmark dataset which show that our approach significantly\noutperforms other baselines, especially for long-tail relations.",
+        "PDF URL": "http://arxiv.org/pdf/1903.01306v1.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Relation"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Relation Extraction"
+            ]
+        ]
+    },
+    {
+        "Title": "Quaternion Knowledge Graph Embeddings",
+        "Authors": "Lina Yao, Yi Tay, Shuai Zhang, Qi Liu",
+        "Abstract": "In this work, we move beyond the traditional complex-valued representations, introducing more expressive hypercomplex representations to model entities and relations for knowledge graph embeddings. More specifically, quaternion embeddings, hypercomplex-valued embeddings with three imaginary components, are utilized to represent entities. Relations are modelled as rotations in the quaternion space. The advantages of the proposed approach are: (1) Latent inter-dependencies (between all components) are aptly captured with Hamilton product, encouraging a more compact interaction between entities and relations; (2) Quaternions enable expressive rotation in four-dimensional space and have more degree of freedom than rotation in complex plane; (3) The proposed framework is a generalization of ComplEx on hypercomplex space while offering better geometrical interpretations, concurrently satisfying the key desiderata of relational representation learning (i.e., modeling symmetry, anti-symmetry and inversion). Experimental results demonstrate that our method achieves state-of-the-art performance on four well-established knowledge graph completion benchmarks.",
+        "PDF URL": "https://arxiv.org/pdf/1904.10281v3.pdf",
+        "Datasets": [
+            [
+                "WN18RR"
+            ],
+            [
+                "FB15k"
+            ],
+            [
+                "WN18"
+            ],
+            [
+                "FB15k-237"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Completion"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Knowledge Graph Embedding"
+            ],
+            [
+                "Graph Embedding"
+            ],
+            [
+                "Representation Learning"
+            ]
+        ]
+    },
+    {
+        "Title": "Relation Embedding with Dihedral Group in Knowledge Graph",
+        "Authors": "Ruijiang Li, Canran Xu",
+        "Abstract": "Link prediction is critical for the application of incomplete knowledge graph (KG) in the downstream tasks. As a family of effective approaches for link predictions, embedding methods try to learn low-rank representations for both entities and relations such that the bilinear form defined therein is a well-behaved scoring function. Despite of their successful performances, existing bilinear forms overlook the modeling of relation compositions, resulting in lacks of interpretability for reasoning on KG. To fulfill this gap, we propose a new model called DihEdral, named after dihedral symmetry group. This new model learns knowledge graph embeddings that can capture relation compositions by nature. Furthermore, our approach models the relation embeddings parametrized by discrete values, thereby decrease the solution space drastically. Our experiments show that DihEdral is able to capture all desired properties such as (skew-) symmetry, inversion and (non-) Abelian composition, and outperforms existing bilinear form based approach and is comparable to or better than deep learning models such as ConvE.",
+        "PDF URL": "https://arxiv.org/pdf/1906.00687v1.pdf",
+        "Datasets": [
+            [
+                "YAGO"
+            ],
+            [
+                "YAGO3-10"
+            ],
+            [
+                "WN18RR"
+            ],
+            [
+                "WN18"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Relation"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ]
+        ]
+    },
+    {
+        "Title": "Learning Attention-based Embeddings for Relation Prediction in Knowledge Graphs",
+        "Authors": "Charu Sharma, Manohar Kaul, Deepak Nathani, Jatin Chauhan",
+        "Abstract": "The recent proliferation of knowledge graphs (KGs) coupled with incomplete or partial information, in the form of missing relations (links) between entities, has fueled a lot of research on knowledge base completion (also known as relation prediction). Several recent works suggest that convolutional neural network (CNN) based models generate richer and more expressive feature embeddings and hence also perform well on relation prediction. However, we observe that these KG embeddings treat triples independently and thus fail to cover the complex and hidden information that is inherently implicit in the local neighborhood surrounding a triple. To this effect, our paper proposes a novel attention based feature embedding that captures both entity and relation features in any given entity's neighborhood. Additionally, we also encapsulate relation clusters and multihop relations in our model. Our empirical study offers insights into the efficacy of our attention based model and we show marked performance gains in comparison to state of the art methods on all datasets.",
+        "PDF URL": "https://arxiv.org/pdf/1906.01195v1.pdf",
+        "Datasets": [
+            [
+                "NELL-995"
+            ],
+            [
+                "FB15k"
+            ],
+            [
+                "WN18RR"
+            ],
+            [
+                "FB15k-237"
+            ],
+            [
+                "WN18"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Relation Prediction"
+            ],
+            [
+                "Knowledge Base Completion"
+            ],
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Completion"
+            ],
+            [
+                "Relation"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ]
+        ]
+    },
+    {
+        "Title": "Neural Variational Inference For Estimating Uncertainty in Knowledge Graph Embeddings",
+        "Authors": "Tim Rocktaschel, Pasquale Minervini, Alexander I. Cowen-Rivers, Sebastian Riedel, Matko Bosnjak, Jun Wang",
+        "Abstract": "Recent advances in Neural Variational Inference allowed for a renaissance in latent variable models in a variety of domains involving high-dimensional data. While traditional variational methods derive an analytical approximation for the intractable distribution over the latent variables, here we construct an inference network conditioned on the symbolic representation of entities and relation types in the Knowledge Graph, to provide the variational distributions. The new framework results in a highly-scalable method. Under a Bernoulli sampling framework, we provide an alternative justification for commonly used techniques in large-scale stochastic variational inference, which drastically reduce training time at a cost of an additional approximation to the variational lower bound. We introduce two models from this highly scalable probabilistic framework, namely the Latent Information and Latent Fact models, for reasoning over knowledge graph-based representations. Our Latent Information and Latent Fact models improve upon baseline performance under certain conditions. We use the learnt embedding variance to estimate predictive uncertainty during link prediction, and discuss the quality of these learnt uncertainty estimates. Our source code and datasets are publicly available online at https://github.com/alexanderimanicowenrivers/Neural-Variational-Knowledge-Graphs.",
+        "PDF URL": "https://arxiv.org/pdf/1906.04985v2.pdf",
+        "Datasets": [
+            [
+                "WN18"
+            ],
+            [
+                "WN18RR"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Variational Inference"
+            ]
+        ]
+    },
+    {
+        "Title": "Augmenting and Tuning Knowledge Graph Embeddings",
+        "Authors": "Farnood Salehi, Stephan Mandt, Robert Bamler",
+        "Abstract": "Knowledge graph embeddings rank among the most successful methods for link prediction in knowledge graphs, i.e., the task of completing an incomplete collection of relational facts. A downside of these models is their strong sensitivity to model hyperparameters, in particular regularizers, which have to be extensively tuned to reach good performance [Kadlec et al., 2017]. We propose an efficient method for large scale hyperparameter tuning by interpreting these models in a probabilistic framework. After a model augmentation that introduces per-entity hyperparameters, we use a variational expectation-maximization approach to tune thousands of such hyperparameters with minimal additional cost. Our approach is agnostic to details of the model and results in a new state of the art in link prediction on standard benchmark data.",
+        "PDF URL": "https://arxiv.org/pdf/1907.01068v1.pdf",
+        "Datasets": [
+            [
+                "FB15k"
+            ],
+            [
+                "WN18RR"
+            ],
+            [
+                "FB15k-237"
+            ],
+            [
+                "WN18"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Adaptive Margin Ranking Loss for Knowledge Graph Embeddings via a Correntropy Objective Function",
+        "Authors": "Sahar Vahdati, Mojtaba Nayyeri, Xiaotian Zhou, Jens Lehmann, Hamed Shariat Yazdi",
+        "Abstract": "Translation-based embedding models have gained significant attention in link prediction tasks for knowledge graphs. TransE is the primary model among translation-based embeddings and is well-known for its low complexity and high efficiency. Therefore, most of the earlier works have modified the score function of the TransE approach in order to improve the performance of link prediction tasks. Nevertheless, proven theoretically and experimentally, the performance of TransE strongly depends on the loss function. Margin Ranking Loss (MRL) has been one of the earlier loss functions which is widely used for training TransE. However, the scores of positive triples are not necessarily enforced to be sufficiently small to fulfill the translation from head to tail by using relation vector (original assumption of TransE). To tackle this problem, several loss functions have been proposed recently by adding upper bounds and lower bounds to the scores of positive and negative samples. Although highly effective, previously developed models suffer from an expansion in search space for a selection of the hyperparameters (in particular the upper and lower bounds of scores) on which the performance of the translation-based models is highly dependent. In this paper, we propose a new loss function dubbed Adaptive Margin Loss (AML) for training translation-based embedding models. The formulation of the proposed loss function enables an adaptive and automated adjustment of the margin during the learning process. Therefore, instead of obtaining two values (upper bound and lower bound), only the center of a margin needs to be determined. During learning, the margin is expanded automatically until it converges. In our experiments on a set of standard benchmark datasets including Freebase and WordNet, the effectiveness of AML is confirmed for training TransE on link prediction tasks.",
+        "PDF URL": "https://arxiv.org/pdf/1907.05336v1.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Translation"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "Drug-Drug Interaction Prediction Based on Knowledge Graph Embeddings and Convolutional-LSTM Network",
+        "Authors": "Mamtaz Uddin, Oya Beyan, Michael Cochez, Stefan Decker, Md. Rezaul Karim, Joao Bosco Jares",
+        "Abstract": "Interference between pharmacological substances can cause serious medical injuries. Correctly predicting so-called drug-drug interactions (DDI) does not only reduce these cases but can also result in a reduction of drug development cost. Presently, most drug-related knowledge is the result of clinical evaluations and post-marketing surveillance; resulting in a limited amount of information. Existing data-driven prediction approaches for DDIs typically rely on a single source of information, while using information from multiple sources would help improve predictions. Machine learning (ML) techniques are used, but the techniques are often unable to deal with skewness in the data. Hence, we propose a new ML approach for predicting DDIs based on multiple data sources. For this task, we use 12,000 drug features from DrugBank, PharmGKB, and KEGG drugs, which are integrated using Knowledge Graphs (KGs). To train our prediction model, we first embed the nodes in the graph using various embedding approaches. We found that the best performing combination was a ComplEx embedding method creating using PyTorch-BigGraph (PBG) with a Convolutional-LSTM network and classic machine learning-based prediction models. The model averaging ensemble method of three best classifiers yields up to 0.94, 0.92, 0.80 for AUPR, F1-score, and MCC, respectively during 5-fold cross-validation tests.",
+        "PDF URL": "https://arxiv.org/pdf/1908.01288v1.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "BIG-bench Machine Learning"
+            ],
+            [
+                "Marketing"
+            ]
+        ]
+    },
+    {
+        "Title": "Linking Physicians to Medical Research Results via Knowledge Graph Embeddings and Twitter",
+        "Authors": "Jens Lehmann, Afshin Sadeghi",
+        "Abstract": "Informing professionals about the latest research results in their field is a particularly important task in the field of health care, since any development in this field directly improves the health status of the patients. Meanwhile, social media is an infrastructure that allows public instant sharing of information, thus it has recently become popular in medical applications. In this study, we apply Multi Distance Knowledge Graph Embeddings (MDE) to link physicians and surgeons to the latest medical breakthroughs that are shared as the research results on Twitter. Our study shows that using this method physicians can be informed about the new findings in their field given that they have an account dedicated to their profession.",
+        "PDF URL": "https://arxiv.org/pdf/1908.02571v3.pdf",
+        "Datasets": [],
+        "Tasks": [
+            [
+                "Knowledge Graph Embeddings"
+            ]
+        ]
+    },
+    {
+        "Title": "RDF2Vec: RDF Graph Embeddings and Their Applications",
+        "Authors": "Petar Ristoski, Tommaso Di Noia, Renato De Leone, Jessica Rosati, Heiko Paulheim",
+        "Abstract": "Linked Open Data has been recognized as a valuable source for background information in many data mining and information retrieval tasks. However, most of the existing tools require features in propositional form, i.e., a vector of nominal or numerical features associated with an instance, while Linked Open Data sources are graphs by nature. In this paper, we present RDF2Vec, an approach that uses language modeling approaches for unsupervised feature extraction from sequences of words, and adapts them to RDF graphs.We generate sequences by leveraging local information from graph sub-structures, harvested by Weisfeiler-Lehman Subtree RDF Graph Kernels and graph walks, and learn latent numerical representations of entities in RDF graphs.We evaluate our approach on three different tasks: (i) standard machine learning tasks, (ii) entity and document modeling, and (iii) content-based recommender systems. The evaluation shows that the proposed entity embeddings outperform existing techniques, and that pre-computed feature vector representations of general knowledge graphs such as DBpedia and Wikidata can be easily reused for different tasks.",
+        "PDF URL": "http://www.semantic-web-journal.net/system/files/swj1738.pdf",
+        "Datasets": [
+            [
+                "MUTAG"
+            ],
+            [
+                "AIFB"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graphs"
+            ],
+            [
+                "Information Retrieval"
+            ],
+            [
+                "General Knowledge"
+            ],
+            [
+                "Retrieval"
+            ],
+            [
+                "Entity Embeddings"
+            ],
+            [
+                "Language Modelling"
+            ],
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Recommendation Systems"
+            ],
+            [
+                "Knowledge Graph Embedding"
+            ],
+            [
+                "Node Classification"
+            ],
+            [
+                "Language Modeling"
+            ]
+        ]
+    },
+    {
+        "Title": "HyperKG: Hyperbolic Knowledge Graph Embeddings for Knowledge Base Completion",
+        "Authors": "Prodromos Kolyvakis, Dimitris Kiritsis, Alexandros Kalousis",
+        "Abstract": "Learning embeddings of entities and relations existing in knowledge bases allows the discovery of hidden patterns in data. In this work, we examine the geometrical space's contribution to the task of knowledge base completion. We focus on the family of translational models, whose performance has been lagging, and propose a model, dubbed HyperKG, which exploits the hyperbolic space in order to better reflect the topological properties of knowledge bases. We investigate the type of regularities that our model can capture and we show that it is a prominent candidate for effectively representing a subset of Datalog rules. We empirically show, using a variety of link prediction datasets, that hyperbolic space allows to narrow down significantly the performance gap between translational and bilinear models.",
+        "PDF URL": "https://arxiv.org/pdf/1908.04895v2.pdf",
+        "Datasets": [
+            [
+                "WN18RR"
+            ],
+            [
+                "FB15k"
+            ],
+            [
+                "WN18"
+            ],
+            [
+                "FB15k-237"
+            ]
+        ],
+        "Tasks": [
+            [
+                "Knowledge Graph Embeddings"
+            ],
+            [
+                "Link Prediction"
+            ],
+            [
+                "Knowledge Base Completion"
+            ]
+        ]
+    }
+]
