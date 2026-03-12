@@ -1,0 +1,376 @@
+{
+  "documents": [
+    {
+      "paper_title": "Adaptive Margin Ranking Loss for Knowledge Graph Embeddings via a Correntropy Objective Function",
+      "num_tables": 2,
+      "tables": [
+        {
+          "table_id": "table_1",
+          "table_uid": "AdaptiveMargin_5_1",
+          "page": 5,
+          "evaluation": {
+            "expected_rows": 19,
+            "expected_cols": 9,
+            "columns": ["Dataset", "WN18_Mean_raw", "WN18_Mean_filter", "WN18_Hits@10_raw", "WN18_Hits@10_filter", "FB15k_Mean_raw", "FB15k_Mean_filter", "FB15k_Hits@10_raw", "FB15k_Hits@10_filter"]
+          },
+          "rows": [
+            ["Unstructured [6]", 315, 304, 35.5, 38.2, 1074, 979, 4.5, 6.3],
+            ["RESCAL Nickel et al. [22]", 1180, 1163, 37.2, 52.8, 828, 683, 28.4, 44.1],
+            ["SE [8]", 1011, 985, 68.5, 80.5, 273, 162, 28.8, 39.8],
+            ["SME (linear) [6]", 545, 533, 65.1, 74.1, 274, 154, 30.7, 40.8],
+            ["SME (bilinear) [6]", 526, 509, 54.7, 61.3, 284, 158, 31.3, 41.3],
+            ["LMF [14]", 469, 456, 71.4, 81.6, 283, 164, 26.0, 33.1],
+            ["TransE [7]", 263, 251, 75.4, 89.2, 243, 125, 34.9, 47.1],
+            ["TransH (unif) [27]", 318, 303, 75.4, 86.7, 211, 84, 42.5, 58.5],
+            ["TransH (bern) [27]", 401, 388, 73.0, 82.3, 212, 87, 45.7, 64.4],
+            ["TransR (unif) [17]", 232, 219, 78.3, 91.7, 226, 78, 43.8, 65.5],
+            ["TransR (bern) [17]", 238, 225, 79.8, 92.0, 198, 77, 48.2, 68.7],
+            ["TransD (unif) [15]", 242, 229, 79.2, 92.5, 211, 67, 49.4, 74.2],
+            ["TransD (bern) [15]", 224, 212, 79.6, 92.2, 194, 91, 53.4, 77.3],
+            ["TransE-RS(unif) [29]", 362, 348, 80.3, 93.7, 161, 62, 53.1, 72.3],
+            ["TransE-RS(bern) [29]", 385, 371, 80.4, 93.7, 161, 63, 53.2, 72.1],
+            ["TransH-RS(unif) [29]", 401, 389, 81.2, 94.7, 163, 64, 53.4, 72.6],
+            ["TransH-RS(bern) [29]", 371, 357, 80.3, 94.5, 178, 77, 53.6, 75.0],
+            ["TransEAML", 226, 217, 84.3, 95.2, 159, 49, 55.5, 77.8]
+          ],
+          "annotations": {
+            "bold_cells": ["18:3", "18:4", "18:7", "18:8"]
+          }
+        },
+        {
+          "table_id": "table_2",
+          "table_uid": "AdaptiveMargin_5_2",
+          "page": 5,
+          "evaluation": {
+            "expected_rows": 8,
+            "expected_cols": 3,
+            "columns": ["Data", "FB15k", "wn18"]
+          },
+          "rows": [
+            ["Optimizer", "Adagrad", "Adagrad"],
+            ["Embedding size", 100, 100],
+            ["Epochs", 900000, 900000],
+            ["ξ", 0.1, 0.1],
+            ["σ", 1.0, 1.0],
+            ["λ", 1.0, 1.0],
+            ["γ", 30, 15],
+            ["Learning rate", 0.1, 0.1]
+          ]
+        }
+      ]
+    },
+    {
+      "paper_title": "Adversarial Contrastive Estimation",
+      "num_tables": 4,
+      "tables": [
+        {
+          "table_id": "table_1",
+          "table_uid": "AdversarialContrastive_8_1",
+          "page": 8,
+          "evaluation": {
+            "expected_rows": 20,
+            "expected_cols": 6,
+            "columns": ["Category", "Queen", "King", "Computer", "Man", "Woman"]
+          },
+          "rows": [
+            ["Skip-Gram NCE Top 5", "princess", "prince", "computers", "woman", "girl"],
+            ["Skip-Gram NCE Top 5", "king", "queen", "computing", "boy", "man"],
+            ["Skip-Gram NCE Top 5", "empress", "kings", "software", "girl", "prostitute"],
+            ["Skip-Gram NCE Top 5", "pxqueen", "emperor", "microcomputer", "stranger", "person"],
+            ["Skip-Gram NCE Top 5", "monarch", "monarch", "mainframe", "person", "divorcee"],
+            ["Skip-Gram NCE Top 45-50", "sambiria", "eraric", "hypercard", "angiomata", "suitor"],
+            ["Skip-Gram NCE Top 45-50", "phongsri", "mumbere", "neurotechnology", "someone", "nymphomaniac"],
+            ["Skip-Gram NCE Top 45-50", "safrit", "empress", "lgp", "bespectacled", "barmaid"],
+            ["Skip-Gram NCE Top 45-50", "mcelvoy", "saxonvm", "pcs", "hero", "redheaded"],
+            ["Skip-Gram NCE Top 45-50", "tsarina", "pretender", "keystroke", "clown", "jew"],
+            ["Skip-Gram ACE Top 5", "princess", "prince", "software", "woman", "girl"],
+            ["Skip-Gram ACE Top 5", "prince", "vi", "computers", "girl", "herself"],
+            ["Skip-Gram ACE Top 5", "elizabeth", "kings", "applications", "tells", "man"],
+            ["Skip-Gram ACE Top 5", "duke", "duke", "computing", "dead", "lover"],
+            ["Skip-Gram ACE Top 5", "consort", "iii", "hardware", "boy", "tells"],
+            ["Skip-Gram ACE Top 45-50", "baron", "earl", "files", "kid", "aunt"],
+            ["Skip-Gram ACE Top 45-50", "abbey", "holy", "information", "told", "maid"],
+            ["Skip-Gram ACE Top 45-50", "throne", "cardinal", "device", "revenge", "wife"],
+            ["Skip-Gram ACE Top 45-50", "marie", "aragon", "design", "magic", "lady"],
+            ["Skip-Gram ACE Top 45-50", "victoria", "princes", "compatible", "angry", "bride"]
+          ]
+        },
+        {
+          "table_id": "table_2",
+          "table_uid": "AdversarialContrastive_8_2",
+          "page": 8,
+          "evaluation": {
+            "expected_rows": 9,
+            "expected_cols": 3,
+            "columns": ["Model", "RW", "WS353"]
+          },
+          "rows": [
+            ["Skipgram Only NCE baseline", 18.90, 31.35],
+            ["Skipgram + Only ADV", 29.96, 58.05],
+            ["Skipgram + ACE", 32.71, 55.00],
+            ["Glove-50 (Recomputed based on(Pennington et al., 2014))", 34.02, 49.51],
+            ["Glove-100 (Recomputed based on (Pennington et al., 2014))", 36.64, 52.76],
+            ["Glove-300 (Recomputed based on(Pennington et al., 2014))", 41.18, 60.12],
+            ["Glove-50+ ACE", 35.60, 60.46],
+            ["Glove-100+ ACE", 36.51, 63.29],
+            ["Glove-300+ ACE", 40.57, 66.50]
+          ]
+        },
+        {
+          "table_id": "table_3",
+          "table_uid": "AdversarialContrastive_8_3",
+          "page": 8,
+          "evaluation": {
+            "expected_rows": 2,
+            "expected_cols": 2,
+            "columns": ["Method", "Accuracy (%)"]
+          },
+          "rows": [
+            ["order-embeddings", 90.6],
+            ["order-embeddings + Our ACE", 92.0]
+          ]
+        },
+        {
+          "table_id": "table_4",
+          "table_uid": "AdversarialContrastive_9_4",
+          "page": 9,
+          "evaluation": {
+            "expected_rows": 8,
+            "expected_cols": 3,
+            "columns": ["Method", "MRR", "hit@10"]
+          },
+          "rows": [
+            ["ACE(Ent+SC)", 0.792, 0.945],
+            ["ACE(Ent+SC+IW)", 0.768, 0.949],
+            ["NCE TransD (ours)", 0.527, 0.947],
+            ["NCE TransD ((Ji et al., 2015))", "-", 0.925],
+            ["KBGAN(DISTMULT) ((Cai and Wang, 2017))", 0.772, 0.948],
+            ["KBGAN(COMPLEX) ((Cai and Wang, 2017))", 0.779, 0.948],
+            ["Wang et al. ((Wang et al., 2018))", "-", 0.93],
+            ["COMPLEX ((Trouillon et al., 2016))", 0.941, 0.947]
+          ]
+        }
+      ]
+    },
+    {
+      "paper_title": "Binarized Knowledge Graph Embeddings",
+      "num_tables": 5,
+      "tables": [
+        {
+          "table_id": "table_1",
+          "table_uid": "BinarizedKGE_8_1",
+          "page": 8,
+          "evaluation": {
+            "expected_rows": 5,
+            "expected_cols": 5,
+            "columns": ["", "WN18", "FB15k", "WN18RR", "FB15k-237"]
+          },
+          "rows": [
+            ["N_e", 40943, 14951, 40559, 14505],
+            ["N_r", 18, 1345, 11, 237],
+            ["# training triples", 141442, 483142, 86835, 272115],
+            ["# validation triples", 5000, 50000, 3034, 17535],
+            ["# test triples", 5000, 59071, 3134, 20466]
+          ]
+        },
+        {
+          "table_id": "table_2",
+          "table_uid": "BinarizedKGE_8_2",
+          "page": 8,
+          "evaluation": {
+            "expected_rows": 11,
+            "expected_cols": 9,
+            "columns": ["Model", "WN18_MRR", "WN18_Hits@1", "WN18_Hits@3", "WN18_Hits@10", "FB15k_MRR", "FB15k_Hits@1", "FB15k_Hits@3", "FB15k_Hits@10"]
+          },
+          "rows": [
+            ["TransE*", "-", "-", "-", "-", "-", "-", "-", "-"],
+            ["DistMult*", "-", "-", "-", "-", "-", "-", "-", "-"],
+            ["HolE*", "-", "-", "-", "-", "-", "-", "-", "-"],
+            ["ComplEx*", "-", "-", "-", "-", "-", "-", "-", "-"],
+            ["ANALOGY**", "-", "-", "-", "-", "-", "-", 78.5, 85.4],
+            ["CP***", "-", "-", "-", "-", "-", "-", "-", "-"],
+            ["ConvE**", "-", "-", "-", 95.6, "-", "-", "-", "-"],
+            ["CP (D = 200)", "-", "-", "-", "-", "-", "-", "-", "-"],
+            ["B-CP (D = 200)", "-", "-", "-", "-", "-", "-", "-", "-"],
+            ["B-CP (D = 400)", "-", "-", "-", "-", "-", "-", "-", "-"],
+            ["B-CP (D = 300 x 3)", 94.6, 94.2, 95.0, "-", 72.9, 66.5, "-", "-"]
+          ]
+        },
+        {
+          "table_id": "table_3",
+          "table_uid": "BinarizedKGE_9_3",
+          "page": 9,
+          "evaluation": {
+            "expected_rows": 8,
+            "expected_cols": 9,
+            "columns": ["Model", "WN18RR_MRR", "WN18RR_Hits@1", "WN18RR_Hits@3", "WN18RR_Hits@10", "FB15k-237_MRR", "FB15k-237_Hits@1", "FB15k-237_Hits@3", "FB15k-237_Hits@10"]
+          },
+          "rows": [
+            ["DistMult*", 43.0, 39.0, 44.0, 49.0, 24.1, 15.5, 26.3, 41.9],
+            ["ComplEx*", 44.0, 41.0, 46.0, 51.0, 24.7, 15.8, 27.5, 42.8],
+            ["R-GCN*", "-", "-", "-", "-", 24.8, 15.3, 25.8, 41.7],
+            ["ConvE*", 43.0, 40.0, 44.0, 52.0, 32.5, 23.7, 35.6, 50.1],
+            ["CP (D = 200)", 44.0, 42.0, 46.0, 51.0, 29.0, 19.8, 32.2, 47.9],
+            ["B-CP (D = 200)", 45.0, 43.0, 46.0, 50.0, 27.8, 19.4, 30.4, 44.6],
+            ["B-CP (D = 400)", 45.0, 43.0, 46.0, 52.0, 29.2, 20.8, 31.8, 46.1],
+            ["B-CP (D = 300 x 3)", 48.0, 45.0, 49.0, 53.0, 30.3, 21.4, 33.3, 48.2]
+          ]
+        },
+        {
+          "table_id": "table_4",
+          "table_uid": "BinarizedKGE_10_4",
+          "page": 10,
+          "evaluation": {
+            "expected_rows": 15,
+            "expected_cols": 5,
+            "columns": ["Model", "Bits per entity", "Bits per relation", "MRR_WN18RR", "MRR_FB15k-237"]
+          },
+          "rows": [
+            ["DistMult* (D = 200)", 6400, 6400, 43.0, 24.1],
+            ["ComplEx* (D = 200)", 12800, 12800, 44.0, 24.7],
+            ["ConvE* (D = 200)", 6400, 6400, 43.0, 32.5],
+            ["CP (D = 15)", 960, 480, 40.0, 22.0],
+            ["CP (D = 50)", 3200, 1600, 43.0, 24.8],
+            ["CP (D = 200)", 12800, 6400, 44.0, 29.0],
+            ["CP (D = 500)", 32000, 16000, 43.0, 29.2],
+            ["VQ-CP (D = 200)", 400, 200, 36.0, 8.7],
+            ["VQ-CP (D = 500)", 1000, 500, 36.0, 8.3],
+            ["B-CP (D = 100)", 200, 100, 38.0, 23.2],
+            ["B-CP (D = 200)", 400, 200, 45.0, 27.8],
+            ["B-CP (D = 300)", 600, 300, 46.0, 29.0],
+            ["B-CP (D = 400)", 800, 400, 45.0, 29.2],
+            ["B-CP (D = 500)", 1000, 500, 45.0, 29.1],
+            ["B-CP (D = 300 x 3)", 1800, 900, 48.0, 30.3]
+          ]
+        },
+        {
+          "table_id": "table_5",
+          "table_uid": "BinarizedKGE_12_5",
+          "page": 12,
+          "evaluation": {
+            "expected_rows": 3,
+            "expected_cols": 3,
+            "columns": ["Model", "Accuracy", "Model size"]
+          },
+          "rows": [
+            ["CP (D = 15)", 50.3, "0.4GB"],
+            ["CP (D = 200)", 89.2, "4.8GB"],
+            ["B-CP (D = 400)", 92.8, "0.3GB"]
+          ]
+        }
+      ]
+    },
+    {
+      "paper_title": "HyperKG- Hyperbolic Knowledge Graph Embeddings for Knowledge Base Completion",
+      "num_tables": 4,
+      "tables": [
+        {
+          "table_id": "table_1",
+          "table_uid": "HyperKG_6_1",
+          "page": 6,
+          "evaluation": {
+            "expected_rows": 4,
+            "expected_cols": 6,
+            "columns": ["Dataset", "E", "R", "#Train", "#Valid", "#Test"]
+          },
+          "rows": [
+            ["WN18RR", 40943, 11, 86835, 3034, 3134],
+            ["FB15k-237", 14541, 237, 272115, 17535, 20466],
+            ["WD", 418, 2, 550, 25, 25],
+            ["WD++", 763, 2, 1120, 40, 40]
+          ]
+        },
+        {
+          "table_id": "table_2",
+          "table_uid": "HyperKG_7_2",
+          "page": 7,
+          "evaluation": {
+            "expected_rows": 6,
+            "expected_cols": 6,
+            "columns": ["Method", "Type", "WN18RR_MRR", "WN18RR_H@10", "FB15k-237_MRR", "FB15k-237_H@10"]
+          },
+          "rows": [
+            ["DISTMULT (Yang et al. 2015) [*]", "Bilinear", 0.43, 49, 0.24, 41],
+            ["ComplEx (Trouillon et al. 2016) [*]", "Bilinear", 0.44, 51, 0.24, 42],
+            ["TransE (Bordes et al. 2013) [*]", "Translational", 0.22, 50, 0.29, 46],
+            ["HyperKG (Möbius addition)", "Translational", 0.30, 44, 0.19, 32],
+            ["HyperKG (no regularisation)", "Translational", 0.30, 46, 0.25, 41],
+            ["HyperKG", "Translational", 0.41, 50, 0.28, 45]
+          ]
+        },
+        {
+          "table_id": "table_3",
+          "table_uid": "HyperKG_7_3",
+          "page": 7,
+          "evaluation": {
+            "expected_rows": 3,
+            "expected_cols": 5,
+            "columns": ["Method", "WD_MRR", "WD_H@10", "WD++_MRR", "WD++_H@10"]
+          },
+          "rows": [
+            ["ComplEx", 0.92, 98, 0.81, 92],
+            ["TransE", 0.88, 96, 0.89, 98],
+            ["HyperKG", 0.98, 98, 0.88, 97]
+          ]
+        },
+        {
+          "table_id": "table_4",
+          "table_uid": "HyperKG_9_4",
+          "page": 9,
+          "evaluation": {
+            "expected_rows": 8,
+            "expected_cols": 9,
+            "columns": ["Dataset", "Model", "#negs_E", "#negs_R", "η", "λ", "n", "γ", "β"]
+          },
+          "rows": [
+            ["WN18RR", "HyperKG", 10, 0, 0.01, 0.8, 100, 1.0, "[n/2]"],
+            ["WN18RR", "HyperKG (Möbius addition)", 10, 0, 0.01, "-", 100, 1.0, "[n/2]"],
+            ["WN18RR", "HyperKG (no regularisation)", 10, 0, 0.01, 0.0, 100, 1.0, "[n/2]"],
+            ["FB15k-237", "HyperKG", 5, 0, 0.01, 0.2, 100, 0.5, "[n/2]"],
+            ["FB15k-237", "HyperKG (Möbius addition)", 5, 0, 0.01, "-", 100, 0.5, "[n/2]"],
+            ["FB15k-237", "HyperKG (no regularisation)", 5, 0, 0.01, 0.0, 100, 0.5, "[n/2]"],
+            ["WD", "HyperKG", 1, 1, 0.8, 0, 100, 7, "[n/2]"],
+            ["WD++", "HyperKG", 1, 1, 0.1, 0, 100, 7, "[n/2]"]
+          ]
+        }
+      ]
+    },
+    {
+      "paper_title": "Seq2RDF- An end-to-end application for deriving Triples from Natural Language Text",
+      "num_tables": 2,
+      "tables": [
+        {
+          "table_id": "table_1",
+          "table_uid": "Seq2RDF_3_1",
+          "page": 3,
+          "evaluation": {
+            "expected_rows": 2,
+            "expected_cols": 2,
+            "columns": ["", ""]
+          },
+          "rows": [
+            ["Text", "Berlin is the capital city of Germany."],
+            ["Triple", "dbr:Germany dbo:capital dbr:Berlin"]
+          ]
+        },
+        {
+          "table_id": "table_2",
+          "table_uid": "Seq2RDF_4_2",
+          "page": 4,
+          "evaluation": {
+            "expected_rows": 5,
+            "expected_cols": 4,
+            "columns": ["Metric", "NYT", "ADE", "Wiki-DBpedia"]
+          },
+          "rows": [
+            ["EL+Lexical", 36.8, 61.4, 37.8],
+            ["EL+LSTM", 58.7, 70.3, 65.5],
+            ["EL+GRU", 59.8, 73.2, 67.0],
+            ["Seq2Seq", 64.2, 73.4, 73.5],
+            ["S+A+W+G", 71.4, 79.5, 84.3]
+          ]
+        }
+      ]
+    }
+  ]
+}
