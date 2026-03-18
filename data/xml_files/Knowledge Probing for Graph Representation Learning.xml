@@ -1,0 +1,1246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main" xml:id="_zjGuB8x">Knowledge Probing for Graph Representation Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-08-07">7 Aug 2024</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mingyu</forename><surname>Zhao</surname></persName>
+							<email>my.zhao1@siat.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xingyu</forename><surname>Huang</surname></persName>
+							<email>xingyuhuang1998@outlook.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ziyu</forename><surname>Lyu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yanlin</forename><surname>Wang</surname></persName>
+							<email>yanlin-wang@outlook.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Lixin</forename><surname>Cui</surname></persName>
+							<email>cuilixin@cufe.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Lu</forename><surname>Bai</surname></persName>
+							<email>bailu@bnu.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Cyber Science and Technology</orgName>
+								<orgName type="institution">Shenzhen Campus of Sun Yat-sen University</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Advanced Technology</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">University of Chinese Academy of Sciences. Shenzhen</orgName>
+								<address>
+									<settlement>Guangdong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">School of Cyber Science and Technology</orgName>
+								<orgName type="institution">Shenzhen Campus of Sun Yat-sen University</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Institute of Advanced Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences. Shenzhen</orgName>
+								<address>
+									<settlement>Guangdong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">School of Cyber Science and Technology</orgName>
+								<orgName type="institution">Sun Yat-sen University Shenzhen</orgName>
+								<address>
+									<settlement>Guangdong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Yanlin Wang</orgName>
+								<orgName type="institution">Sun Yat-sen University Guangzhou</orgName>
+								<address>
+									<settlement>Guangdong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">Lixin Cui</orgName>
+								<orgName type="institution">Central University of Finance and Economics Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="department">Lu Bai</orgName>
+								<orgName type="institution">Beijing Normal University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff8">
+								<orgName type="department">Conference acronym &apos;XX</orgName>
+								<address>
+									<postCode>03-05 2018</postCode>
+									<settlement>June</settlement>
+									<region>Woodstock NY</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main" xml:id="_Y6q6wrz">Knowledge Probing for Graph Representation Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2024-08-07">7 Aug 2024</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3DDCB42E5D9EE07B9D7829B751F8F183</idno>
+					<idno type="arXiv">arXiv:2408.03877v1[cs.LG]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-02-22T20:51+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=true, generateTeiCoordinates=[], sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term xml:id="_MdWyR7F">Graph Representation Learning</term>
+					<term xml:id="_tD9fGAp">Knowledge Probing</term>
+					<term xml:id="_R64H7Fk">Evaluation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="_XZ5fWRz"><p xml:id="_hJE3F94">Graph learning methods have been extensively applied in diverse application areas. However, what kind of inherent graph properties e.g. graph proximity, graph structural information has been encoded into graph representation learning for downstream tasks is still under-explored. In this paper, we propose a novel graph probing framework (GraphProbe) to investigate and interpret whether the family of graph learning methods has encoded different levels of knowledge in graph representation learning. Based on the intrinsic properties of graphs, we design three probes to systematically investigate the graph representation learning process from different perspectives, respectively the node-wise level, the path-wise level, and the structural level. We construct a thorough evaluation benchmark with nine representative graph learning methods from random walk based approaches, basic graph neural networks and self-supervised graph methods, and probe them on six benchmark datasets for node classification, link prediction and graph classification. The experimental evaluation verify that GraphProbe can estimate the capability of graph representation learning. Remaking results have been concluded: GCN and WeightedGCN methods are relatively versatile methods achieving better results with respect to different tasks.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1" xml:id="_ZvcbNNG">INTRODUCTION</head><p xml:id="_bUs5DwT">Graphs are a prevalent data structure and have been broadly in multiple fields <ref type="bibr" target="#b15">[16]</ref>. For example, social networks <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b22">23]</ref>, molecular graph structures, and biological protein networks are universally modeled as graphs <ref type="bibr" target="#b4">[5]</ref>. In recent decades, a lot of graph representations learning methods have been devised, ranging from matrix factorization methods <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b5">6]</ref>, random-walk based algorithms <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b23">24]</ref>, to the popular family of graph neural networks (GNN) <ref type="bibr" target="#b9">[10,</ref><ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b32">33,</ref><ref type="bibr" target="#b34">35,</ref><ref type="bibr" target="#b38">39]</ref>. The graph representation learning methods have demonstrated different performance on the classical downstream tasks, e.g. node classification, link prediction and graph classification. And the diverse graph representation learning methods have been extensively applied in multiple application areas, e.g. social network analysis <ref type="bibr" target="#b12">[13,</ref><ref type="bibr" target="#b22">23]</ref>, recommender system <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b17">18,</ref><ref type="bibr" target="#b28">29]</ref>, and protein classification <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b8">9]</ref>.</p><p xml:id="_9ug96WF">Those graph representation learning methods tend to learn a mapping which embed nodes or (sub)graphs into a low-dimensional vectors by encoding relational information and structural information, and the learned embeddings are used for further downstream tasks <ref type="bibr" target="#b26">[27]</ref>. However, there is no study to investigate and explain what kinds of graph properties have been actually coded in the learned embedding through different graph representation learning methods. It lacks a systematical evaluation to probe whether the graph inherent properties (e.g. graph proximity, graph structural information) are encoded into the learned node and graph representations with the popular but black-box graph representation learning methods.</p><p xml:id="_yFEvsRt">In this paper, we devise a systematic graph probing benchmark (GraphProbe) to investigate what types of knowledge are encoded into graph representation learning for 9 representative graph learning methods from diverse categories including random walk based methods, classical graph neural networks like graph convolution networks (GCN) and graph attention networks (GAT), unsupervised graph learning methods and weighted graph learning methods. We devise three types of probes at three different levels, respectively the node-wise , path-wise and structure-wise levels. First, the node-wise probe is proposed to investigate whether the node-wise influences are encoded in graph representation learning, and two intrinsic node centrality metrics (e.g. eigenvector centrality and betweenness centrality) are adopted to measure node-wise influences. Second, a distance probe is designed to explore whether the path-wise information (distance between two nodes) can be embedded into representation learning of nodes, based on the shortest paths of a pair of nodes. Third, we leverage Weisfeiler-Lehman kernel algorithm <ref type="bibr" target="#b30">[31]</ref> as structural evaluation metrics and devise a parameter-free structural probe to interpret whether the structural information is enoverviecoded into the learned graph representations. We conduct extensive experiments to probe the performance of graph representation learning on 6 benchmark datasets from diverse domains for three traditional downstream tasks. Our systematic evaluation has concluded some remarked results. The main contributions of this paper are summarized as follows:</p><p xml:id="_PhQ9fad">• To our best knowledge, our proposed method is the first time to explore knowledge probing on various types of graph learning models across all classical downstream tasks. A systematic graph probing framework is novelly introduced, in which three types of probes based on graph intrinsic properties are devised respectively from the node-wise, pathwise and structure-wise levels. • An evaluation benchmark for graph representation learning on node classification, link prediction and graph classification, broadly including nine representative graph learning models from four different categories and six benchmarks datasets from three domains including citation networks, social networks and Bio-chemical networks. • Our experimental results conclude remarked findings. Especially, our devised knowledge probes are verified to reflect the capability of graph representation learning, and have competitive and consistent results with the traditional evaluation metrics such as accuracy, AUC and F1 scores.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2" xml:id="_sAaug2e">RELATED WORK 2.1 Graph Representation Learning</head><p xml:id="_k2UEFDq">Graph representation Learning methods map structural graph data into low-dimensional dense vectors, by capturing the graph topology structure, node-to-node relationships and other relevant information. Early methods for learning representations for nodes on graph-structured data were mainly matrix factorization methods based on dimension reduction <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b5">6]</ref>, and random walk approaches based on random walk statistics (e.g. DeepWalk <ref type="bibr" target="#b23">[24]</ref> and Node2Vec <ref type="bibr" target="#b13">[14]</ref>). For example, DeepWalk <ref type="bibr" target="#b23">[24]</ref> was the first to input random walk paths into a skip-gram model to learn graph node embeddings. Node2vec <ref type="bibr" target="#b13">[14]</ref> combined both breadth-first and depth-first walks to approximate with negative sampling. However, matrix factorization and random walk methods are shallow embedding approaches <ref type="bibr" target="#b15">[16]</ref> and they cannot capture structural similarity. In recent decades, graph neural networks have been extensively proposed for graph representation learning <ref type="bibr" target="#b15">[16]</ref>. The family of graph neural networks rely on the neighborhood aggregation strategy, and solve the main limitations of the direct encoding methods like matrix factorization and random walk approaches. For example, Kipf et al. <ref type="bibr" target="#b21">[22]</ref> proposed a scalable approach (Graph convolution Network, GCN) for semi-supervised learning on graph-structured data, by utilizing an efficient layer-wise propagation rule that is based on a first-order approximation of spectral convolutions on graphs. GraphSAGE <ref type="bibr" target="#b14">[15]</ref> was a general inductive graph representation learning framework, and learned a function that generates embeddings by sampling and leveraged node feature information to efficiently generate node embeddings for previously unseen data. In addition, some unsupervised graph learning frameworks have been devised</p><p xml:id="_qcTQUQK">. For example, Variational Graph Auto-Encoders (VGAE) proposed an unsupervised learning framework based on the variational auto-encoder. Based on the recent contrastive learning techniques, You et al. [36] proposed a graph contrastive learning framework for unsupervised representation learning of graph data and explored four types of graph augmentations to incorporate various priors. Although extensive graph representation learning methods have been proposed and worked on the traditional downstream tasks, no studies have investigated whether the inherent graph structural and topological information has been encoded into graph representation learning. In this paper, we propose a graph knowledge probing framework to probe the latent knowledge within graph representation learning, and answer what kind of graph information have been encoded when performing downstream tasks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2" xml:id="_rxYz3Vc">Knowledge Probe</head><p xml:id="_CRz6tWk">Recently, knowledge probes have been proposed to probe knowledge in pre-trained language models (PLMs) such as ELMo <ref type="bibr" target="#b24">[25]</ref> and BERT <ref type="bibr" target="#b10">[11]</ref>. Probing methods are designed to understand and interpret what knowledge have been learned in the pre-trained language models, and they probe specific knowledge including linguistic knowledge Conneau et al. <ref type="bibr" target="#b6">[7]</ref>, Hewitt and Manning <ref type="bibr" target="#b18">[19]</ref>, Hou and Sachan <ref type="bibr" target="#b19">[20]</ref>, Shi et al. <ref type="bibr" target="#b31">[32]</ref>, and factual knowledge Petroni et al. <ref type="bibr" target="#b25">[26]</ref>. For example, Hewitt et al. <ref type="bibr" target="#b18">[19]</ref> proposed a structural probe to evaluate whether syntax trees have been encoded in a linear transformation of a neural network's word representation space. The probing results demonstrated that the transforms exist for the two PLMs ELMo and BERT. Petroni et al. proposed a LAMA benchmark to probe factual knowledge in PLMs using promt-based retrieval. The most similar work is [2] in which a probing framework has been proposed for quantify the chemical knowledge and molecular properties in graph representations for graph based neural networks. Different from previous studies, we propose a holistic graph probing benchmark to understand and interpret whether different types of inherent graph properties have been encoded into graph representation learning, from the node-wise, path-wise and structural-wise levels. The studied graph models covering a broad range of graph learning methods, ranging from random walk based methods to graph neural networks. In addition, we benchmark our knowledge probes on three classical downstream tasks with nine representative graph learning methods.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3" xml:id="_aQDywQm">THE GRAPH EMBEDDING PROBES</head><p xml:id="_bBKWQD9">In order to investigate whether the inherent graph properties have been encoded into graph representation learning and reveal why different graph learning methods have different performance on downstream tasks, we we propose a knowledge probing framework (GraphProbe) to probe graph representation learning, and devise three knowledge probes from different levels, respectively node-wise, path-wise, and structure-wise levels. Figure <ref type="figure" target="#fig_0">1</ref> shows the overall architecture of our proposed GraphProbe. From the node-wise level, we devise the node centrality probes to investigate whether the influences of node properties and the local neighbourhood information can be encoded into representation learning of nodes for downstream tasks such as node classification and link prediction. From the path-wise level, we leverage the distance metrics of paths between two nodes to explore whether the path-wise topological information can be encoded into graph representation learning. From the structure-wise level, a graph structural probe is devised to investigate whether the structural information e.g. sub-graph information is encoded into graph representation learning when performing the classical graph classification task. In the following parts, we firstly have a formal problem definition for the knowledge probing on graph representation leaning and then illustrate different probes in details.</p><p xml:id="_5xAeHam">Problem Definition. We give a formal definition for the knowledge probing problem on graph representation learning. Given the constructed graph data 𝐺 = {𝑉 , 𝐸}, 𝑉 is the set of nodes in 𝐺, and 𝐸 is the set of the edges. h 𝑖 represents the feature representation of each node 𝑣 𝑖 , and the dimension of the feature representation is 𝑑. The node representation X can be randomly initialized or initialized with meta features. With a graph-based model 𝑀 𝑘 , we can obtain the learned node feature representation h 𝑘 1:|𝑉 | = 𝑀 (𝐺, X, 𝜃 𝑘 ). The graph probe 𝑃 is a function to estimate whether the learned representations encode the specified properties I, as defined in Equation <ref type="formula" target="#formula_0">1</ref>.</p><formula xml:id="formula_0">𝑆 𝑘 = 𝑃 (h 𝑘 1:|𝑉 | , 𝐼,𝑇 ).<label>(1)</label></formula><p xml:id="_ER9GK75">in which 𝐼 denotes the investigated metrics used in the devised probes, and 𝑇 denotes the applied downstream task. The probe score 𝑆 𝑘 estimates how well the learned representations from the graph-based model 𝑀 𝑘 encode information for the downstream task 𝑇 with respect to 𝐼 . In the following sections, we will describe the different probes in details.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1" xml:id="_agETyPT">The Node Centrality Probe</head><p xml:id="_cHC7YTg">From the node-wise perspective, we leverage the node centrality properties of graph data as the estimated metrics 𝐼 because the node centrality reflects the influence and importance of a node and to the extent captures the neighborhood information of a node <ref type="bibr" target="#b7">[8]</ref>. We devise a node centrality probe to investigate whether the learned representations have encoded the node centrality when performing classical downstream tasks, e.g, node classification and link prediction.</p><p xml:id="_NfU2N6a">We devise a supervised probe to compare the node centrality of two different nodes 𝑣 𝑖 and 𝑣 𝑗 . We calculate the node centrality values 𝐶 (𝑣 𝑖 ) and 𝐶 (𝑣 𝑗 ) based on some graph node centrality metrics (e.g. eigenvector centrality and betweeness centrality), and map the pair-wise centrality comparison into a binary value 𝑙 𝑖 𝑗 as in Equation <ref type="formula" target="#formula_1">2</ref>. The binary value 𝑙 is used as the centrality label to train the node centrality probe 𝑃 𝑐 (h 𝑘 1:|𝑉 | , 𝑙,𝑇 ).</p><formula xml:id="formula_1">𝑙 𝑖 𝑗 = 1 𝐶 (𝑣 𝑖 ) ≥ 𝐶 (𝑣 𝑗 ) 0 𝐶 (𝑣 𝑖 ) &lt; 𝐶 (𝑣 𝑗 ).<label>(2)</label></formula><p xml:id="_Q5Q4AFB">Following the probe architecture in Pimentel et al. <ref type="bibr" target="#b26">[27]</ref> which has been designed to reduce the information loss, we adopt a simple learning network two-layer perception (MLP) <ref type="foot" target="#foot_0">1</ref> to learn the supervised probe:</p><formula xml:id="formula_2">𝑃 𝑘 𝑐 (h 𝑘 𝑖 , h 𝑘 𝑗 ) = 𝑀𝐿𝑃 (h 𝑘 𝑖 ∥h 𝑘 𝑗 )</formula><p xml:id="_4QxmVcM">, and output the probability 𝑝 that the previous node 𝑣 𝑖 has a larger centrality than node 𝑣 𝑗 . Cross-entropy is used as the loss function to train the supervised probe. Finally, the probe scores of the node centrality probe 𝑆 𝑘 𝑐 for model 𝑀 𝑘 are the evaluation measure scores to measure the prediction from the probe based on the learned representations of the model 𝑀 𝑘 as follows:</p><formula xml:id="formula_3">𝑆 𝑘 𝑐 = 𝐸𝑣𝑎𝑙 (𝑃 𝑘 𝑐 (h 𝑘 𝑖 , h 𝑘 𝑗 ), 𝑙 𝑖 𝑗 ).<label>(3)</label></formula><p xml:id="_Wsd3z9N">Classical evaluation metrics can be used for 𝐸𝑣𝑎𝑙(e.g. F1-score, AUC, Accuracy). We report results with Accuracy and F1-score <ref type="bibr" target="#b27">[28]</ref> in experiment section. A higher probe score 𝑆 𝑘 𝑐 means the graph-based model 𝑀 𝑘 has greater ability to encode centrality information into the node representations. We explore two node centrality metrics for 𝐶 (•), respectively eigenvector centrality <ref type="bibr" target="#b3">[4]</ref> and betweeness centrality <ref type="bibr" target="#b29">[30]</ref>.</p><p xml:id="_mPJs8mv">Eigenvector Centrality. Eigenvector centrality <ref type="bibr" target="#b3">[4]</ref> measures the importance of nodes in a network by exploiting adjacency and eigenvector matrices. Eigenvector centrality is a unique measure that satisfies certain natural principles for a ranking algorithm <ref type="bibr" target="#b2">[3]</ref>. And Wang et al. <ref type="bibr" target="#b33">[34]</ref> show that several recommendation algorithms based on node importance have been enhanced with the introduction of eigenvector centrality. A ∈ R 𝑛×𝑛 is the adjacency matrix such that 𝑎 𝑖 𝑗 = 1 if node 𝑖 is connected to node 𝑗 and 𝑎 𝑖 𝑗 = 0 if not. The formal definition of the eigenvalue 𝜆 and the eigenvector x is 𝐴x = 𝜆x And the principal eigenvector</p><formula xml:id="formula_4">x 𝑝 = (𝑥 𝑝 1 , • • • , 𝑥 𝑝 𝑛 )</formula><p xml:id="_SUH3CTN">is the eigenvector corresponding to the eigenvalue with the largest modulus. The eigenvector centrality of node 𝑖 can be computed as in Equation <ref type="formula" target="#formula_5">4</ref>:</p><formula xml:id="formula_5">𝐸𝐶 (𝑖) = 𝑥 𝑝 𝑖 , 𝐸𝐶 (𝑛 𝑖 ) = 1 𝜆 ∑︁ 𝑛 𝑗 ∈𝑁 (𝑛 𝑖 ) 𝐸𝐶 (𝑛 𝑗 ), 𝑥 𝑖 = 1 𝜆 𝐴 𝑇 𝑖,𝑗 𝑥 𝑗 . (<label>4</label></formula><formula xml:id="formula_6">)</formula><p xml:id="_QMssMNa">where 𝐸𝐶 (𝑛 𝑖 ), 𝐸𝐶 (𝑛 𝑗 ) is the amount of influence that node 𝑛 𝑖 , 𝑛 𝑗 carries, 𝑁 (𝑛 𝑖 ) is the set of direct neighbors of node 𝑛 𝑖 , and 𝜆 is a constant.</p><p xml:id="_SuBjTJP">Betweenness Centrality. In graph theory, betweenness centrality <ref type="bibr" target="#b11">[12]</ref> is a measure of centrality in a graph. For every pair of vertices in a connected graph, there exists at least one shortest path between the vertices such that either the number of edges that the path passes through (for unweighted graphs). The betweenness centrality for each vertex is the number of these shortest paths that pass through the vertex. It applies to a wide range of problems in network theory, including problems related to social networks, biology, transport and scientific cooperation <ref type="bibr" target="#b11">[12]</ref>. The betweeness centrality is defined as in Equation <ref type="formula" target="#formula_7">5</ref>:</p><formula xml:id="formula_7">𝐵𝐶 (𝑣 𝑖 ) = ∑︁ 𝑣 𝑖 ≠𝑣 𝑗 ≠𝑣 𝑡 ∈𝑉 𝜎 𝑗𝑡 (𝑣 𝑖 ) 𝜎 𝑗𝑡 . (<label>5</label></formula><formula xml:id="formula_8">)</formula><p xml:id="_AtYZEAD">𝜎 𝑗𝑡 is number of the shortest paths between node 𝑣 𝑗 and 𝑣 𝑡 , and 𝜎 𝑗𝑡 (𝑣 𝑖 ) is the number of shortest path passing through node 𝑣 𝑖 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2" xml:id="_WaMAuVW">The Distance Probe</head><p xml:id="_ZxDYAhy">In graph data, the distance between two nodes can be estimated by the shortest path. From the path-wise perspective, we devise the distance probe to investigate whether the node representations encode the path-level distance information of graph structure. Following Hewitt and Manning <ref type="bibr" target="#b18">[19]</ref>, we devise the distance probe 𝑃 𝑑 as to estimate the differences between the grounded shortest paths of two nodes and the vector distance of two nodes' representations. Firstly, we define a family of inner products, h 𝑇 𝑊 h parameterized by any positive semi-definite, the symmetric matrix 𝑊 ∈ 𝑆 𝑚×𝑚 + . Equivalently, we can view this as a linear transformation 𝐵 ∈ R 𝑘 ×𝑚 , such that 𝑊 = 𝐵 𝑇 𝐵. The inner product h 𝑇 𝑊 h is then equivalent to (𝐵h) 𝑇 (𝐵h), the norm of h once transformed by 𝐵. Every inner product corresponds to a distance metric. Therefore, the definition of the distance between two nodes' embedding h 𝑘 𝑖 , h 𝑘 𝑗 is:</p><formula xml:id="formula_9">𝑑 𝐵 (h 𝑘 𝑖 , h 𝑘 𝑗 ) 2 = (𝐵(h 𝑘 𝑖 -h 𝑘 𝑗 )) 𝑇 (𝐵(h 𝑘 𝑖 -h 𝑘 𝑗 )).<label>(6)</label></formula><p xml:id="_9vkJtQq">The distance probe 𝑃 𝑑 is trained to recreate the graph distance of node pairs in the training graph, and optimized through gradient descent in Equation <ref type="formula" target="#formula_10">7</ref>. The parameters of our probe are exactly the matrix 𝐵, which we train to recreate the graph distance of node pairs in the training graph. Specifically, we approximate through gradient descent:</p><formula xml:id="formula_10">𝑚𝑖𝑛 𝐵 ∑︁ 𝑖,𝑗 ∈𝐺 𝑑 𝐺 (𝑛 𝑖 , 𝑛 𝑗 ) -𝑑 𝐵 (h 𝑖 , h 𝑗 ) 2 . (<label>7</label></formula><formula xml:id="formula_11">)</formula><p xml:id="_2qAHNTZ">where 𝑑 𝐺 (𝑛 𝑖 , 𝑛 𝑗 ) denotes the distance of the shortest path of two nodes 𝑣 𝑖 , 𝑣 𝑗 in 𝐺<ref type="foot" target="#foot_1">foot_1</ref> .</p><formula xml:id="formula_12">𝑆 𝑘 𝑑 = 1 𝑖,𝑗 ∈𝐺 𝑑 𝐺 (𝑛 𝑖 , 𝑛 𝑗 ) -𝑑 𝐵 (h 𝑘 𝑖 , h 𝑘 𝑗 ) 2 . (<label>8</label></formula><formula xml:id="formula_13">)</formula><p xml:id="_frWA7Qu">The probe score 𝑆 𝑘 𝑑 represents the performance of the probe to recreate the graph distance. Therefore, Bigger 𝑆 𝑘 𝑑 indicates better performance.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3" xml:id="_xTdDuWv">The Graph Structural Probe</head><p xml:id="_rECymDJ">We propose a structural probe to estimate whether the structural information has been encoded into the embedding of the entire graph. The graph representation H 𝑘 is constructed by aggregating the node representations through the readout operation:</p><formula xml:id="formula_14">H 𝑘 = 𝑟𝑒𝑎𝑑𝑜𝑢𝑡 (𝐺, h 𝑘 1:|𝑉 | ).<label>(9)</label></formula><p xml:id="_5YWPZQx">The readout operation can obtain graph-level representation, e.g. sum, mean and max pooling 3 . We report the results with sum operation.</p><p xml:id="_D7Jz9hS">In order to extract the inherent structural information of graphs, we use the Weisfeiler-Lehman(WL) isomorphism test <ref type="bibr" target="#b30">[31]</ref> as evaluation metrics to measure the similarity between graph structures. The WL subtree kernel algorithm collects the information of neighbor nodes, and use hash to aggregate them to generate the label of the node in one iteration.</p><p xml:id="_3sRrQ9Y">We devise a structural probe to explore whether these graph structural information are preserved in the graph embedding representation H 𝑘 . The bottom-right figure (c) in Figure <ref type="figure" target="#fig_0">1</ref> shows the workflow of the structural probe. The structural probe is to estimate whether the graph embedding has encoded the graph structural information e.g. the Weisfeiler-Lehman(WL) isomorphism test information. For the input graphs {𝐺 1 , 𝐺 2 , •, 𝐺 𝑛 }, we obtain the graph representation <ref type="foot" target="#foot_3">4</ref> , and compute the pair-wise similarity of graph embeddings. Cosine similarity is used, and obtain the pairwise similarity of graph representations 𝑆 𝑘 𝑐𝑜𝑠 (𝐺 𝑚 , 𝐺 𝑛 ) for a pair of graphs 𝐺 𝑚 and 𝐺 𝑛 :</p><formula xml:id="formula_15">𝐷 = {H 𝑘 1 , H 𝑘 2 , • • • , H 𝑘 𝑛 } from the graph-based model</formula><formula xml:id="formula_16">𝑆 𝑘 𝑐𝑜𝑠 (𝐺 𝑚 , 𝐺 𝑛 ) = H 𝑘 𝐺 𝑚 • H 𝑘 𝐺 𝑛 ∥H 𝑘 𝐺 𝑚 ∥∥H 𝑘 𝐺 𝑛 ∥ .</formula><p xml:id="_dcXxquv">And we also compute the pair-wise similarity of the WL outputs for each pair of graphs. As the output of the WL algorithm is a set of each node labels, we use Jaccard similarity to compute the structural-level graph similarity 𝑆 𝑘 𝑠𝑡𝑟 (𝐺 𝑚 , 𝐺 𝑛 ) for a pair of graphs 𝐺 𝑚 and 𝐺 𝑛 :</p><formula xml:id="formula_17">𝑆 𝑘 𝑠𝑡𝑟 (𝐺 𝑚 , 𝐺 𝑛 ) = 𝐽𝑎𝑐𝑐𝑎𝑟𝑑 (𝑊 𝐿(𝐺 𝑚 ),𝑊 𝐿(𝐺 𝑛 )).</formula><p xml:id="_D2nDKwM">𝑊 𝐿(𝐺 𝑚 ) is the graph label output from the WL sub-tree kernel algorithm. Based on the pair-wise similarity scores, we can have the pair-wise similarity matrix from the graph embedding level S 𝐺𝐸 and the structural level S 𝑠𝑡𝑟 . Spearman correlation coefficient is used to estimate the structural scores 𝑆 𝑘 𝑠 , by comparing the two similarity matrixes, computed as in Equation <ref type="formula" target="#formula_18">10</ref>.</p><formula xml:id="formula_18">𝑆 𝑘 𝑠 = 1 𝑛 ∑︁ (𝐺 𝑚 ∈𝐷 1 - 6 𝐺𝑛∈𝐷 𝜏 2 𝑚𝑛 𝑛(𝑛 2 -1) . (<label>10</label></formula><formula xml:id="formula_19">)</formula><p xml:id="_4xjUVHk">𝜏 𝑚𝑛 is the ordering distance between the ranked 𝑅(S 𝐺𝐸 𝑚 ) and the ranked 𝑅(S 𝑠𝑡𝑟 𝑚 ). 𝑅(•) is ranking operation on an input array. A higher structure probe score 𝑆 𝑘 𝑠 indicates that the graph representations have the greater ability to capture the graph structural information.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4" xml:id="_YnzQC78">EXPERIMENT 4.1 Representative Graph Learning Methods</head><p xml:id="_mPR6YVJ">In order to evaluate our probing methods on different categories, we use some representative graph learning methods for experimental evaluation and report their results in Section 5 <ref type="foot" target="#foot_4">5</ref> . In general, we select graph learning methods from 4 categories, including random walk based graph embedding methods (e.g. Node2Vec <ref type="bibr" target="#b13">[14]</ref> and DeepWalk <ref type="bibr" target="#b23">[24]</ref>), basic graph neural networks (e.g. GCN <ref type="bibr" target="#b21">[22]</ref> and GAT <ref type="bibr" target="#b32">[33]</ref>), self-supervised graph learning methods (e.g. GCL <ref type="bibr" target="#b35">[36]</ref> and VGAE <ref type="bibr" target="#b20">[21]</ref>) and weighted graph learning methods (WGCN <ref type="bibr" target="#b37">[38]</ref>). In addition, we add the control task, i.e. a naive two-layer MLP method to avoid potential performance bias due to the learning performance of our probes <ref type="foot" target="#foot_5">6</ref> .</p><p xml:id="_bzFqnx3">• DeepWalk <ref type="bibr" target="#b23">[24]</ref>: is one of random walk based graph embedding method. It adopts the local information obtained from truncated random walks to learn the latent representation of nodes via skip-Gram with hierarchical softmax. • Node2Vec <ref type="bibr" target="#b13">[14]</ref>: is also a classic graph embedding method.</p><p xml:id="_Y8jn4tV">• Chebyshev <ref type="bibr" target="#b9">[10]</ref>: generalizes convolutional neural networks (CNNs) in the context of spectral graph theory and design fast localized convolutional filters on graphs for graph learning.</p><p xml:id="_fksRNAq">• GCN <ref type="bibr" target="#b21">[22]</ref>: performs semi-supervised learning on graphstructured data and introduces a simple and well-behaved layer-wise propagation rule for neural network models via the localized first-order approximation of spectral graph convolutions.</p><p xml:id="_H5KwwNw">• GAT <ref type="bibr" target="#b21">[22]</ref>: incorporates masked self-attention layers on top of GCN-style methods.</p><p xml:id="_J3exFRF">• GraphSAGE <ref type="bibr" target="#b14">[15]</ref>: is an inductive framework for representation learning on large graphs which leverages node feature information to efficiently generate node embeddings for unseen data.</p><p xml:id="_KdYDf4a">• VGAE <ref type="bibr" target="#b20">[21]</ref>: is unsupervised learning framework based on the variational auto-encoder.</p><p xml:id="_aDK8nPR">• GCL <ref type="bibr" target="#b35">[36]</ref>: is a graph contrastive learning framework for unsupervised representation learning of graph data and devises four types of graph augmentations to incorporate various priors • WGCN <ref type="bibr" target="#b37">[38]</ref>: considers the directional structural information for different nodes and proposes a GCN model with weighted structural features. • Control method (MLP): we use a simple two layer MLP model with ReLu after the first layer as the control method. We perform probing evaluation on the representative graph learning methods for three classical downstream tasks of graph learning methods. In addition to learning with random initialization, we further study graph learning with meta-features initialized, and perform thorough analysis in Section 5.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2" xml:id="_ERCRwTK">Downstream Tasks and Datasets</head><p xml:id="_2k8HBVR">We conduct performance evaluation on the classic downstream tasks of graph learning methods, including node classification <ref type="bibr" target="#b21">[22]</ref>, link prediction <ref type="bibr" target="#b28">[29]</ref> and graph classification <ref type="bibr" target="#b34">[35]</ref>.</p><p xml:id="_sBCuW2d">• Node classification: This task is one of the most popular and widely used applications of graph learning models. The graph learning methods learn the node representations and classify nodes into different groups. • Link prediction: It is to predicate whether there exist a link between two nodes. For example, the recommendation problem in recommender system scenarios can be formulated as one link prediction task and construct a user-item interaction graph to predict the probability of linking a user to a item. • Graph classification: Its goal is to classify a whole graph into different categories. The main applications of graph classification are protein classification and chemical compound classification. We adopt some benchmark datasets from different domains including citation networks, social networks, and Bio-chemical Networks. Table <ref type="table" target="#tab_2">1</ref> shows the statistics and proprietress of the used benchmarks.</p><p xml:id="_ua3AKm7">• Citation Networks: Cora <ref type="bibr" target="#b22">[23]</ref> is a dataset containing scientific papers categorized into seven classes. It commonly be used for node classification (transductive). The number of node classes is 7, and the number of node features is 1,433. • Social Networks: Flickr <ref type="bibr" target="#b36">[37]</ref> is a image hosting and video hosting platform. Flickr dataset is used for node classification (inductive).The number of node classes is 7 and the number of node features is 500. In addition, we adopt two social networks datasets Yelp <ref type="bibr" target="#b28">[29]</ref> and MovieLens <ref type="bibr" target="#b16">[17]</ref> for Link prediction. Yelp includes 69,716 users and items as nodes, and 1,561,406 interaction records. MovieLens dataset includes 9,742 movies as nodes in the graph. It also includes over 100,836 ratings provided by around 610 users. The number of meta-features for items is 404. • Bio-Chemical Networks: Two datsets are used for graph classification, respectively Enzyme <ref type="bibr" target="#b4">[5]</ref> and Mutag <ref type="bibr" target="#b8">[9]</ref>. Enzyme dataset contains the proteins information which contribute to catalyzing chemical reactions in the body. Mutag dataset is a widely used toxicity dataset which helps assess the potential risks of exposure to various chemicals and compounds.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3" xml:id="_HheTTzN">Experimental Setting</head><p xml:id="_eFSFs2T">All datasets expect Yelp dataset follow use the splitting rules as previous studies. For the Yelp dataset, the data splitting ratio for the training set, validation set and test set is set as 7:2:1.</p><p xml:id="_FrBYCmJ">For Chebyshev, we use one layer structure. For GCN, GAT, Graph-SAGE and MLP, we adopt the two layer structure. The length of walk for Node2Vec is set as 20. The size of the context window for the skip-gram and the walks per node are both 10. In order to make the walk unbiased, we also set the p which controls how likely the walk is to go back to the previous node, it is set as 1.0. For WGCN method, we use the same set as <ref type="bibr" target="#b37">[38]</ref>, three layers structure, compute the neighbors number for each node and use the weighted neighbor features for each node. Also, we aggregate the weighted neighbor features for each node. Finally, we use ReLU activation function. In order to keep performance of it, we use the same encoder GCN as VGAE <ref type="bibr" target="#b20">[21]</ref>. For GCL, we use the same augmentation as the GCL, we randomly drop edges and swap some node in order to make different graphs. We use the cosine similarities to calculate the two augmenting graphs and calculate the contrastive loss. The activation function ELU is used for GAT and the activation function ReLU is used for the other models. The dropout ratio for all models is 0.5. The output dimension size for all models is 64. The learning rate is set as 0.001.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5" xml:id="_TunUnKc">EXPERIMENTAL RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1" xml:id="_3UfMVku">Performance of Graph Learning Methods on Node Classification</head><p xml:id="_RWnJXcT">In order to validate the knowledge probing performance of our methods with respect to the node classification task, we compare the probing scores of the representative graph learning methods with reference to commonly used metrics in node classification including Accuracy (ACC) and F1 scores. Table <ref type="table" target="#tab_3">2</ref> shows the performance comparison for node classification. In additional to the absolute performance numbers, we add the overall rank numbers among the compared methods with brackets as the relative performance. For example, the highlighted number 79.9(1) indicates GAT obtains 0.799 accuracy on Cora dataset, and rank first among all compared methods. In all tables, we use bold font to highlight the best performance and underlines to indicate the worst performance 7 .</p><p xml:id="_NHhghqD">For node classification, we report transductive performance from Cora and inductive performance from Flickr. We can see that the best method on Cora (transductive) is GAT, and the best method is GCL on Flick (inductive) with respect to both ACC and F1 scores. Our centrality probes (EC and BC) have consistent evaluation results with the commonly used golden metrics, namely GAT ranks first. For the worst cases, our centrality prober has the same results (DeepWalk or MLP) with ACC and F1 on Flick dataset. On Cora, we find an interesting phenomenon that the simple MLP methods is better than GCL, Node2Vec and DeepWalk with respect to Acc and F1 while our centrality probing method demonstrate the worst methods are respectively MLP and Node2Vec. It might raise the question whether the final statistical metrics like accuracy and F1 actually reflect the capability of the graph representation learning</p><p xml:id="_H4dYQUh">In comparison with the centrality probes, our distance probe are not very consistent with our centrality probes and the traditional metrics although they can find the worse cases. It is because the the distance probe is a path-wise probe while the node classification might emphasize to encode more topological information into graph representation learning. The path-wise probe method e.g. the distance probe might be inappropriate for knowledge probing in the node classification task as only encoding the path-wise information in graph representation learning cannot works well, e.g. random walk based methods like DeepWalk and Node2Vec.</p><p xml:id="_tNCYMjY">When initializing with meta-features, we have the similar results on Flick dataset, and the best method is GCL with respect to both 7 Statistical significance tests have been conducted. All reported results are significant  <ref type="bibr" target="#b9">(10)</ref> of our centrality probes and the classical metrics. On Cora, the top-2 method with respect to ACC and F1 are GAT and GCN while top-2 methods with respect to our centrality probes are GAT and CCN. On Cora and Flick datasets, the worst cases are all MLP with respect to both of our centrality probes and the classical metrics.</p><p xml:id="_jdpFrty">In general, it has slight perturbation in the relative performance when initialized with meta-features.</p><p xml:id="_ZRuKgqy">In order to further discuss the relations between the node-wise properties and the graph representation learning, we calculate the homophily <ref type="bibr" target="#b39">[40]</ref> of different graphs from different datasets. The homophily ratio of is about 0.8 for Cora nad 0.32 for Flickr. It might explain why different graph methods show different performance, due to the inherent graph properties. GNN methods like GAT can have better performance on highly homophilous graphs. Our probe also have consistent results with the homophily analysis.  • Our centrality probes is effective for knowledge probing of graph representation learning in the node classification task. They has consistent results with the traditional evaluation metrics accuracy and F1, validating their effectiveness of our centrality probes. • The path-wise probe method e.g. the distance probe might be inappropriate for knowledge probing in the node classification task. • GAT is superior to other representative methods. The top-2 methods are GAT and GCN. Initializing with metameasures results into small perturbation among the top percentile in performance ranking.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2" xml:id="_k6Scjh6">Performance of Graph Learning Methods on Link Prediction</head><p xml:id="_qsaXgqf">To evaluate the knowledge probing performance of our methods with respect to the link prediction task, we compare the probing scores of the representative graph learning methods with reference to commonly used metrics in the link prediction task on Yelp and Movielens dataset, including AUC and F1 scores. We evaluate both the centrality probes and the distance probes, and the performance comparison results on Yelp and MovieLens for link prediction are reported in Table <ref type="table" target="#tab_4">3</ref>. On Yelp dataset, the best methods is GCN and the worst method is DeepWalk except MLP, with respect to both AUC and F1 scores. The distance probe has consistent results with both AUC and F1 scores. Although the centrality probes cannot be totally the same with the traditional scores, we can see that they ( especially the centrality probe with betweeness) have similar results by ranking GCN, VGAE at top-3 positions in the case that the two traditional metrics have similar results rather than the consistent results. On Moivelens dataset, the traditional metrics have shown considerable different results in the performance ranking, in which the best method is VGAE with AUC and that is WGCN with F1. This phenomenon to some extent indicates that different evaluation metrics might have some different relative results due to different measure mechanisms. Our distance probe is consistent with F1 for the best method, and our centrality probes are more similar with AUC scores. When initializing with meta-features, the performance of link prediction on Yelp and Movielens have some different results. The best method on Yelp is WGCN (AUC) and GCN (F1), in contrast with random initialization (GCN). On Moivelens dataset, the best ones are VGAE (AUC) and GraphSAGE (F1) while the random initialization results are VGAE (AUC) and WGCN (F1). Our distance probe also capture the differences due to different initialization setting and is still consistent with the traditional metrics, ranking WGCN and GCN at the top-2 positions.</p><p xml:id="_jJ2phEb">• The distance probe is effective for knowledge probing of graph representation learning in the link prediction task. They have consistent results with the traditional evaluation metrics AUC and F1 for different initialization setting. The reason might be that the path-wise probe is devised to probe the path-wise information within graph representation learning which acts the core roles in link prediction. • In general, no single method can be totally superior to other methods with respect to all evaluation metrics on the two datasets. GCN, VGAE and WGCN can be ranked at the top positions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3" xml:id="_xkDwvbq">Performance of Graph Learning Methods on Graph Classification</head><p xml:id="_7Mgy6nY">We compare the structure probing scores of the representative graph learning methods with reference to commonly used metrics in the graph classification task on MUTAG and ENZYMES dataset, including accuracy (ACC) and F1 scores. Table <ref type="table" target="#tab_4">3</ref> demonstrates the performance results on graph classification. On MUTAG dataset, the best method is GCN with with both ACC and F1 and our structural probing result is consistent with the traditional golden metrics. On ENZYMES dataset, our structural probing results are consistent with ACC scores (WGCN is best). For the cases with meta-features, our structural probing results are consistent with ACC and F1 scores on MUTAG dataset and with ACC scores (Chebyshev is best) on ENZYMES dataset (WGCN is best).</p><p xml:id="_bExz7Ue">• Our structure probe is effective for knowledge probing of graph representation learning in the graph classification task. They have consistent results with the traditional evaluation metrics ACC and F1 for different initialization setting. • In general, no single method can dominate other methods on the two datasets. WGCN has relatively robust peformance, ranking at top-3 positions on the two datasets. In some cases, some "out-of-date" methods e.g. Chebyshev can have better performance.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.4" xml:id="_RFZuzhs">Visualization Analysis</head><p xml:id="_DM5uhf7">In order to further compare the overall performance of different methods for different information embedding capabilities, we compute the ranking of the 9 representative methods and the MLP baseline for each probe and use radar charts to visualize their capacities in Figure <ref type="figure" target="#fig_1">2</ref> (I indicates the inductive and T indicates transductive, and M the Meta) . GCN and WGCN have better performance in most probing aspects in comparison with other methods.</p><p xml:id="_Vw4k3Xh">Although having the same capacities of aggregating the neighbor information, VGAE has the sub-optimal performance. Furthermore, they all hardly rely on meta informations. GCL has better performance on Node Classification (Inductive), GAT has better performance on Node Classification(transductive). Chebyshev might be better used with meta information. Node2Vec has the worst performance on all aspects. We also draw the skyline plot for finding the methods on different downstream tasks which can not be dominated by other methods in Figure <ref type="figure" target="#fig_2">3</ref>. We can investigate the joint-abilities of graph learning methods on different downstream tasks. In Link Prediction-Node Classification tasks, GAT, VGAE and GCN has better performance that can not be dominated. In Graph Classification-Node Classification, GAT and GCN performs well. GAT has better graph classification capabilities and GCN has better node classification abilities. In Graph Classification-Link Predictions, only GCN cannot be dominated by others. From the skyline results, we can see that GCN and GAT has better joint-abillites for downstream tasks.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.5" xml:id="_T4hk38Z">Effects of Parameters</head><p xml:id="_BUs6dJy">The only hyper parameters used in our probes is the path parameter. It controls the shortest path that our probe can detect in the graph. We calculate the Correlations with the F1 scores in different path, it shows that most of our best path are between 3 and 4. We use the max score of the path for each datasets</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6" xml:id="_97esQgS">CONCLUSION</head><p xml:id="_mk8qBXn">In this paper, we proposed a graph probing benchmark for the representative graph learning methods. Diverse probes at three different levels (node-wise, path-wise and structure-wise) are devised to investigate and interpret weather the graph properties from different levels are encoded into representation learning of the seven representative graph neural networks based methods. We conduct system evaluation and thorough analysis to investigate what kind of information have been encoded and which methods have competitive performance with different targeted downstream tasks. The experimental evaluation validate the effectiveness of GraphProbe. Furthermore, We conclude some remarking findings: GAT is superior in the node classification; GCN and WGCN are relatively versatile methods achieving better results with respect to different tasks. The benchmark codes and resources will be public after acceptance.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 :</head><label>1</label><figDesc xml:id="_dRV5JkM">Figure 1: The overall architecture of our proposed GraphProbe.</figDesc><graphic coords="4,66.41,83.69,479.18,239.22" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 :</head><label>2</label><figDesc xml:id="_3RP9pFQ">Figure 2: Radar chart comparison of graph embedding models for different information embedding capabilitie</figDesc><graphic coords="8,58.84,268.39,494.29,260.93" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 :</head><label>3</label><figDesc xml:id="_VKQ6bQw">Figure 3: Skyline Plot on different Downstream Tasks based on random initialization</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 1 :</head><label>1</label><figDesc xml:id="_uKCSTUa">Benchmark datasets. The Classes indicate the node class number for the Cora and Flickr dataset, and graph class number for ENZYMES and MUTAG.</figDesc><table><row><cell></cell><cell>Dataset</cell><cell cols="3">Graphs Classes Nodes</cell><cell>Edges</cell><cell>Node Features</cell></row><row><cell>Citation networks</cell><cell>Cora</cell><cell>1</cell><cell>7</cell><cell>2,708</cell><cell>5,429</cell><cell>1,433</cell></row><row><cell>Social networks</cell><cell>Flickr Yelp MovieLens</cell><cell>1 1 1</cell><cell>7 --</cell><cell cols="2">89,250 899,756 69,716 1,561,406 10,352 100,836</cell><cell>500 -404</cell></row><row><cell>Bio-</cell><cell>ENZYMES</cell><cell>600</cell><cell>6</cell><cell>33</cell><cell>124</cell><cell>21</cell></row><row><cell>networks</cell><cell>MUTAG</cell><cell>188</cell><cell>2</cell><cell>18</cell><cell>20</cell><cell>7</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 2 :</head><label>2</label><figDesc xml:id="_MZsRUjP">Results of the graph learning models on Node Classification. Highlight the best performance with bold font and the worst ones with underlines.</figDesc><table><row><cell cols="3">Dataset-rand Metrics Chebyshev</cell><cell>GCN</cell><cell>GAT</cell><cell>GraphSAGE</cell><cell>VGAE</cell><cell>GCL</cell><cell cols="3">WGCN Node2Vec DeepWalk</cell><cell>MLP</cell></row><row><cell></cell><cell>ACC</cell><cell>52.9 (6)</cell><cell>78.6 (3)</cell><cell>79.9 (1)</cell><cell>77.3 (4)</cell><cell>79.7 (2)</cell><cell>45 (8)</cell><cell>76.13 (5)</cell><cell>14.1 (10)</cell><cell>21.24 (9)</cell><cell>52.4 (7)</cell></row><row><cell></cell><cell>F1</cell><cell>56.94 (6)</cell><cell cols="2">77.96 (3) 79.18 (1)</cell><cell>76.64 (4)</cell><cell>78.84 (2)</cell><cell>45.7 (8)</cell><cell cols="2">74.32 (5) 12.88 (10)</cell><cell>21.19 (9)</cell><cell>51.93 (7)</cell></row><row><cell>Cora</cell><cell>EC</cell><cell>60.45 (7)</cell><cell cols="2">73.6 (2) 75.12 (1)</cell><cell>72.42 (4)</cell><cell cols="3">72.83 (3) 62.38 (6) 67.17 (5)</cell><cell>57.5 (9)</cell><cell>58.13 (8)</cell><cell>57.35 (10)</cell></row><row><cell></cell><cell>BC</cell><cell>59.24 (6)</cell><cell cols="2">70.24 (3) 76.12 (1)</cell><cell>58.01 (7)</cell><cell cols="3">71.24 (2) 61.13 (5) 64.13 (4)</cell><cell>54.1 (9)</cell><cell>54.12 (8)</cell><cell>53.8 (10)</cell></row><row><cell></cell><cell>Distance</cell><cell>8.05 (10)</cell><cell cols="2">11.24 (7) 12.98 (3)</cell><cell>11.93 (6)</cell><cell cols="3">24.16 (1) 10.08 (9) 12.91 (4)</cell><cell>14.68 (2)</cell><cell>11.98 (5)</cell><cell>11.24 (7)</cell></row><row><cell></cell><cell>ACC</cell><cell>77.5 (5)</cell><cell cols="2">81.14 (4) 72.05 (6)</cell><cell>57.05 (7)</cell><cell>91.41 (2)</cell><cell>92.8 (1)</cell><cell>85.12 (3)</cell><cell>50.49 (8)</cell><cell>50.12 (9)</cell><cell>47.94 (10)</cell></row><row><cell></cell><cell>F1</cell><cell>77.5 (5)</cell><cell cols="2">81.14 (4) 72.05 (6)</cell><cell>57.05 (7)</cell><cell>91.41 (2)</cell><cell>92.8 (1)</cell><cell>85.12 (3)</cell><cell>50.49 (8)</cell><cell>50.12 (9)</cell><cell>47.94 (10)</cell></row><row><cell>Flickr</cell><cell>EC</cell><cell>49.7 (7)</cell><cell>50 (6)</cell><cell>50.05 (4)</cell><cell>50.05 (4)</cell><cell cols="3">71.28 (2) 76.12 (1) 69.12 (3)</cell><cell>32.18 (8)</cell><cell>31.24 (9)</cell><cell>23.13 (10)</cell></row><row><cell></cell><cell>BC</cell><cell>68.17 (4)</cell><cell cols="2">65.72 (7) 66.12 (6)</cell><cell>67.12 (5)</cell><cell cols="3">70.13 (2) 75.13 (1) 70.1 (3)</cell><cell>30.13 (8)</cell><cell>28.17 (10)</cell><cell>29.38 (9)</cell></row><row><cell></cell><cell>Distance</cell><cell>13.45 (6)</cell><cell cols="2">13.82 (2) 13.82 (2)</cell><cell>12.54 (7)</cell><cell cols="4">13.62 (5) 13.82 (2) 19.52 (1) 11.98 (8)</cell><cell>10.44 (9)</cell><cell>9.68 (10)</cell></row><row><cell>Dataset-meta</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell cols="3">Initialization with meta-features</cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell>ACC</cell><cell>62.3 (7)</cell><cell>79.4 (2)</cell><cell>79.9 (1)</cell><cell>77.3 (5)</cell><cell>78.5 (3)</cell><cell cols="2">55.14 (9) 78.12 (4)</cell><cell>55.18 (8)</cell><cell>68.91 (6)</cell><cell>53.4 (10)</cell></row><row><cell></cell><cell>F1</cell><cell>63.9 (6)</cell><cell cols="2">78.57 (2) 79.02 (1)</cell><cell>76.52 (5)</cell><cell cols="3">77.83 (4) 55.18 (9) 78.01 (3)</cell><cell>58.13 (8)</cell><cell>61.13 (7)</cell><cell>52.8 (10)</cell></row><row><cell>Cora</cell><cell>EC</cell><cell>65.79 (6)</cell><cell cols="2">72.37 (1) 72.14 (2)</cell><cell>66.18 (4)</cell><cell cols="3">70.24 (3) 41.23 (8) 66.01 (5)</cell><cell>52.37 (7)</cell><cell>32.44 (9)</cell><cell>30.12 (10)</cell></row><row><cell></cell><cell>BC</cell><cell>63.71 (6)</cell><cell cols="2">70.12 (1) 69.27 (2)</cell><cell>66.04 (4)</cell><cell cols="3">66.13 (3) 51.28 (8) 64.78 (5)</cell><cell>57.89 (7)</cell><cell>41.28 (9)</cell><cell>39.38 (10)</cell></row><row><cell></cell><cell>Distance</cell><cell>8.03 (10)</cell><cell>11.18 (8)</cell><cell>13.2 (4)</cell><cell>12.03 (5)</cell><cell cols="4">11.47 (6) 11.04 (9) 30.91 (1) 14.59 (2)</cell><cell>13.82 (3)</cell><cell>11.19 (7)</cell></row><row><cell></cell><cell>ACC</cell><cell>77.9 (5)</cell><cell cols="2">82.12 (4) 74.13 (6)</cell><cell>59.38 (7)</cell><cell cols="3">92.42 (2) 93.12 (1) 86.13 (3)</cell><cell>52.48 (8)</cell><cell>52.34 (9)</cell><cell>50.13 (10)</cell></row><row><cell></cell><cell>F1</cell><cell>77.9 (5)</cell><cell cols="2">82.12 (4) 74.13 (6)</cell><cell>59.38 (7)</cell><cell cols="3">92.42 (2) 93.12 (1) 86.13 (3)</cell><cell>52.48 (8)</cell><cell>52.34 (9)</cell><cell>50.13 (10)</cell></row><row><cell>Flickr</cell><cell>EC</cell><cell>48.37 (7)</cell><cell cols="2">81.38 (5) 68.73 (6)</cell><cell>86.81 (3)</cell><cell cols="3">90.38 (2) 91.24 (1) 85.12 (4)</cell><cell>48.37 (7)</cell><cell>46.37 (9)</cell><cell>42.41 (10)</cell></row><row><cell></cell><cell>BC</cell><cell>38.14 (6)</cell><cell cols="2">39.14 (4) 37.89 (7)</cell><cell>38.84 (5)</cell><cell cols="3">67.4 (2) 68.38 (1) 59.24 (3)</cell><cell>32.32 (8)</cell><cell>29.38 (9)</cell><cell>29.04 (10)</cell></row><row><cell></cell><cell>Distance</cell><cell>24.25 (1)</cell><cell cols="2">24.25 (1) 21.48 (5)</cell><cell>19.09 (7)</cell><cell cols="3">23.01 (4) 18.33 (8) 23.62 (3)</cell><cell>18.02 (9)</cell><cell>19.1 (6)</cell><cell>16.04 (10)</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 3 :</head><label>3</label><figDesc xml:id="_hdNkKtw">Results of the graph learning models on Link Prediction. Highlight the best performance with bold font and the worst ones with underlines.</figDesc><table><row><cell cols="3">Dataset-rand Metrics Chebyshev</cell><cell>GCN</cell><cell>GAT</cell><cell>GraphSAGE</cell><cell>VGAE</cell><cell>GCL</cell><cell cols="2">WGCN Node2Vec DeepWalk</cell><cell>MLP</cell></row><row><cell></cell><cell>AUC</cell><cell>61.24 (7)</cell><cell cols="2">78.14 (1) 63.12 (6)</cell><cell>63.71 (5)</cell><cell cols="3">73.14 (3) 67.12 (4) 76.12 (2)</cell><cell>55.12 (8)</cell><cell>52.37 (9)</cell><cell>42.32 (10)</cell></row><row><cell></cell><cell>F1</cell><cell>52.24 (8)</cell><cell cols="2">71.50 (1) 66.15 (5)</cell><cell>65.23 (6)</cell><cell cols="3">71.09 (2) 70.01 (3) 68.57 (4)</cell><cell>53.17 (7)</cell><cell>51.95 (9)</cell><cell>51.05 (10)</cell></row><row><cell>Yelp</cell><cell>Distance</cell><cell>31.90 (3)</cell><cell cols="2">32.02 (1) 24.25 (5)</cell><cell>22.05 (8)</cell><cell cols="3">24.25 (5) 28.32 (4) 32.01 (2)</cell><cell>24.18 (7)</cell><cell>16.33 (9)</cell><cell>14.04 (10)</cell></row><row><cell></cell><cell>EC</cell><cell>46.28 (9)</cell><cell cols="2">71.21 (2) 60.71 (5)</cell><cell>64.28 (4)</cell><cell cols="3">72.16 (1) 56.73 (6) 70.12 (3)</cell><cell>49.82 (7)</cell><cell>48.12 (8)</cell><cell>45.39 (10)</cell></row><row><cell></cell><cell>BC</cell><cell>45.13 (7)</cell><cell cols="2">72.12 (1) 56.78 (6)</cell><cell>63.47 (4)</cell><cell cols="3">71.97 (2) 58.12 (5) 71.12 (3)</cell><cell>39.02 (9)</cell><cell>40.18 (8)</cell><cell>36.85 (10)</cell></row><row><cell></cell><cell>AUC</cell><cell>68.21 (5)</cell><cell cols="2">73.75 (2) 47.91 (10)</cell><cell>71.21 (3)</cell><cell cols="3">74.29 (1) 68.14 (6) 70.12 (4)</cell><cell>56.43 (7)</cell><cell>51.24 (8)</cell><cell>50.12 (9)</cell></row><row><cell></cell><cell>F1</cell><cell>50.75 (9)</cell><cell cols="2">67.94 (3) 61.25 (4)</cell><cell>58.64 (5)</cell><cell cols="4">70.48 (2) 58.60 (6) 70.87 (1) 51.84 (7)</cell><cell>51.06 (8)</cell><cell>48.82 (10)</cell></row><row><cell>MovieLens</cell><cell>Distance</cell><cell>19.50 (8)</cell><cell cols="2">19.52 (7) 29.78 (2)</cell><cell>24.25 (4)</cell><cell cols="4">24.17 (6) 28.77 (3) 31.82 (1) 24.20 (5)</cell><cell>15.75 (9)</cell><cell>12.31 (10)</cell></row><row><cell></cell><cell>EC</cell><cell>50.52 (7)</cell><cell cols="2">70.85 (2) 61.23 (5)</cell><cell>63.41 (4)</cell><cell cols="3">72.16 (1) 59.13 (6) 70.12 (3)</cell><cell>49.82 (9)</cell><cell>50.12 (8)</cell><cell>41.26 (10)</cell></row><row><cell></cell><cell>BC</cell><cell>40.97 (8)</cell><cell cols="2">72.30 (1) 57.55 (6)</cell><cell>63.77 (4)</cell><cell cols="3">71.97 (2) 62.12 (5) 69.13 (3)</cell><cell>39.02 (9)</cell><cell>42.12 (7)</cell><cell>37.24 (10)</cell></row><row><cell>Dataset-meta</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell cols="3">Initialization with meta-features</cell><cell></cell></row><row><cell></cell><cell>AUC</cell><cell>63.85 (7)</cell><cell cols="2">81.14 (2) 78.03 (4)</cell><cell>70.37 (5)</cell><cell cols="4">78.24 (3) 70.13 (6) 82.34 (1) 59.12 (8)</cell><cell>55.37 (9)</cell><cell>45.32 (10)</cell></row><row><cell></cell><cell>F1</cell><cell>53.44 (9)</cell><cell cols="2">75.35 (1) 67.45 (5)</cell><cell>66.83 (6)</cell><cell cols="3">73.19 (4) 74.60 (2) 73.89 (3)</cell><cell>57.12 (7)</cell><cell>54.82 (8)</cell><cell>52.44 (10)</cell></row><row><cell>Yelp</cell><cell>Distance</cell><cell>28.96 (4)</cell><cell cols="2">33.20 (2) 24.18 (8)</cell><cell>24.47 (7)</cell><cell cols="4">24.92 (6) 25.70 (5) 49.06 (1) 29.87 (3)</cell><cell>19.47 (9)</cell><cell>13.82 (10)</cell></row><row><cell></cell><cell>EC</cell><cell>47.21 (8)</cell><cell cols="2">72.43 (2) 61.24 (5)</cell><cell>65.12 (4)</cell><cell cols="3">73.13 (1) 57.14 (6) 71.21 (3)</cell><cell>50.12 (7)</cell><cell>47.12 (9)</cell><cell>42.31 (10)</cell></row><row><cell></cell><cell>BC</cell><cell>46.14 (7)</cell><cell cols="2">73.13 (3) 57.38 (6)</cell><cell>64.18 (4)</cell><cell cols="3">73.59 (1) 59.12 (5) 73.24 (2)</cell><cell>41.31 (9)</cell><cell>45.89 (8)</cell><cell>38.13 (10)</cell></row><row><cell></cell><cell>AUC</cell><cell>70.57 (4)</cell><cell cols="2">73.56 (3) 48.37 (10)</cell><cell>74.92 (2)</cell><cell cols="3">74.96 (1) 52.38 (8) 70.18 (5)</cell><cell>56.66 (7)</cell><cell>57.17 (6)</cell><cell>50.12 (9)</cell></row><row><cell></cell><cell>F1</cell><cell>62.45 (5)</cell><cell cols="2">66.16 (3) 45.63 (8)</cell><cell>71.86 (1)</cell><cell cols="3">67.97 (2) 44.22 (9) 64.51 (4)</cell><cell>51.65 (6)</cell><cell>50.13 (7)</cell><cell>43.59 (10)</cell></row><row><cell>MovieLens</cell><cell>Distance</cell><cell>27.15 (5)</cell><cell cols="2">29.77 (2) 22.43 (7)</cell><cell>28.02 (4)</cell><cell cols="4">22.84 (6) 28.68 (3) 32.28 (1) 20.51 (8)</cell><cell>19.52 (9)</cell><cell>16.33 (10)</cell></row><row><cell></cell><cell>EC</cell><cell>60.73 (5)</cell><cell cols="2">72.63 (1) 71.88 (2)</cell><cell>60.36 (6)</cell><cell cols="3">71.61 (3) 31.35 (10) 65.35 (4)</cell><cell>55.14 (8)</cell><cell>60.12 (7)</cell><cell>42.31 (9)</cell></row><row><cell></cell><cell>BC</cell><cell>53.29 (6)</cell><cell cols="2">71.10 (2) 75.79 (1)</cell><cell>50.47 (8)</cell><cell cols="3">71.04 (3) 43.13 (9) 67.12 (4)</cell><cell>53.17 (7)</cell><cell>58.38 (5)</cell><cell>40.13</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 4 :</head><label>4</label><figDesc xml:id="_3Btv49K">Results of the graph learning models on Graph Classification. Highlight the best performance with bold font and the worst ones with underlines.</figDesc><table><row><cell>Dataset-rand</cell><cell cols="2">Metrics Chebyshev</cell><cell>GCN</cell><cell>GAT</cell><cell>GraphSAGE</cell><cell>VGAE</cell><cell>GCL</cell><cell cols="3">WGCN Node2Vec DeepWalk</cell><cell>MLP</cell></row><row><cell></cell><cell>ACC</cell><cell>82.05 (5)</cell><cell cols="2">92.31 (1) 87.18 (2)</cell><cell>84.62 (4)</cell><cell cols="3">74.36 (6) 74.36 (6) 87.13 (3)</cell><cell>72.71 (9)</cell><cell>73.13 (8)</cell><cell>71.49 (10)</cell></row><row><cell>MUTAG</cell><cell>F1</cell><cell>82.05 (5)</cell><cell cols="2">92.31 (1) 87.18 (2)</cell><cell>84.62 (4)</cell><cell cols="3">74.36 (6) 74.36 (6) 87.13 (3)</cell><cell>72.71 (9)</cell><cell>73.13 (8)</cell><cell>71.49 (10)</cell></row><row><cell></cell><cell>Structure</cell><cell>11.96 (4)</cell><cell cols="2">15.69 (1) 13.39 (2)</cell><cell>8.29 (5)</cell><cell>3.89 (7)</cell><cell>3.79 (8)</cell><cell>12.23 (3)</cell><cell>5.12 (6)</cell><cell>3.13 (9)</cell><cell>2.62 (10)</cell></row><row><cell></cell><cell>ACC</cell><cell>45 (4)</cell><cell cols="2">44.17 (5) 45.83 (3)</cell><cell>54.17 (2)</cell><cell cols="3">43.33 (6) 43.33 (6) 59.38 (1)</cell><cell>42.5 (8)</cell><cell>41.5 (9)</cell><cell>37.5 (10)</cell></row><row><cell>ENZYMES</cell><cell>F1</cell><cell>15 (10)</cell><cell>22.5 (3)</cell><cell>20.83 (4)</cell><cell>18.33 (5)</cell><cell cols="3">26.67 (1) 16.67 (8) 25.81 (2)</cell><cell>18.27 (6)</cell><cell>17.93 (7)</cell><cell>16.67 (8)</cell></row><row><cell></cell><cell>Structure</cell><cell>3.44 (7)</cell><cell>11.82 (3)</cell><cell>8.37 (4)</cell><cell>12.83 (2)</cell><cell>7.26 (6)</cell><cell cols="2">8.36 (5) 15.48 (1)</cell><cell>2.19 (8)</cell><cell>2.04 (9)</cell><cell>1.84 (10)</cell></row><row><cell>Dataset-meta</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell cols="3">Initialization with meta-features</cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell>ACC</cell><cell>94.87 (1)</cell><cell cols="2">82.05 (6) 84.62 (4)</cell><cell>92.31 (2)</cell><cell cols="3">79.49 (7) 84.62 (4) 90.24 (3)</cell><cell>77.31 (8)</cell><cell>75.13 (9)</cell><cell>74.62 (10)</cell></row><row><cell>MUTAG</cell><cell>F1</cell><cell>94.87 (1)</cell><cell cols="2">82.05 (6) 84.62 (4)</cell><cell>92.31 (2)</cell><cell cols="3">79.49 (7) 84.62 (4) 90.24 (3)</cell><cell>77.31 (8)</cell><cell>75.13 (9)</cell><cell>74.62 (10)</cell></row><row><cell></cell><cell>Structure</cell><cell>18.19 (1)</cell><cell>4.78 (7)</cell><cell>6.02 (5)</cell><cell>16.48 (3)</cell><cell>5.98 (6)</cell><cell>15.8 (4)</cell><cell>17.29 (2)</cell><cell>2.38 (9)</cell><cell>2.41 (8)</cell><cell>1.73 (10)</cell></row><row><cell></cell><cell>ACC</cell><cell>43.33 (5)</cell><cell cols="2">47.5 (3) 39.17 (10)</cell><cell>57.5 (2)</cell><cell cols="4">43.33 (5) 46.67 (4) 60.35 (1) 41.32 (8)</cell><cell>40.13 (9)</cell><cell>43.33 (5)</cell></row><row><cell>ENZYMES</cell><cell>F1</cell><cell>22.5 (3)</cell><cell>21.67 (4)</cell><cell>15 (10)</cell><cell>20 (5)</cell><cell cols="3">19.17 (6) 25.83 (1) 25.23 (2)</cell><cell>17.99 (8)</cell><cell>18.12 (7)</cell><cell>17.5 (9)</cell></row><row><cell></cell><cell>Structure</cell><cell>7.49 (3)</cell><cell>5.12 (4)</cell><cell>3.48 (6)</cell><cell>8.89 (2)</cell><cell>3.24 (7)</cell><cell cols="2">4.56 (5) 10.23 (1)</cell><cell>1.31 (9)</cell><cell>1.78 (8)</cell><cell>0.39 (10)</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0"><p xml:id="_XQTmC7N">We use a two-layer MLP as the learning network, and the activation function is ReLU.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_1"><p xml:id="_K27We7X">Considering the computational complexity, we only keep the node pairs with distance less than or equal to</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_3"><p xml:id="_eNQeU2E">If the graph learning algorithm can learn the representation of the entire graph, we directly use it. Otherwise, we use the readout operation of nodes to represent the graph representation.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_4"><p xml:id="_REcYz2y">Our probing method is flexibly used for any graph learning method. Due to space limitation, we chose different representative graph learning methods from diverse categories.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_5"><p xml:id="_73mqdM3">Our devised probes are based on MLP and we use MLP as the control experiment variable for comparison.</p></note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main" xml:id="_dP9X85Z">Distributed large-scale natural graph factorization</title>
+		<author>
+			<persName><forename type="first">Amr</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nino</forename><surname>Shervashidze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shravan</forename><surname>Narayanamurthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vanja</forename><surname>Josifovski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">J</forename><surname>Smola</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2488388.2488393</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_6xTNqSm">Proceedings of the 22nd International Conference on World Wide Web, WWW &apos;13</title>
+		<meeting>the 22nd International Conference on World Wide Web, WWW &apos;13<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="37" to="48" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main" xml:id="_Fr7HZh4">Probing graph representations</title>
+		<author>
+			<persName><forename type="first">Mohammad</forename><surname>Sadegh Akhondzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vijay</forename><surname>Lingam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aleksandar</forename><surname>Bojchevski</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_Jnx9UNa">International Conference on Artificial Intelligence and Statistics</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="11630" to="11649" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main" xml:id="_Jb82bcQ">Ranking systems: The pagerank axioms</title>
+		<author>
+			<persName><forename type="first">Alon</forename><surname>Altman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Moshe</forename><surname>Tennenholtz</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1064009.1064010</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_xbqBS6C">Proceedings of the 6th ACM Conference on Electronic Commerce, EC &apos;05</title>
+		<meeting>the 6th ACM Conference on Electronic Commerce, EC &apos;05<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main" xml:id="_3rnCRS6">Power and centrality: A family of measures</title>
+		<author>
+			<persName><forename type="first">Phillip</forename><surname>Bonacich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_EdkwkMQ">American journal of sociology</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1170" to="1182" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main" xml:id="_4cE6r6y">Protein function prediction via graph kernels</title>
+		<author>
+			<persName><forename type="first">Karsten</forename><forename type="middle">M</forename><surname>Borgwardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Soon</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefan</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V N</forename><surname>Schönauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><forename type="middle">J</forename><surname>Vishwanathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hans-Peter</forename><surname>Smola</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kriegel</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/bioinformatics/bti1007</idno>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_BYGspqs">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="47" to="56" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main" xml:id="_HUSZXev">Grarep: Learning graph representations with global structural information</title>
+		<author>
+			<persName><forename type="first">Shaosheng</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qiongkai</forename><surname>Xu</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2806416.2806512</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_64RacYq">Proceedings of the 24th ACM International on Conference on Information and Knowledge Management, CIKM &apos;15</title>
+		<meeting>the 24th ACM International on Conference on Information and Knowledge Management, CIKM &apos;15<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="891" to="900" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main" xml:id="_BxndTty">What you can cram into a single $&amp;!#* vector: Probing sentence embeddings for linguistic properties</title>
+		<author>
+			<persName><forename type="first">Alexis</forename><surname>Conneau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">German</forename><surname>Kruszewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guillaume</forename><surname>Lample</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Loïc</forename><surname>Barrault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Baroni</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P18-1198</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_82usEbd">Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 56th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Melbourne, Australia</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="2126" to="2136" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<author>
+			<persName><forename type="first">Kousik</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sovan</forename><surname>Samanta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Madhumangal</forename><surname>Pal</surname></persName>
+		</author>
+		<title level="m" xml:id="_MtCABmE">Study on centrality measures in social networks: a survey. Social network analysis and mining</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="1" to="11" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main" xml:id="_JaKn6CG">Structure-activity relationship of mutagenic aromatic and heteroaromatic nitro compounds. correlation with molecular orbital energies and hydrophobicity</title>
+		<author>
+			<persName><forename type="first">Asim</forename><surname>Kumar Debnath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rosa</forename><forename type="middle">L</forename><surname>Lopez De Compadre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gargi</forename><surname>Debnath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><forename type="middle">J</forename><surname>Shusterman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Corwin</forename><surname>Hansch</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jm00106a046</idno>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_Jv4kM5b">Journal of Medicinal Chemistry</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="786" to="797" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main" xml:id="_n4SUhcf">Convolutional neural networks on graphs with fast localized spectral filtering</title>
+		<author>
+			<persName><forename type="first">Michaël</forename><surname>Defferrard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xavier</forename><surname>Bresson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>Vandergheynst</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_KKYT4Tc">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="page">29</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main" xml:id="_5ePKBFr">BERT: Pre-training of deep bidirectional transformers for language understanding</title>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming-Wei</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenton</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristina</forename><surname>Toutanova</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/N19-1423</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_Se4tC3V">Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<title level="s" xml:id="_7Frr5w5">Long and Short Papers</title>
+		<meeting>the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies<address><addrLine>Minneapolis, Minnesota</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="4171" to="4186" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main" xml:id="_aNqfAqx">A set of measures of centrality based on betweenness</title>
+		<author>
+			<persName><forename type="first">Linton</forename><surname>Freeman</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/3033543</idno>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_9hnRWwS">Sociometry</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="35" to="41" />
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main" xml:id="_A8JXx6Z">Citeseer: An automatic citation indexing system</title>
+		<author>
+			<persName><forename type="first">Lee</forename><surname>Giles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kurt</forename><forename type="middle">D</forename><surname>Bollacker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steve</forename><surname>Lawrence</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_YuVjQst">Proceedings of the third ACM conference on Digital libraries</title>
+		<meeting>the third ACM conference on Digital libraries</meeting>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<biblScope unit="page" from="89" to="98" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main" xml:id="_4Jhkwvw">node2vec: Scalable feature learning for networks</title>
+		<author>
+			<persName><forename type="first">Aditya</forename><surname>Grover</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jure</forename><surname>Leskovec</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_wQWm62N">Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining</title>
+		<meeting>the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="855" to="864" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main" xml:id="_fcVJDWR">Inductive representation learning on large graphs</title>
+		<author>
+			<persName><forename type="first">Will</forename><surname>Hamilton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhitao</forename><surname>Ying</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jure</forename><surname>Leskovec</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_yaeWCuu">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page">30</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main" xml:id="_bR75aHa">Representation learning on graphs: Methods and applications</title>
+		<author>
+			<persName><forename type="first">William</forename><forename type="middle">L</forename><surname>Hamilton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rex</forename><surname>Ying</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jure</forename><surname>Leskovec</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_yVNVv6b">IEEE Data Eng. Bull</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="52" to="74" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main" xml:id="_bMUVpc2">The movielens datasets: History and context</title>
+		<author>
+			<persName><forename type="first">F</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maxwell</forename><surname>Harper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><forename type="middle">A</forename><surname>Konstan</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2827872</idno>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_S8UVsU6">ACM Trans. Interact. Intell. Syst</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main" xml:id="_kNVS6nx">Lightgcn: Simplifying and powering graph convolution network for recommendation</title>
+		<author>
+			<persName><forename type="first">Xiangnan</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kuan</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiang</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongdong</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Meng</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3397271.3401063</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_BKrRHK7">Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR &apos;20</title>
+		<meeting>the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR &apos;20<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="639" to="648" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main" xml:id="_sC6aDCb">A structural probe for finding syntax in word representations</title>
+		<author>
+			<persName><forename type="first">John</forename><surname>Hewitt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/N19-1419</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_ZrnkqqH">Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<title level="s" xml:id="_NFeRB3s">Long and Short Papers</title>
+		<meeting>the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies<address><addrLine>Minneapolis, Minnesota</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="4129" to="4138" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main" xml:id="_2NW2Fba">Bird&apos;s eye: Probing for linguistic graph structures with a simple information-theoretic approach</title>
+		<author>
+			<persName><forename type="first">Yifan</forename><surname>Hou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mrinmaya</forename><surname>Sachan</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2021.acl-long.145</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_dMNAmJx">Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing</title>
+		<meeting>the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1844" to="1859" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">N</forename><surname>Thomas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Kipf</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Welling</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1611.07308</idno>
+		<title level="m" xml:id="_cmq3B2z">Variational graph auto-encoders</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main" xml:id="_25CKRD4">Semi-supervised classification with graph convolutional networks</title>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">N</forename><surname>Kipf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Welling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_MzJMMzg">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main" xml:id="_pQD57t3">Automating the construction of internet portals with machine learning</title>
+		<author>
+			<persName><forename type="first">Andrew Kachites</forename><surname>Mccallum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kamal</forename><surname>Nigam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Rennie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristie</forename><surname>Seymore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_fSvf8NM">Information Retrieval</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="127" to="163" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main" xml:id="_fY58HKH">Deepwalk: Online learning of social representations</title>
+		<author>
+			<persName><forename type="first">Bryan</forename><surname>Perozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rami</forename><surname>Al-Rfou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Skiena</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_YZ9ueTZ">Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining</title>
+		<meeting>the 20th ACM SIGKDD international conference on Knowledge discovery and data mining</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="701" to="710" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main" xml:id="_dkbKpcv">Deep contextualized word representations</title>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">E</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Neumann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohit</forename><surname>Iyyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matt</forename><surname>Gardner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenton</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luke</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/N18-1202</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_a5CEhyN">Proceedings of the 2018 Conference of the North American Chapter</title>
+		<title level="s" xml:id="_DQPyJEZ">Long Papers</title>
+		<meeting>the 2018 Conference of the North American Chapter<address><addrLine>New Orleans, Louisiana</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="2227" to="2237" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main" xml:id="_cM4jZZT">Language models as knowledge bases?</title>
+		<author>
+			<persName><forename type="first">Fabio</forename><surname>Petroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tim</forename><surname>Rocktäschel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sebastian</forename><surname>Riedel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patrick</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anton</forename><surname>Bakhtin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuxiang</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Miller</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D19-1250</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_37gxBHs">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</title>
+		<meeting>the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)<address><addrLine>Hong Kong, China</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="2463" to="2473" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main" xml:id="_tQ4xDZu">Information-theoretic probing for linguistic structure</title>
+		<author>
+			<persName><forename type="first">Tiago</forename><surname>Pimentel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Josef</forename><surname>Valvoda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rowan</forename><surname>Hall Maudslay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ran</forename><surname>Zmigrod</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adina</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Cotterell</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.acl-main.420</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_ETrGwSH">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="4609" to="4622" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Van Rijsbergen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_6gtA36D">Information Retrieval</title>
+		<imprint>
+			<date type="published" when="1979">1979</date>
+			<pubPlace>Butterworth-Heinemann, USA</pubPlace>
+		</imprint>
+	</monogr>
+	<note>2nd edition</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main" xml:id="_5KyNECx">Collective classification in network data</title>
+		<author>
+			<persName><forename type="first">Prithviraj</forename><surname>Sen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Galileo</forename><surname>Namata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mustafa</forename><surname>Bilgic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lise</forename><surname>Getoor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Galligher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tina</forename><surname>Eliassi-Rad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_naCxb3t">AI magazine</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="93" to="93" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main" xml:id="_sqKMRfT">Group structure and the behavior of individuals in small groups</title>
+		<author>
+			<persName><forename type="first">Marvin</forename><forename type="middle">E</forename><surname>Shaw</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/00223980.1954.9712925</idno>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_hXctRjh">The Journal of Psychology</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="139" to="149" />
+			<date type="published" when="1954">1954</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main" xml:id="_svPkgwm">Weisfeiler-lehman graph kernels</title>
+		<author>
+			<persName><forename type="first">Nino</forename><surname>Shervashidze</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pascal</forename><surname>Schweitzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Erik</forename><surname>Jan Van Leeuwen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kurt</forename><surname>Mehlhorn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karsten</forename><forename type="middle">M</forename><surname>Borgwardt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_HVDSckS">J. Mach. Learn. Res</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="2539" to="2561" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main" xml:id="_vb7RRrW">Does string-based neural MT learn source syntax?</title>
+		<author>
+			<persName><forename type="first">Xing</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Inkit</forename><surname>Padhi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Knight</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D16-1159</idno>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_xBQMZg2">Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2016 Conference on Empirical Methods in Natural Language Processing<address><addrLine>Austin, Texas</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="1526" to="1534" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main" xml:id="_vTgT5yA">Graph attention networks</title>
+		<author>
+			<persName><forename type="first">Petar</forename><surname>Velickovic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guillem</forename><surname>Cucurull</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arantxa</forename><surname>Casanova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adriana</forename><surname>Romero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pietro</forename><surname>Lio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_4TQ3GWG">stat</title>
+		<imprint>
+			<biblScope unit="volume">1050</biblScope>
+			<biblScope unit="issue">20</biblScope>
+			<biblScope unit="page" from="10" to="48550" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main" xml:id="_U2F7xcP">Link prediction of complex network based on eigenvector centrality</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_shtn9BC">2022 Workshop on Pattern Recognition and Data Mining</title>
+		<meeting><address><addrLine>Wuhan, China</addrLine></address></meeting>
+		<imprint>
+			<publisher>WPRDM</publisher>
+			<date type="published" when="2022-06">2022. 2022. June 2022</date>
+			<biblScope unit="volume">2337</biblScope>
+			<biblScope unit="page" from="24" to="26" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main" xml:id="_FFuKsV3">How powerful are graph neural networks?</title>
+		<author>
+			<persName><forename type="first">Keyulu</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weihua</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jure</forename><surname>Leskovec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefanie</forename><surname>Jegelka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_9JtPrNh">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main" xml:id="_zmZDSXU">Graph contrastive learning with augmentations</title>
+		<author>
+			<persName><forename type="first">Yuning</forename><surname>You</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianlong</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongduo</forename><surname>Sui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ting</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhangyang</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Shen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_TDrB6qX">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="5812" to="5823" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main" xml:id="_EBdWCfV">GraphSAINT: Graph sampling based inductive learning method</title>
+		<author>
+			<persName><forename type="first">Hanqing</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hongkuan</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ajitesh</forename><surname>Srivastava</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rajgopal</forename><surname>Kannan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Viktor</forename><surname>Prasanna</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_NQCmq2u">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main" xml:id="_r84Au2T">Wgcn: graph convolutional networks with weighted structural features</title>
+		<author>
+			<persName><forename type="first">Yunxiang</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianzhong</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qingwei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_AXYRDRT">Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval</title>
+		<meeting>the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="624" to="633" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main" xml:id="_4xKezwB">Simple spectral graph convolution</title>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Piotr</forename><surname>Koniusz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" xml:id="_AZcJ7mD">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main" xml:id="_8qTQcsC">Beyond homophily in graph neural networks: Current limitations and effective designs</title>
+		<author>
+			<persName><forename type="first">Jiong</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yujun</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lingxiao</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Heimann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Leman</forename><surname>Akoglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Danai</forename><surname>Koutra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" xml:id="_uX6Vy6S">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="7793" to="7804" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

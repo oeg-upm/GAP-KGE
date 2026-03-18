@@ -1,0 +1,42 @@
+{
+    "total_time": 38.369972705841064,
+    "average_time": 7.673994541168213,
+    "paper_evaluation_data": [
+        {
+            "title": "TuckER: Tensor Factorization for Knowledge Graph Completion",
+            "time": 7.489949703216553,
+            "vram_usage": 0,
+            "ram_mem_usage": 6401.2421875,
+            "cpu_usage": 4.1,
+            "extracted_datasets": [
+                "standard link prediction datasets"
+            ],
+            "datasets_gt": [
+                "WN18RR",
+                "FB15k-237",
+                " FB15k",
+                "WN18"
+            ],
+            "dataset_f1": 0.7922362089157104,
+            "extracted_tasks": [
+                "link prediction",
+                "Link prediction"
+            ],
+            "tasks_gt": [
+                "Knowledge Graph Completion",
+                "Knowledge Graphs",
+                "Link Prediction",
+                "Prediction"
+            ],
+            "task_f1": 0.8672457337379456,
+            "extracted_models": [
+                "TuckER"
+            ],
+            "model_gt": [
+                "TuckER"
+            ],
+            "model_f1": 0.9999999403953552,
+            "extracted_implementations": "['A']",
+            "implementation_gt": "https://github.com/luffycodes/neptune",
+            "implementation_f1": 0.7330188751220703,
+            "extracted_category": 

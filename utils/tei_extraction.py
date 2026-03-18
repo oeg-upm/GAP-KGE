@@ -71,59 +71,7 @@ def tei_to_full_raw_text(tei_xml: str, remove_ref = None) -> str:
 
     return raw
 
-# def extract_flat_sections_with_subtext(tei_xml_str):
-#     ns = {'tei': 'http://www.tei-c.org/ns/1.0'}
-#     root = etree.fromstring(tei_xml_str.encode())
 
-#     divs = root.xpath('//tei:text/tei:body/tei:div', namespaces=ns)
-#     section_map = {}
-#     top_sections = []
-
-#     for div in divs:
-#         head = div.find('tei:head', namespaces=ns)
-#         if head is None or not head.text:
-#             continue
-
-#         title = head.text.strip()
-#         n_attr = head.get('n')
-#         section_num = n_attr.strip() if n_attr else None
-
-#         # Get all paragraph text in this <div>
-#         paragraphs = [
-#             ''.join(p.itertext()).strip()
-#             for p in div.xpath('.//tei:p', namespaces=ns)
-#             if p.text or len(p)
-#         ]
-#         text = '\n\n'.join(paragraphs)
-
-#         if section_num and re.fullmatch(r'\d+', section_num):
-#             # It's a top-level section
-#             section_entry = {
-#                 "title": title,
-#                 "text": text
-#             }
-#             section_map[section_num] = section_entry
-#             top_sections.append(section_entry)
-
-#         elif section_num and re.fullmatch(r'\d+\.\d+', section_num):
-#             # It's a subsection: merge into parent
-#             parent_num = section_num.split('.')[0]
-#             if parent_num in section_map:
-#                 if text:
-#                     section_map[parent_num]["text"] += '\n\n' + text
-#             else:
-#                 # Orphan subsection — ignore or treat as top-level
-#                 pass
-
-#         else:
-#             # No numeric heading: optionally add as top-level
-#             if text:
-#                 top_sections.append({
-#                     "title": title,
-#                     "text": text
-#                 })
-
-#     return top_sections
 def extract_flat_sections_with_subtext(tei_xml_str):
     ns = {'tei': 'http://www.tei-c.org/ns/1.0'}
     root = etree.fromstring(tei_xml_str.encode())
