@@ -22,7 +22,7 @@ The fields that we are extracting to generate the model cards are:
 
 Points marked with ✅ have been already covered in the pipeline, while those marked with 👷 are currently in progress.
 ## Table extraction
-Hi Erick! 👋. To make your life a bit easier, I'll keep it short and sweet for this part. The work already done using DeepDocTextion is on the folder called **table_extraction**. Here, you'll find the notebook developed by Mateo for testing our approach, and I made a .py version of it (haven't had the chance to test it yet though). We hace a corpus of 109 articles on KGE which are on the *data/pdf_files* folder.
+The work already done using DeepDocTextion is on the folder called **table_extraction**. Here, you'll find the notebook developed by Mateo for testing our approach, and I made a .py version of it (haven't had the chance to test it yet though). We hace a corpus of 109 articles on KGE which are on the *data/pdf_files* folder.
 Inside the *table_extraction* folder, you'll find another folder with a couple of PDFs Mateo used for testing the approach by manually revising the output.
 
 ## Pre-requisites
