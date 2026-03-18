@@ -13,9 +13,9 @@ The fields that we are extracting to generate the model cards are:
 - Title of the paper ✅
 - Reference to the implementation in the paper ✅
 - Reference to the implementation in external libraries 👷
-- Name of the proposed model 👷
+- Name of the proposed model ✅
 - Type of model according to the Shen et al. (2022) taxonomy ✅
-- Limits and biases
+- Limits and biases 👷
 - Datasets used for the evaluation 👷
 - Metrics used for the evaluation👷
 - Achieved results👷
