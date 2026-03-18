@@ -117,5 +117,3 @@ This experimentation comprised evaluating both LLM-based and non-LLM approaches 
 - To run the **non-LLM experiments**, execute the [run_non_llm.ipynb](/experiment_notebooks/run_non_llm.ipynb)
 - To run the **LLM-based experiments**, execute the [run_llm.ipynb](/experiment_notebooks/run_llms.ipynb)
 - Finally, to run the experiments for the optimal pipeline, execute the [run_best_configuration.ipynb](/experiment_notebooks/run_best_configuration.ipynb)
-
-## Summary of work so far
