@@ -2,7 +2,7 @@
   "documents": [
     {
       "paper_title": "Adaptive Margin Ranking Loss for Knowledge Graph Embeddings via a Correntropy Objective Function",
-      "num_tables": 2,
+      "num_tables": 1,
       "tables": [
         {
           "table_id": "table_1",
@@ -222,246 +222,13 @@
               77.8
             ]
           ]
-        },
-        {
-          "table_id": "table_2",
-          "page": 5,
-          "evaluation": {
-            "expected_rows": 8,
-            "expected_cols": 3,
-            "columns": [
-              "Data",
-              "FB15k",
-              "wn18"
-            ]
-          },
-          "rows": [
-            [
-              "Optimizer",
-              "Adagrad",
-              "Adagrad"
-            ],
-            [
-              "Embedding size",
-              100,
-              100
-            ],
-            [
-              "Epochs",
-              900000,
-              900000
-            ],
-            [
-              "ξ",
-              0.1,
-              0.1
-            ],
-            [
-              "σ",
-              1.0,
-              1.0
-            ],
-            [
-              "λ",
-              1.0,
-              1.0
-            ],
-            [
-              "γ",
-              30,
-              15
-            ],
-            [
-              "Learning rate",
-              0.1,
-              0.1
-            ]
-          ]
         }
       ]
     },
     {
       "paper_title": "Adversarial Contrastive Estimation",
-      "num_tables": 4,
+      "num_tables": 3,
       "tables": [
-        {
-          "table_id": "table_1",
-          "page": 8,
-          "evaluation": {
-            "expected_rows": 20,
-            "expected_cols": 6,
-            "columns": [
-              "Category",
-              "Queen",
-              "King",
-              "Computer",
-              "Man",
-              "Woman"
-            ]
-          },
-          "rows": [
-            [
-              "Skip-Gram NCE Top 5",
-              "princess",
-              "prince",
-              "computers",
-              "woman",
-              "girl"
-            ],
-            [
-              "Skip-Gram NCE Top 5",
-              "king",
-              "queen",
-              "computing",
-              "boy",
-              "man"
-            ],
-            [
-              "Skip-Gram NCE Top 5",
-              "empress",
-              "kings",
-              "software",
-              "girl",
-              "prostitute"
-            ],
-            [
-              "Skip-Gram NCE Top 5",
-              "pxqueen",
-              "emperor",
-              "microcomputer",
-              "stranger",
-              "person"
-            ],
-            [
-              "Skip-Gram NCE Top 5",
-              "monarch",
-              "monarch",
-              "mainframe",
-              "person",
-              "divorcee"
-            ],
-            [
-              "Skip-Gram NCE Top 45-50",
-              "sambiria",
-              "eraric",
-              "hypercard",
-              "angiomata",
-              "suitor"
-            ],
-            [
-              "Skip-Gram NCE Top 45-50",
-              "phongsri",
-              "mumbere",
-              "neurotechnology",
-              "someone",
-              "nymphomaniac"
-            ],
-            [
-              "Skip-Gram NCE Top 45-50",
-              "safrit",
-              "empress",
-              "lgp",
-              "bespectacled",
-              "barmaid"
-            ],
-            [
-              "Skip-Gram NCE Top 45-50",
-              "mcelvoy",
-              "saxonvm",
-              "pcs",
-              "hero",
-              "redheaded"
-            ],
-            [
-              "Skip-Gram NCE Top 45-50",
-              "tsarina",
-              "pretender",
-              "keystroke",
-              "clown",
-              "jew"
-            ],
-            [
-              "Skip-Gram ACE Top 5",
-              "princess",
-              "prince",
-              "software",
-              "woman",
-              "girl"
-            ],
-            [
-              "Skip-Gram ACE Top 5",
-              "prince",
-              "vi",
-              "computers",
-              "girl",
-              "herself"
-            ],
-            [
-              "Skip-Gram ACE Top 5",
-              "elizabeth",
-              "kings",
-              "applications",
-              "tells",
-              "man"
-            ],
-            [
-              "Skip-Gram ACE Top 5",
-              "duke",
-              "duke",
-              "computing",
-              "dead",
-              "lover"
-            ],
-            [
-              "Skip-Gram ACE Top 5",
-              "consort",
-              "iii",
-              "hardware",
-              "boy",
-              "tells"
-            ],
-            [
-              "Skip-Gram ACE Top 45-50",
-              "baron",
-              "earl",
-              "files",
-              "kid",
-              "aunt"
-            ],
-            [
-              "Skip-Gram ACE Top 45-50",
-              "abbey",
-              "holy",
-              "information",
-              "told",
-              "maid"
-            ],
-            [
-              "Skip-Gram ACE Top 45-50",
-              "throne",
-              "cardinal",
-              "device",
-              "revenge",
-              "wife"
-            ],
-            [
-              "Skip-Gram ACE Top 45-50",
-              "marie",
-              "aragon",
-              "design",
-              "magic",
-              "lady"
-            ],
-            [
-              "Skip-Gram ACE Top 45-50",
-              "victoria",
-              "princes",
-              "compatible",
-              "angry",
-              "bride"
-            ]
-          ]
-        },
         {
           "table_id": "table_2",
           "page": 8,
@@ -477,7 +244,7 @@
           "rows": [
             [
               "Skipgram Only NCE baseline",
-              18.90,
+              18.9,
               31.35
             ],
             [
@@ -488,7 +255,7 @@
             [
               "Skipgram + ACE",
               32.71,
-              55.00
+              55.0
             ],
             [
               "Glove-50 (Recomputed based on(Pennington et al., 2014))",
@@ -507,7 +274,7 @@
             ],
             [
               "Glove-50+ ACE",
-              35.60,
+              35.6,
               60.46
             ],
             [
@@ -518,7 +285,7 @@
             [
               "Glove-300+ ACE",
               40.57,
-              66.50
+              66.5
             ]
           ]
         },
@@ -603,60 +370,8 @@
     },
     {
       "paper_title": "Binarized Knowledge Graph Embeddings",
-      "num_tables": 5,
+      "num_tables": 4,
       "tables": [
-        {
-          "table_id": "table_1",
-          "page": 8,
-          "evaluation": {
-            "expected_rows": 5,
-            "expected_cols": 5,
-            "columns": [
-              "",
-              "WN18",
-              "FB15k",
-              "WN18RR",
-              "FB15k-237"
-            ]
-          },
-          "rows": [
-            [
-              "N_e",
-              40943,
-              14951,
-              40559,
-              14505
-            ],
-            [
-              "N_r",
-              18,
-              1345,
-              11,
-              237
-            ],
-            [
-              "# training triples",
-              141442,
-              483142,
-              86835,
-              272115
-            ],
-            [
-              "# validation triples",
-              5000,
-              50000,
-              3034,
-              17535
-            ],
-            [
-              "# test triples",
-              5000,
-              59071,
-              3134,
-              20466
-            ]
-          ]
-        },
         {
           "table_id": "table_2",
           "page": 8,
@@ -1064,58 +779,8 @@
     },
     {
       "paper_title": "HyperKG- Hyperbolic Knowledge Graph Embeddings for Knowledge Base Completion",
-      "num_tables": 4,
+      "num_tables": 2,
       "tables": [
-        {
-          "table_id": "table_1",
-          "page": 6,
-          "evaluation": {
-            "expected_rows": 4,
-            "expected_cols": 6,
-            "columns": [
-              "Dataset",
-              "E",
-              "R",
-              "#Train",
-              "#Valid",
-              "#Test"
-            ]
-          },
-          "rows": [
-            [
-              "WN18RR",
-              40943,
-              11,
-              86835,
-              3034,
-              3134
-            ],
-            [
-              "FB15k-237",
-              14541,
-              237,
-              272115,
-              17535,
-              20466
-            ],
-            [
-              "WD",
-              418,
-              2,
-              550,
-              25,
-              25
-            ],
-            [
-              "WD++",
-              763,
-              2,
-              1120,
-              40,
-              40
-            ]
-          ]
-        },
         {
           "table_id": "table_2",
           "page": 7,
@@ -1159,7 +824,7 @@
             [
               "HyperKG (Möbius addition)",
               "Translational",
-              0.30,
+              0.3,
               44,
               0.19,
               32
@@ -1167,7 +832,7 @@
             [
               "HyperKG (no regularisation)",
               "Translational",
-              0.30,
+              0.3,
               46,
               0.25,
               41
@@ -1219,144 +884,13 @@
               97
             ]
           ]
-        },
-        {
-          "table_id": "table_4",
-          "page": 9,
-          "evaluation": {
-            "expected_rows": 8,
-            "expected_cols": 9,
-            "columns": [
-              "Dataset",
-              "Model",
-              "#negs_E",
-              "#negs_R",
-              "η",
-              "λ",
-              "n",
-              "γ",
-              "β"
-            ]
-          },
-          "rows": [
-            [
-              "WN18RR",
-              "HyperKG",
-              10,
-              0,
-              0.01,
-              0.8,
-              100,
-              1.0,
-              "[n/2]"
-            ],
-            [
-              "WN18RR",
-              "HyperKG (Möbius addition)",
-              10,
-              0,
-              0.01,
-              "-",
-              100,
-              1.0,
-              "[n/2]"
-            ],
-            [
-              "WN18RR",
-              "HyperKG (no regularisation)",
-              10,
-              0,
-              0.01,
-              0.0,
-              100,
-              1.0,
-              "[n/2]"
-            ],
-            [
-              "FB15k-237",
-              "HyperKG",
-              5,
-              0,
-              0.01,
-              0.2,
-              100,
-              0.5,
-              "[n/2]"
-            ],
-            [
-              "FB15k-237",
-              "HyperKG (Möbius addition)",
-              5,
-              0,
-              0.01,
-              "-",
-              100,
-              0.5,
-              "[n/2]"
-            ],
-            [
-              "FB15k-237",
-              "HyperKG (no regularisation)",
-              5,
-              0,
-              0.01,
-              0.0,
-              100,
-              0.5,
-              "[n/2]"
-            ],
-            [
-              "WD",
-              "HyperKG",
-              1,
-              1,
-              0.8,
-              0,
-              100,
-              7,
-              "[n/2]"
-            ],
-            [
-              "WD++",
-              "HyperKG",
-              1,
-              1,
-              0.1,
-              0,
-              100,
-              7,
-              "[n/2]"
-            ]
-          ]
         }
       ]
     },
     {
       "paper_title": "Seq2RDF- An end-to-end application for deriving Triples from Natural Language Text",
-      "num_tables": 2,
+      "num_tables": 1,
       "tables": [
-        {
-          "table_id": "table_1",
-          "page": 3,
-          "evaluation": {
-            "expected_rows": 2,
-            "expected_cols": 2,
-            "columns": [
-              "",
-              ""
-            ]
-          },
-          "rows": [
-            [
-              "Text",
-              "Berlin is the capital city of Germany."
-            ],
-            [
-              "Triple",
-              "dbr:Germany dbo:capital dbr:Berlin"
-            ]
-          ]
-        },
         {
           "table_id": "table_2",
           "page": 4,
@@ -1405,5 +939,8 @@
         }
       ]
     }
-  ]
+  ],
+  "description": "Subconjunto filtrado: SOLO tablas de evaluación (métricas de rendimiento del modelo).",
+  "num_documents": 5,
+  "total_tables": 11
 }
