@@ -57,6 +57,7 @@
       "hits@1",
       "hits@10",
       "hits@3",
+      "mr",
       "mrr"
     ]
   },
@@ -92,6 +93,7 @@
     "local_path": "model_type_pdfs/1506.00999.pdf",
     "xml_file": "../data/xml_files\\Combining Two And Three-Way Embeddings Models for Link Prediction in Knowledge B.xml",
     "metrics": [
+      "auc",
       "hits@10",
       "hits@5",
       "mr"
@@ -132,7 +134,9 @@
     "xml_file": "../data/xml_files\\Analogical Inference for Multi-Relational Embeddings.xml",
     "metrics": [
       "hits@1",
+      "hits@10",
       "hits@3",
+      "map",
       "mrr"
     ]
   },
@@ -193,6 +197,7 @@
     "local_path": "model_type_pdfs/1412.6575.pdf",
     "xml_file": "../data/xml_files\\Embedding Entities and Relations for Learning and Inference in Knowledge Bases.xml",
     "metrics": [
+      "accuracy",
       "hits@10",
       "map",
       "mrr"
@@ -240,6 +245,8 @@
     "local_path": "model_type_pdfs/trouillon16.pdf",
     "xml_file": "../data/xml_files\\Complex Embeddings for Simple Link Prediction.xml",
     "metrics": [
+      "accuracy",
+      "hits@1",
       "mrr"
     ]
   },
@@ -278,6 +285,11 @@
     "local_path": "model_type_pdfs/rosso2020www_0.pdf",
     "xml_file": "../data/xml_files\\SimplE Embedding for Link Prediction in Knowledge Graphs.xml",
     "metrics": [
+      "accuracy",
+      "hits@1",
+      "hits@10",
+      "hits@3",
+      "mr",
       "mrr"
     ]
   },
@@ -316,6 +328,7 @@
       "hits@10",
       "hits@30",
       "hits@50",
+      "map",
       "mr",
       "mrr"
     ]
@@ -357,6 +370,7 @@
     "local_path": "model_type_pdfs/1705.10744.pdf",
     "xml_file": "../data/xml_files\\Knowledge Base Completion Baseline strikes back (Again).xml",
     "metrics": [
+      "accuracy",
       "hits@1",
       "hits@10",
       "mrr"
@@ -409,7 +423,11 @@
     "category": "Translation models",
     "local_path": "model_type_pdfs/PACLIC_28_Fan.pdf",
     "xml_file": "../data/xml_files\\Knowledge Graph Embedding An Overview.xml",
-    "metrics": []
+    "metrics": [
+      "hits@10",
+      "map",
+      "mrr"
+    ]
   },
   {
     "paper_url": "https://paperswithcode.com/paper/canonical-tensor-decomposition-for-knowledge",
@@ -503,6 +521,7 @@
     "local_path": "model_type_pdfs/1912.02686.pdf",
     "xml_file": "../data/xml_files\\Canonical Tensor Decomposition for Knowledge Base Completion.xml",
     "metrics": [
+      "hits@10",
       "mrr"
     ]
   },
@@ -549,6 +568,7 @@
     "local_path": "model_type_pdfs/1904.10281.pdf",
     "xml_file": "../data/xml_files\\Quaternion Knowledge Graph Embeddings.xml",
     "metrics": [
+      "accuracy",
       "hits@1",
       "hits@10",
       "hits@3",
@@ -656,7 +676,9 @@
     "category": "Semantic matching models",
     "local_path": "model_type_pdfs/b337e84de8752b27eda3a12363109e80-Paper.pdf",
     "xml_file": "../data/xml_files\\Knowledge Enhanced Graph Neural Networks for Graph Completion.xml",
-    "metrics": []
+    "metrics": [
+      "accuracy"
+    ]
   },
   {
     "paper_url": "https://paperswithcode.com/paper/probabilistic-knowledge-graph-embeddings",
@@ -690,6 +712,7 @@
     "local_path": "model_type_pdfs/45634.pdf",
     "xml_file": "../data/xml_files\\Probabilistic Knowledge Graph Embeddings.xml",
     "metrics": [
+      "hits@10",
       "map",
       "mrr"
     ]
@@ -747,6 +770,8 @@
     "local_path": "model_type_pdfs/1808.04122.pdf",
     "xml_file": "../data/xml_files\\A Capsule Network-based Embedding Model for Knowledge Graph Completion and Searc.xml",
     "metrics": [
+      "hits@1",
+      "hits@10",
       "mr",
       "mrr"
     ]
@@ -815,6 +840,9 @@
     "local_path": "model_type_pdfs/1703.06103.pdf",
     "xml_file": "../data/xml_files\\Modeling Relational Data with Graph Convolutional Networks.xml",
     "metrics": [
+      "accuracy",
+      "hits@1",
+      "map",
       "mrr"
     ]
   },
@@ -874,6 +902,7 @@
     "local_path": "model_type_pdfs/1911.03082.pdf",
     "xml_file": "../data/xml_files\\Composition-based Multi-Relational Graph Convolutional Networks.xml",
     "metrics": [
+      "accuracy",
       "mr",
       "mrr"
     ]
@@ -933,6 +962,7 @@
     "local_path": "model_type_pdfs/1711.04071.pdf",
     "xml_file": "../data/xml_files\\KBGAN Adversarial Learning for Knowledge Graph Embeddings.xml",
     "metrics": [
+      "hits@10",
       "mrr"
     ]
   },
@@ -1001,6 +1031,7 @@
     "local_path": "model_type_pdfs/2003.13432.pdf",
     "xml_file": "../data/xml_files\\Network In Graph Neural Network.xml",
     "metrics": [
+      "accuracy",
       "auc",
       "hits@10",
       "hits@100",
@@ -1064,6 +1095,7 @@
     "local_path": "model_type_pdfs/1cecc7a77928ca8133fa24680a88d2f9-Paper.pdf",
     "xml_file": "../data/xml_files\\Translating Embeddings for Modeling Multi-relational Data.xml",
     "metrics": [
+      "accuracy",
       "hits@10",
       "mr"
     ]
@@ -1102,7 +1134,9 @@
     "local_path": "model_type_pdfs/1801.08641.pdf",
     "xml_file": "../data/xml_files\\Knowledge Graph Embedding with Multiple Relation Projections.xml",
     "metrics": [
+      "accuracy",
       "hits@10",
+      "map",
       "mr",
       "mrr"
     ]
@@ -1157,6 +1191,7 @@
     "local_path": "model_type_pdfs/1606.08140.pdf",
     "xml_file": "../data/xml_files\\STransE a novel embedding model of entities and relationships in knowledge bases.xml",
     "metrics": [
+      "hits@10",
       "mr",
       "mrr"
     ]
@@ -1484,6 +1519,7 @@
     "local_path": "model_type_pdfs/meilicke18ruleemb.pdf",
     "xml_file": "../data/xml_files\\KG-BERT BERT for Knowledge Graph Completion.xml",
     "metrics": [
+      "accuracy",
       "hits@1",
       "hits@10",
       "mr"
@@ -1538,6 +1574,7 @@
     "local_path": "model_type_pdfs/1904.12211.pdf",
     "xml_file": "../data/xml_files\\Soft Marginal TransE for Scholarly Knowledge Graph Completion.xml",
     "metrics": [
+      "accuracy",
       "hits@10",
       "mr"
     ]
@@ -1633,6 +1670,7 @@
     "metrics": [
       "auc",
       "hits@10",
+      "map",
       "mr",
       "mrr"
     ]
@@ -1668,7 +1706,9 @@
     "category": "Internal side information inside KGs",
     "local_path": "model_type_pdfs/paperID314.pdf",
     "xml_file": "../data/xml_files\\Learning Graph Representations.xml",
-    "metrics": []
+    "metrics": [
+      "map"
+    ]
   },
   {
     "paper_url": "https://paperswithcode.com/paper/knowledge-graph-embedding-with-numeric",
@@ -1742,6 +1782,7 @@
     "local_path": "model_type_pdfs/D15-1031.pdf",
     "xml_file": "../data/xml_files\\Aligning Knowledge and Text Embeddings by Entity Descriptions.xml",
     "metrics": [
+      "accuracy",
       "hits@10"
     ]
   },
@@ -1799,7 +1840,9 @@
     "local_path": "model_type_pdfs/1609.07028.pdf",
     "xml_file": "../data/xml_files\\Knowledge Probing for Graph Representation Learning.xml",
     "metrics": [
-      "auc"
+      "accuracy",
+      "auc",
+      "f1"
     ]
   },
   {
@@ -1834,6 +1877,7 @@
     "local_path": "model_type_pdfs/1809.01341.pdf",
     "xml_file": "../data/xml_files\\Embedding Multimodal Relational Data for Knowledge Base Completion.xml",
     "metrics": [
+      "accuracy",
       "hits@1",
       "hits@10",
       "hits@2",
@@ -1878,6 +1922,7 @@
     "metrics": [
       "hits@1",
       "hits@10",
+      "mr",
       "mrr"
     ]
   },
@@ -1916,6 +1961,7 @@
     "local_path": "model_type_pdfs/1802.00934.pdf",
     "xml_file": "../data/xml_files\\Incorporating Literals into Knowledge Graph Embeddings.xml",
     "metrics": [
+      "accuracy",
       "hits@1",
       "hits@10",
       "hits@3",
@@ -1987,6 +2033,9 @@
     "local_path": "model_type_pdfs/D18-1225.pdf",
     "xml_file": "../data/xml_files\\Neural Graph Embedding Methods for Natural Language Processing.xml",
     "metrics": [
+      "accuracy",
+      "f1",
+      "map",
       "mr",
       "mrr"
     ]
@@ -2025,7 +2074,9 @@
     "category": "Internal side information inside KGs",
     "local_path": "model_type_pdfs/1508.02593.pdf",
     "xml_file": "../data/xml_files\\Type-Constrained Representation Learning in Knowledge Graphs.xml",
-    "metrics": []
+    "metrics": [
+      "map"
+    ]
   },
   {
     "paper_url": "https://paperswithcode.com/paper/polar-embedding",
@@ -2055,7 +2106,9 @@
     "category": "Internal side information inside KGs",
     "local_path": "model_type_pdfs/2018.KDD%202018%20Hierarchical%20Taxonomy%20Aware%20Network%20Embedding.pdf",
     "xml_file": "../data/xml_files\\Polar Embedding.xml",
-    "metrics": []
+    "metrics": [
+      "f1"
+    ]
   },
   {
     "paper_url": "https://paperswithcode.com/paper/a2n-attending-to-neighbors-for-knowledge",
@@ -2088,6 +2141,7 @@
     "local_path": "model_type_pdfs/P19-1431.pdf",
     "xml_file": "../data/xml_files\\A2N Attending to Neighbors for Knowledge Graph Inference.xml",
     "metrics": [
+      "accuracy",
       "hits@1",
       "hits@10",
       "hits@3",
@@ -2134,6 +2188,7 @@
     "local_path": "model_type_pdfs/1906.01195.pdf",
     "xml_file": "../data/xml_files\\Learning Attention-based Embeddings for Relation Prediction in Knowledge Graphs.xml",
     "metrics": [
+      "hits@1",
       "mr",
       "mrr"
     ]
@@ -2172,7 +2227,12 @@
     "local_path": "model_type_pdfs/1808.09040.pdf",
     "xml_file": "../data/xml_files\\One-shot Learning for Temporal Knowledge Graphs.xml",
     "metrics": [
+      "accuracy",
+      "hits@1",
       "hits@10",
+      "hits@2",
+      "hits@3",
+      "map",
       "mrr"
     ]
   },
@@ -2257,6 +2317,10 @@
     "local_path": "model_type_pdfs/1911.04910.pdf",
     "xml_file": "../data/xml_files\\Orthogonal Relation Transforms with Graph Context Modeling for Knowledge Graph E.xml",
     "metrics": [
+      "accuracy",
+      "hits@1",
+      "hits@10",
+      "hits@3",
       "mrr"
     ]
   },
@@ -2297,6 +2361,7 @@
     "local_path": "model_type_pdfs/1607.01426.pdf",
     "xml_file": "../data/xml_files\\Variational Graph Recurrent Neural Networks.xml",
     "metrics": [
+      "accuracy",
       "auc"
     ]
   },
@@ -2337,7 +2402,10 @@
     "category": "Internal side information inside KGs",
     "local_path": "model_type_pdfs/jiang17a.pdf",
     "xml_file": "../data/xml_files\\Graph Learning A Survey.xml",
-    "metrics": []
+    "metrics": [
+      "accuracy",
+      "map"
+    ]
   },
   {
     "paper_url": "https://paperswithcode.com/paper/representation-learning-for-scale-free",
@@ -2371,7 +2439,11 @@
     "category": "External extra information outside KGs",
     "local_path": "model_type_pdfs/1807.08204.pdf",
     "xml_file": "../data/xml_files\\Representation Learning for Scale-free Networks.xml",
-    "metrics": []
+    "metrics": [
+      "accuracy",
+      "f1",
+      "map"
+    ]
   },
   {
     "paper_url": "https://paperswithcode.com/paper/domain-representation-for-knowledge-graph",
@@ -2408,7 +2480,9 @@
     "local_path": "model_type_pdfs/KR2ML_2019_paper_31.pdf",
     "xml_file": "../data/xml_files\\Domain Representation for Knowledge Graph Embedding.xml",
     "metrics": [
+      "hits@1",
       "hits@10",
+      "hits@3",
       "mr"
     ]
   },
@@ -2453,7 +2527,9 @@
     "local_path": "model_type_pdfs/1909.11864.pdf",
     "xml_file": "../data/xml_files\\Representation Learning with Ordered Relation Paths for Knowledge Graph Completi.xml",
     "metrics": [
+      "accuracy",
       "hits@10",
+      "map",
       "mr"
     ]
   },
@@ -2489,6 +2565,7 @@
     "local_path": "model_type_pdfs/2001.11850.pdf",
     "xml_file": "../data/xml_files\\Graph Neural Networks at a Fraction.xml",
     "metrics": [
+      "accuracy",
       "auc",
       "hits@50"
     ]
@@ -2547,7 +2624,11 @@
     "local_path": "model_type_pdfs/0e55666a4ad822e0e34299df3591d979-Paper.pdf",
     "xml_file": "../data/xml_files\\Logical Entity Representation in Knowledge-Graphs for Differentiable Rule Learni.xml",
     "metrics": [
+      "accuracy",
+      "f1",
       "hits@1",
+      "hits@10",
+      "hits@3",
       "mrr"
     ]
   },
@@ -2582,7 +2663,9 @@
     "category": "External extra information outside KGs",
     "local_path": "model_type_pdfs/0297.pdf",
     "xml_file": "../data/xml_files\\Representation Learning over Dynamic Graphs.xml",
-    "metrics": []
+    "metrics": [
+      "hits@10"
+    ]
   },
   {
     "paper_url": "https://paperswithcode.com/paper/drum-end-to-end-differentiable-rule-mining-on",
@@ -2639,6 +2722,7 @@
     "local_path": "model_type_pdfs/0c72cb7ee1512f800abe27823a792d03-Paper.pdf",
     "xml_file": "../data/xml_files\\DRUM End-To-End Differentiable Rule Mining On Knowledge Graphs.xml",
     "metrics": [
+      "accuracy",
       "hits@1",
       "hits@10",
       "hits@3",
@@ -2676,7 +2760,10 @@
     "category": "External extra information outside KGs",
     "local_path": "model_type_pdfs/ijcai2016.pdf",
     "xml_file": "../data/xml_files\\Higher-Order Factorization Machines.xml",
-    "metrics": []
+    "metrics": [
+      "accuracy",
+      "auc"
+    ]
   },
   {
     "paper_url": "https://paperswithcode.com/paper/logic-rules-powered-knowledge-graph-embedding",
@@ -2728,10 +2815,12 @@
     "local_path": "model_type_pdfs/1903.03772.pdf",
     "xml_file": "../data/xml_files\\Logic Rules Powered Knowledge Graph Embedding.xml",
     "metrics": [
+      "accuracy",
       "hits@1",
       "hits@10",
       "hits@3",
       "hits@5",
+      "map",
       "mr",
       "mrr"
     ]
@@ -2809,7 +2898,11 @@
     "category": "External extra information outside KGs",
     "local_path": "model_type_pdfs/13e5ebb0fa112fe1b31a1067962d74a7-Paper.pdf",
     "xml_file": "../data/xml_files\\Natural-Parameter Networks A Class of Probabilistic Neural Networks.xml",
-    "metrics": []
+    "metrics": [
+      "accuracy",
+      "auc",
+      "map"
+    ]
   },
   {
     "paper_url": "https://paperswithcode.com/paper/accurate-text-enhanced-knowledge-graph",
@@ -2847,6 +2940,7 @@
     "local_path": "model_type_pdfs/N18-1068.pdf",
     "xml_file": "../data/xml_files\\Accurate Text-Enhanced Knowledge Graph Representation Learning.xml",
     "metrics": [
+      "accuracy",
       "hits@10",
       "mr"
     ]
@@ -2890,6 +2984,7 @@
       "hits@1",
       "hits@10",
       "hits@3",
+      "mr",
       "mrr"
     ]
   },
@@ -2928,6 +3023,7 @@
     "local_path": "model_type_pdfs/1611.08661.pdf",
     "xml_file": "../data/xml_files\\Knowledge Graph Representation with Jointly Structural and Textual Encoding.xml",
     "metrics": [
+      "accuracy",
       "hits@10",
       "mr"
     ]
@@ -3256,6 +3352,7 @@
     "local_path": "model_type_pdfs/D16-1260.pdf",
     "xml_file": "../data/xml_files\\Encoding Temporal Information for Time-Aware Link Prediction.xml",
     "metrics": [
+      "accuracy",
       "hits@1",
       "hits@10",
       "mr"
@@ -3304,6 +3401,7 @@
     "local_path": "model_type_pdfs/1807.00228.pdf",
     "xml_file": "../data/xml_files\\Scaling Knowledge Graph Embedding Models.xml",
     "metrics": [
+      "accuracy",
       "hits@1",
       "mrr"
     ]
@@ -3385,6 +3483,7 @@
     "local_path": "model_type_pdfs/trivedi17a.pdf",
     "xml_file": "../data/xml_files\\Reasoning on Knowledge Graphs with Debate Dynamics.xml",
     "metrics": [
+      "accuracy",
       "auc",
       "hits@1",
       "hits@10",
@@ -3450,6 +3549,7 @@
     "local_path": "model_type_pdfs/1904.05530.pdf",
     "xml_file": "../data/xml_files\\Recurrent Event Network Autoregressive Structure Inference over Temporal Knowled.xml",
     "metrics": [
+      "hits@3",
       "mrr"
     ]
   },
