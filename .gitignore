@@ -1,4 +1,4 @@
 *.pdf
 
 *.xlsx
-*.idea
+.idea/
