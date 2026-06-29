@@ -1,10 +1,10 @@
 """Table context + entity extraction (LightOnOCR + GLiNER2).
 
 Single PDF:
-    python extract_table_context_lightonocr.py -i "pdfs_test/paper.pdf" -o pdfs_test/out -v
+    python extract_table_context_lightonocr_gliner.py -i "pdfs_test/paper.pdf" -o pdfs_test/out -v
 
 Multiple PDFs (folder):
-    python extract_table_context_lightonocr.py -i pdfs_test -o pdfs_test/out -v
+    python extract_table_context_lightonocr_gliner.py -i pdfs_test -o pdfs_test/out -v
 """
 
 from __future__ import annotations
