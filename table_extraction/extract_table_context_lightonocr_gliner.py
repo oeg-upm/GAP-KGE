@@ -35,16 +35,16 @@ GLINER2_MAX_CHARS = 3000
 
 GLINER2_LABEL_DESCRIPTIONS = {
     "model": (
-        "Name of a machine-learning model, knowledge-graph embedding method, "
-        "algorithm or system (e.g. TransE, ComplEx, HolE, RotatE)."
+        "Name of a model, method, or algorithm "
+        "(e.g. TransE, ComplEx, RotatE)."
     ),
     "dataset": (
         "Name of a benchmark dataset or knowledge-graph corpus "
-        "(e.g. WN18, WN18RR, FB15k, FB15k-237, YAGO, NELL)."
+        "(e.g. WN18, FB15k, YAGO)."
     ),
     "metric": (
-        "Name of an evaluation metric used to score a model "
-        "(e.g. MRR, Hits@1, Hits@3, Hits@10, MR, Mean, Accuracy, F1)."
+        "Name of an evaluation metric used for reporting performance "
+        "(e.g. MRR, Hits@10, F1)."
     ),
 }
 GLINER2_LABELS = list(GLINER2_LABEL_DESCRIPTIONS.keys())
