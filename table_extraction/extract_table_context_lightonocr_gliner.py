@@ -1,10 +1,10 @@
 """Table context + entity extraction (LightOnOCR + GLiNER2).
 
 Single PDF:
-    python extract_table_context_lightonocr_gliner.py -i "pdfs_test/paper.pdf" -o pdfs_test/out -v
+    python extract_table_context_lightonocr_gliner.py -i path/to/paper.pdf -o path/to/out -v
 
 Multiple PDFs (folder):
-    python extract_table_context_lightonocr_gliner.py -i pdfs_test -o pdfs_test/out -v
+    python extract_table_context_lightonocr_gliner.py -i path/to/pdfs -o path/to/out -v
 """
 
 from __future__ import annotations
@@ -32,6 +32,11 @@ OCR_TARGET_LONGEST = 1540
 GLINER2_MODEL_ID = "fastino/gliner2-base-v1"
 GLINER2_MIN_SCORE = 0.65
 GLINER2_MAX_CHARS = 3000
+
+ADJACENT_PARA_WINDOW = 2
+MIN_MENTION_CHARS = 40
+
+_HEADING_ONLY_RE = re.compile(r"^#{1,6}\s+\S")
 
 GLINER2_LABEL_DESCRIPTIONS = {
     "model": (
@@ -213,6 +218,49 @@ def _collapse_ws(text: str) -> str:
     return re.sub(r"[ \t]+", " ", text).strip()
 
 
+def _repair_hyphen_breaks(text: str) -> str:
+    """Rejoin hyphenated words split across line breaks (lowercase continuation only)."""
+    return re.sub(r"(\w)-\s*\n\s*([a-z][\w'-]*)", r"\1\2", text)
+
+
+def _split_paragraphs(text: str) -> List[str]:
+    """Split page text into paragraphs; fall back to line/sentence chunks when OCR has no blank lines."""
+    text = _repair_hyphen_breaks(text)
+    paras = [p.strip() for p in re.split(r"\n\s*\n+", text) if p.strip()]
+    if len(paras) > 1:
+        return [_collapse_ws(p) for p in paras]
+
+    lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
+    if len(lines) <= 1:
+        return [_collapse_ws(text)] if text.strip() else []
+
+    chunks: List[str] = []
+    buf: List[str] = []
+    for line in lines:
+        buf.append(line)
+        if line.endswith((".", "!", "?", '."', '."', '."')):
+            chunks.append(" ".join(buf))
+            buf = []
+    if buf:
+        chunks.append(" ".join(buf))
+    if len(chunks) > 1:
+        return [_collapse_ws(p) for p in chunks if p.strip()]
+    return [_collapse_ws(text)] if text.strip() else []
+
+
+def _table_nums_in_para(para: str) -> set:
+    nums: set = set()
+    for m in TABLE_REF_RE.finditer(para):
+        body = _REF_KEYWORD_RE.sub("", m.group(0))
+        for g in _REF_NUM_RE.findall(body):
+            nums.add(normalize_table_number(g))
+    return nums
+
+
+def _mention_key(page: int, text: str) -> Tuple[int, str]:
+    return page, text
+
+
 def find_page_captions(page_text: str) -> List[dict]:
     captions = []
     for m in CAPTION_RE.finditer(page_text):
@@ -286,22 +334,159 @@ def pair_captions_to_tables(page_text: str) -> List[dict]:
 
 def page_paragraphs_without_tables(page_text: str) -> List[str]:
     text = TABLE_BLOCK_RE.sub(" ", page_text)
-    return [_collapse_ws(p) for p in re.split(r"\n\s*\n+", text) if p.strip()]
+    return _split_paragraphs(text)
+
+
+_FOOTNOTE_URL_RE = re.compile(r"https?://|github\.com|\$\^\{\d+\}")
+
+
+def _is_safe_continuation(para: str) -> bool:
+    t = para.strip()
+    if not t:
+        return False
+    if CAPTION_RE.match(t):
+        return False
+    if re.match(r"^Table\b", t, re.IGNORECASE):
+        return False
+    return True
+
+
+_HYPHEN_CONTINUATION_PREFIX_RE = re.compile(r"^([a-z][a-z'-]{0,30})([.,;:!?])?")
+_SENTENCE_END_RE = re.compile(r"""[.!?]['")\]]*\s*$""")
+MAX_MENTION_EXTENSIONS = 2
+
+
+def _ends_complete_sentence(text: str) -> bool:
+    return bool(_SENTENCE_END_RE.search(text.rstrip()))
+
+
+def _continuation_paragraphs(
+    page_idx: int,
+    para_idx: int,
+    paras: List[str],
+    pages: List[str],
+):
+    for k in range(para_idx + 1, len(paras)):
+        yield paras[k]
+    if page_idx < len(pages):
+        for p in page_paragraphs_without_tables(pages[page_idx]):
+            yield p
+
+
+def _extract_hyphen_continuation_prefix(para: str) -> Optional[str]:
+    """Leading lowercase word fragment after a hyphenated line break."""
+    t = para.lstrip()
+    if not t or not t[0].islower():
+        return None
+    if CAPTION_RE.match(t) or re.match(r"^Table\b", t, re.IGNORECASE):
+        return None
+    m = _HYPHEN_CONTINUATION_PREFIX_RE.match(t)
+    if not m:
+        return None
+    return m.group(1) + (m.group(2) or "")
+
+
+def _extend_mention_text(
+    para: str,
+    page_idx: int,
+    para_idx: int,
+    paras: List[str],
+    pages: List[str],
+) -> str:
+    """Rejoin hyphen breaks and incomplete sentences across paragraphs or pages."""
+    out = para.strip()
+    extensions = 0
+
+    for nxt in _continuation_paragraphs(page_idx, para_idx, paras, pages):
+        if extensions >= MAX_MENTION_EXTENSIONS:
+            break
+
+        nxt_text = nxt.strip()
+        if not nxt_text:
+            continue
+
+        if out.rstrip().endswith("-"):
+            merged_base = out.rstrip()[:-1]
+            if _is_safe_continuation(nxt_text):
+                out = _collapse_ws(merged_base + nxt_text)
+                extensions += 1
+                continue
+            prefix = _extract_hyphen_continuation_prefix(nxt_text)
+            if prefix:
+                out = _collapse_ws(merged_base + prefix)
+                break
+            continue
+
+        if _ends_complete_sentence(out) or out.rstrip().endswith(":"):
+            break
+
+        if not _is_safe_continuation(nxt_text):
+            continue
+
+        if extensions == 0 and not nxt_text[0].islower():
+            break
+
+        out = _collapse_ws(out + " " + nxt_text)
+        extensions += 1
+
+    return out
+
+
+def _is_usable_mention(text: str) -> bool:
+    t = text.strip()
+    if len(t) < MIN_MENTION_CHARS:
+        return False
+    if re.fullmatch(r"-+", t):
+        return False
+    if _HEADING_ONLY_RE.match(t) and len(t) < 80:
+        return False
+    if t.startswith("$$") or t.startswith("\\["):
+        return False
+    url_hits = len(_FOOTNOTE_URL_RE.findall(t))
+    if url_hits >= 2:
+        return False
+    if url_hits >= 1 and len(t) < 200:
+        return False
+    return True
 
 
 def find_mentions(pages: List[str]) -> Dict[str, List[dict]]:
+    """Map table number -> narrative paragraphs that cite it (+ nearby paragraphs)."""
     mentions: Dict[str, List[dict]] = {}
+    seen: Dict[str, set] = {}
+
     for page_idx, page_text in enumerate(pages, start=1):
-        for para in page_paragraphs_without_tables(page_text):
+        paras = page_paragraphs_without_tables(page_text)
+        for i, para in enumerate(paras):
             if CAPTION_RE.match(para):
                 continue
-            nums = set()
-            for m in TABLE_REF_RE.finditer(para):
-                body = _REF_KEYWORD_RE.sub("", m.group(0))
-                for g in _REF_NUM_RE.findall(body):
-                    nums.add(normalize_table_number(g))
-            for n in nums:
-                mentions.setdefault(n, []).append({"page": page_idx, "text": para})
+            nums = _table_nums_in_para(para)
+            if not nums:
+                continue
+
+            lo = max(0, i - ADJACENT_PARA_WINDOW)
+            hi = min(len(paras), i + ADJACENT_PARA_WINDOW + 1)
+            for j in range(lo, hi):
+                candidate = paras[j]
+                if CAPTION_RE.match(candidate):
+                    continue
+                if j != i:
+                    adj_nums = _table_nums_in_para(candidate)
+                    if adj_nums and adj_nums.isdisjoint(nums):
+                        continue
+                text = _extend_mention_text(candidate, page_idx, j, paras, pages)
+                if not _is_usable_mention(text):
+                    continue
+                for n in nums:
+                    key = _mention_key(page_idx, text)
+                    seen.setdefault(n, set())
+                    if key in seen[n]:
+                        continue
+                    seen[n].add(key)
+                    mentions.setdefault(n, []).append({"page": page_idx, "text": text})
+
+    for n in mentions:
+        mentions[n].sort(key=lambda m: (m["page"], m["text"]))
     return mentions
 
 
@@ -396,6 +581,14 @@ def metric_dedup_key(raw: str) -> str:
     if m:
         return f"hits@{m.group(1)}"
     return nm
+
+
+def _is_incomplete_metric_key(key: str) -> bool:
+    """Normalized metric keys ending in @ without a numeric suffix (table header fragments)."""
+    if not key or "@" not in key:
+        return False
+    suffix = key.split("@", 1)[1]
+    return not suffix or not any(ch.isdigit() for ch in suffix)
 
 
 def _pick_display(candidates: List[str]) -> str:
@@ -524,13 +717,56 @@ def extract_table_entities(caption: str, html: str) -> Dict[str, List[str]]:
                 filtered_datasets.append(value)
         elif label == "metric":
             k = metric_dedup_key(value)
-            if k and k not in {"hits@", "h@"} and k not in caption_only_mt:
+            if k and not _is_incomplete_metric_key(k) and k not in caption_only_mt:
                 filtered_metrics.append(value)
 
     return {
         "dataset": _dedup_by_key(filtered_datasets, normalize_dataset),
         "metric": _dedup_by_key(filtered_metrics, metric_dedup_key),
     }
+
+
+# ---------------------------------------------------------------------------
+# LaTeX → plain text (pylatexenc)
+# ---------------------------------------------------------------------------
+
+_latex2text = None
+_LATEX_MATH_RE = re.compile(
+    r"\$\$([^$]+)\$\$|\$([^$]+)\$|\\\(([^)]+)\\\)|\\\[([^\]]+)\\\]"
+)
+
+
+def _get_latex2text():
+    global _latex2text
+    if _latex2text is None:
+        from pylatexenc.latex2text import LatexNodes2Text
+
+        _latex2text = LatexNodes2Text()
+    return _latex2text
+
+
+def _convert_latex_fragment(fragment: str) -> str:
+    try:
+        return _get_latex2text().latex_to_text(fragment)
+    except Exception as e:
+        log.debug("latex2text: %s", e)
+        return fragment
+
+
+def latex_to_plain(text: str) -> str:
+    """Convert inline/display LaTeX segments to readable Unicode; leave plain text intact."""
+    if not text or not str(text).strip():
+        return text
+
+    def _repl(match: re.Match) -> str:
+        fragment = next(g for g in match.groups() if g is not None)
+        return _convert_latex_fragment(fragment)
+
+    return _LATEX_MATH_RE.sub(_repl, str(text))
+
+
+def _format_mentions_for_export(mentions: List[dict]) -> List[dict]:
+    return [{"page": m["page"], "text": latex_to_plain(m["text"])} for m in mentions]
 
 
 # ---------------------------------------------------------------------------
@@ -553,18 +789,18 @@ def extract_context_for_pdf(
         paired = pair_captions_to_tables(page_text)
         for t_i, item in enumerate(paired, start=1):
             html = item["match"].group(0)
-            caption = item["caption"] or ""
+            caption_raw = item["caption"] or ""
             table_num = item["table_num"]
-            mentions = mentions_by_num.get(table_num, []) if table_num else []
-            ents = extract_table_entities(caption, html)
+            mentions_raw = mentions_by_num.get(table_num, []) if table_num else []
+            ents = extract_table_entities(caption_raw, html)
 
             tables.append(
                 {
                     "table_id": f"{pdf_path.stem}_p{page_idx}_t{t_i}",
                     "table_label": f"Table {table_num}" if table_num else None,
                     "page": page_idx,
-                    "caption": caption,
-                    "mentions": mentions,
+                    "caption": latex_to_plain(caption_raw),
+                    "mentions": _format_mentions_for_export(mentions_raw),
                     "datasets": ents["dataset"],
                     "metrics": ents["metric"],
                 }
