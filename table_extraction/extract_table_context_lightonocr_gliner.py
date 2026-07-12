@@ -1,10 +1,12 @@
 """Table context + entity extraction (LightOnOCR + GLiNER2).
 
 Single PDF:
-    python extract_table_context_lightonocr_gliner.py -i path/to/paper.pdf -o path/to/out -v
+    python extract_table_context_lightonocr_gliner.py -i pdfs_test/paper.pdf -v
 
-Multiple PDFs (folder):
-    python extract_table_context_lightonocr_gliner.py -i path/to/pdfs -o path/to/out -v
+Multiple PDFs (folder, default input is pdfs_test/):
+    python extract_table_context_lightonocr_gliner.py -v
+
+Writes one combined JSON (default: pdfs_test/table_context_lightonocr_gliner.json).
 """
 
 from __future__ import annotations
@@ -35,6 +37,16 @@ GLINER2_MAX_CHARS = 3000
 
 ADJACENT_PARA_WINDOW = 2
 MIN_MENTION_CHARS = 40
+
+# Default paths (same as extract_table_context_lightonocr_gliner.ipynb)
+PDF_DIR = Path("pdfs_test")
+OUTPUT_PATH = PDF_DIR / "table_context_lightonocr_gliner.json"
+OCR_CACHE_DIR = PDF_DIR / "ocr_cache"
+
+RESULT_JSON_DESCRIPTION = (
+    "Per-table context (caption + mentions) with datasets & metrics via GLiNER2 "
+    "(same multi-pass extraction as table_*_benchmark_gliner notebooks)."
+)
 
 _HEADING_ONLY_RE = re.compile(r"^#{1,6}\s+\S")
 
@@ -163,14 +175,10 @@ def ocr_page(img: Image.Image, max_new_tokens: int = OCR_MAX_NEW_TOKENS) -> str:
         os.unlink(tmp.name)
 
 
-def ocr_pdf_pages(
-    pdf_path: Path,
-    cache_dir: Path,
-    *,
-    force_ocr: bool = False,
-) -> List[str]:
-    cache_dir.mkdir(parents=True, exist_ok=True)
-    cache_file = cache_dir / f"{pdf_path.stem}_pages.json"
+def ocr_pdf_pages(pdf_path: Path, *, force_ocr: bool = False) -> List[str]:
+    """OCR every page of a PDF to text. Cached per PDF as <stem>_pages.json."""
+    OCR_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_file = OCR_CACHE_DIR / f"{pdf_path.stem}_pages.json"
     if cache_file.exists() and not force_ocr:
         log.debug("OCR cache hit: %s", cache_file)
         with cache_file.open(encoding="utf-8") as f:
@@ -774,14 +782,9 @@ def _format_mentions_for_export(mentions: List[dict]) -> List[dict]:
 # ---------------------------------------------------------------------------
 
 
-def extract_context_for_pdf(
-    pdf_path: Path,
-    *,
-    ocr_cache_dir: Path,
-    force_ocr: bool = False,
-) -> dict:
+def extract_context_for_pdf(pdf_path: Path, *, force_ocr: bool = False) -> dict:
     log.info("Processing: %s", pdf_path.name)
-    pages = ocr_pdf_pages(pdf_path, ocr_cache_dir, force_ocr=force_ocr)
+    pages = ocr_pdf_pages(pdf_path, force_ocr=force_ocr)
     mentions_by_num = find_mentions(pages)
 
     tables = []
@@ -822,6 +825,32 @@ def extract_context_for_pdf(
     }
 
 
+def extract_documents(input_path: Path, *, force_ocr: bool = False) -> List[dict]:
+    return [
+        extract_context_for_pdf(pdf_path, force_ocr=force_ocr)
+        for pdf_path in collect_pdf_paths(input_path)
+    ]
+
+
+def write_result_json(
+    documents: List[dict],
+    output_path: Path,
+    *,
+    pdf_dir: Path,
+) -> dict:
+    result_json = {
+        "description": RESULT_JSON_DESCRIPTION,
+        "pdf_dir": str(pdf_dir.resolve()),
+        "num_documents": len(documents),
+        "total_tables": sum(d["num_tables"] for d in documents),
+        "documents": documents,
+    }
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("w", encoding="utf-8") as f:
+        json.dump(result_json, f, indent=2, ensure_ascii=False)
+    return result_json
+
+
 def collect_pdf_paths(input_path: Path) -> List[Path]:
     input_path = input_path.resolve()
     if input_path.is_file():
@@ -838,38 +867,36 @@ def collect_pdf_paths(input_path: Path) -> List[Path]:
 
 def run_extract(
     input_path: Path,
-    output_dir: Path,
+    output_path: Path,
     *,
     ocr_cache_dir: Optional[Path] = None,
     force_ocr: bool = False,
     skip_existing: bool = False,
-) -> List[Path]:
-    output_dir.mkdir(parents=True, exist_ok=True)
-    cache_dir = ocr_cache_dir or (output_dir / "ocr_cache")
+    load_models_first: bool = True,
+) -> Path:
+    global OCR_CACHE_DIR
+    if ocr_cache_dir is not None:
+        OCR_CACHE_DIR = ocr_cache_dir
 
-    load_models()
-    pdf_paths = collect_pdf_paths(input_path)
-    written: List[Path] = []
+    output_path = output_path.resolve()
+    if skip_existing and output_path.exists():
+        log.info("skip existing: %s", output_path)
+        return output_path
 
-    for i, pdf_path in enumerate(pdf_paths, start=1):
-        out_file = output_dir / f"{pdf_path.stem}.json"
-        if skip_existing and out_file.exists():
-            log.info("[%d/%d] skip existing: %s", i, len(pdf_paths), out_file.name)
-            written.append(out_file)
-            continue
+    if load_models_first:
+        load_models()
 
-        log.info("[%d/%d] %s", i, len(pdf_paths), pdf_path.name)
-        doc = extract_context_for_pdf(
-            pdf_path,
-            ocr_cache_dir=cache_dir,
-            force_ocr=force_ocr,
-        )
-        with out_file.open("w", encoding="utf-8") as f:
-            json.dump(doc, f, indent=2, ensure_ascii=False)
-        log.info("  saved: %s", out_file)
-        written.append(out_file)
-
-    return written
+    input_path = input_path.resolve()
+    pdf_dir = input_path if input_path.is_dir() else input_path.parent
+    documents = extract_documents(input_path, force_ocr=force_ocr)
+    write_result_json(documents, output_path, pdf_dir=pdf_dir)
+    log.info(
+        "Done. %d document(s), %d table(s) -> %s",
+        len(documents),
+        sum(d["num_tables"] for d in documents),
+        output_path,
+    )
+    return output_path
 
 
 # ---------------------------------------------------------------------------
@@ -879,7 +906,7 @@ def run_extract(
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="extract_table_context_lightonocr",
+        prog="extract_table_context_lightonocr_gliner",
         description=(
             "Extract per-table context (caption + mentions) and entities "
             "(datasets & metrics) from PDFs using LightOnOCR + GLiNER2."
@@ -888,25 +915,25 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "-i",
         "--input",
-        required=True,
         type=Path,
+        default=PDF_DIR,
         metavar="PATH",
-        help="PDF file or directory containing *.pdf files.",
+        help="PDF file or directory containing *.pdf files (default: pdfs_test).",
     )
     parser.add_argument(
         "-o",
         "--output",
-        required=True,
         type=Path,
-        metavar="DIR",
-        help="Output directory; writes <pdf_stem>.json per PDF.",
+        default=OUTPUT_PATH,
+        metavar="PATH",
+        help="Output JSON file (default: pdfs_test/table_context_lightonocr_gliner.json).",
     )
     parser.add_argument(
         "--ocr-cache",
         type=Path,
-        default=None,
+        default=OCR_CACHE_DIR,
         metavar="DIR",
-        help="OCR page cache directory (default: <output>/ocr_cache).",
+        help="OCR page cache directory (default: pdfs_test/ocr_cache).",
     )
     parser.add_argument(
         "--force-ocr",
@@ -916,7 +943,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--skip-existing",
         action="store_true",
-        help="Skip PDFs whose output JSON already exists.",
+        help="Skip extraction if the output JSON already exists.",
     )
     parser.add_argument(
         "-v",
@@ -941,7 +968,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     logging.basicConfig(level=level, format="%(levelname)s: %(message)s")
 
     try:
-        written = run_extract(
+        run_extract(
             args.input,
             args.output,
             ocr_cache_dir=args.ocr_cache,
@@ -952,7 +979,6 @@ def main(argv: Optional[List[str]] = None) -> int:
         log.error("%s", e)
         return 1
 
-    log.info("Done. %d JSON file(s) in %s", len(written), args.output.resolve())
     return 0
 
 
