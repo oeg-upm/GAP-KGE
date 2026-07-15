@@ -16,8 +16,8 @@ The fields that we are extracting to generate the model cards are:
 - Name of the proposed model ✅
 - Type of model according to the Shen et al. (2022) taxonomy ✅
 - Limits and biases 👷
-- Datasets used for the evaluation 👷
-- Metrics used for the evaluation👷
+- Datasets used for the evaluation ✅
+- Metrics used for the evaluation✅
 - Achieved results👷
 
 Points marked with ✅ have been already covered in the pipeline, while those marked with 👷 are currently in progress.
@@ -27,7 +27,7 @@ Inside the *table_extraction* folder, you'll find another folder with a couple o
 
 ## Pre-requisites
 Some of the studied methods that rely on non-LLM approaches are based on external software, that needs to be installed beforehand.
-One of the softwares employed in this project is [Grobid](https://github.com/kermitt2/grobid).
+One of the softwares employed in this project is [Grobid](https://github.com/kermitt2/grobid), as well as it finetuned version for research papers, [SciPDF](github.com/titipata/scipdf_parser)
 
 ### Running Grobid
 Grobid is deployed as a Docker (🐳) service:
@@ -37,83 +37,11 @@ docker pull lfoppiano/grobid:0.8.0
 docker run -p 8070:8070 lfoppiano/grobid:0.8.0
 </pre>
 
-### Running DataStet
-Another employed software is DataStet, from SoftCite, which is used to detect dataset mention annotations.
-
-The easiest way to deploy and run is to use the Docker image, although there are other ways also that you can check out on their github: [DataStet](https://github.com/kermitt2/datastet).
-
-Run the docker container
-
-<pre lang="markdown">
-docker pull grobid/datastet:0.8.1
-docker run --rm --gpus all -it --init --ulimit core=0 -p 8060:8060 grobid/datastet:0.8.1
-</pre>
-
-This let you access to their web services for dataset extraction. But to exploit the DataStet service more efficiently, a Python client is available in [softcite/software_mentions_client](https://github.com/softcite/software_mentions_client) that can use DataStet to produce dataset mention annotations.
-
-Install the python client
-
-<pre lang="markdown">
-git clone https://github.com/softcite/software_mentions_client.git
-cd software_mentions_client/
-</pre>
-
-It is advised to setup first a virtual environment 
-
-<pre lang="markdown">
-virtualenv --system-site-packages -p python3 env
-source env/bin/activate
-python3 -m pip install -r requirements.txt
-python3 -m pip install -e .
-</pre>
-
-Now with the docker container running and virtual environment activated. For processing a single file, the resulting json being written as file at the indicated output path:
-<pre lang="markdown">
-python3 -m software_mentions_client.client --file-in toto.pdf --file-out toto.json
-</pre>
-
-For processing a repository:
-<pre lang="markdown">
-python3 -m software_mentions_client.client   --repo-in pdf_dir  --datastet
-</pre>
-
-Anntations will be added along the PDF and XML files, with extension *.software.json.
-
-### Running SciRex
-Finally, SciRex was also used in the experimentation for the extraction of tasks within the papers.
-To install and train the SciRex model, check the links for Check the links for [installation](https://github.com/allenai/SciREX?tab=readme-ov-file#installation) and [training](https://github.com/allenai/SciREX?tab=readme-ov-file#training-scirex-baseline-model).
-
-In this case we created a virtual environment instead of conda.
-First make sure the virtual environment is activated.
-<pre lang="markdown">
-source scirex_env/bin/activate
-</pre>
-
-Export required variables for AllenNLP configs.
-<pre lang="markdown">
-export BERT_BASE_FOLDER=/mnt/c/Users/Che/GAP-KGE/SciREX-master/models/scibert/scibert_scivocab_uncased
-export BERT_VOCAB=$BERT_BASE_FOLDER/vocab.txt
-export BERT_WEIGHTS=$BERT_BASE_FOLDER/weights.tar.gz
-export TRAIN_PATH=/mnt/c/Users/Che/GAP-KGE/scirex-master/scirex_dataset/release_data/train.jsonl
-export DEV_PATH=/mnt/c/Users/Che/GAP-KGE/scirex-master/scirex_dataset/release_data/dev.jsonl
-export TEST_PATH=/mnt/c/Users/Che/GAP-KGE/scirex-master/scirex_dataset/release_data/test.jsonl
-export IS_LOWERCASE=true
-export CUDA_DEVICE=0
-</pre>
-
-Run and time Scirex
-<pre lang="markdown">
-time PYTHONPATH=. python scirex/predictors/predict_ner.py \
-  outputs/pwc_outputs/experiment_scirex_full/main \ 
-  scirex_format.jsonl \ # input path
-  test_outputs/pdfs/ner_predictions.jsonl \ # output path
-  0
-</pre>
 
 ## Running the experiments
-As previously mentioned, the *experiment_notebooks* folder contains all notebooks developed throughout the experimentation process.
-This experimentation comprised evaluating both LLM-based and non-LLM approaches to assess which model was the best fit for each section of the final model card.
+As previously mentioned, the *experiment_notebooks* folder contains all notebooks developed throughout the experimentation process. All data for the experiments is in the *data* folder. If unavailable, you can run the *pwc_extraction.py* script to automatically create the dataset from the PWC dumps available.
+One notebook is devised per considered field. Inside each notebook, all cells required to run the experiments on the different model and content combinations are provided.
+**Make sure to have Ollama running with the corresponding models before launching the experiments!**
 
-- To run the **non-LLM experiments**, execute the [run_non_llm.ipynb](/experiment_notebooks/run_non_llm.ipynb)
-- To run the **LLM-based experiments**, execute the [run_llm.ipynb](/experiment_notebooks/run_llms.ipynb)
-- Finally, to run the experiments for the optimal pipeline, execute the [run_best_configuration.ipynb](/experiment_notebooks/run_best_configuration.ipynb)
+## Running the pipeline
+The notebook named *model_card_pipeline.ipynb* can be used to run the full pipeline, both in efficient and in reliable mode.
