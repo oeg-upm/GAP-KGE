@@ -1,0 +1,88 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1712.02121",
+    "@type": "MLModel",
+    "name": "ConvKB",
+    "description": "ConvKB is a novel embedding model proposed for knowledge base completion that advances state-of-the-art models by using a convolutional neural network to capture global relationships and transitional characteristics between entities and relations. In ConvKB, each triple is represented as a 3-column matrix. This matrix is fed into a convolution layer where multiple filters generate feature maps, which are then concatenated into a single feature vector. This vector generates a score by being multiplied with a weight vector via a dot product, and this score is used to predict the validity of the triple. Experiments showed that ConvKB achieves better link prediction performance than previous state-of-the-art models on the WN18RR and FB15k-237 benchmark datasets.",
+    "keywords": [
+        "ConvKB",
+        "embedding model",
+        "knowledge base completion",
+        "convolutional neural network",
+        "link prediction",
+        "WN18RR",
+        "FB15k-237"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5067423247",
+            "name": "Dai Quoc Nguyen"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5103252932",
+            "name": "Tu Dinh Nguyen"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5063933953",
+            "name": "Dat Quoc Nguyen"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5036447132",
+            "name": "Dinh Phung"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:18:22",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/knowledge-graph-completion",
+            "name": "Knowledge Graph Completion"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/task/link-prediction",
+            "name": "Link Prediction"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/other",
+        "name": "Other KGC technologies"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k-237",
+            "name": "FB15k-237"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/wn18rr",
+            "name": "WN18RR"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1712.02121v2",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5067423247"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5103252932"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5063933953"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5036447132"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2774837955",
+        "url": "http://arxiv.org/abs/1712.02121v2"
+    },
+    "codeRepository": [
+        "https://github.com/daiquocnguyen/ConvKB",
+        "https://github.com/datquocnguyen/STransE"
+    ]
+}

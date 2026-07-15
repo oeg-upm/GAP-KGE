@@ -1,0 +1,95 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1707.01476",
+    "@type": "MLModel",
+    "name": "ConvE",
+    "description": "ConvE is a multi-layer convolutional network model introduced for link prediction in knowledge graphs. It reports state-of-the-art results on several established datasets and is noted for being highly parameter efficient, achieving performance similar to DistMult and R-GCN while using 8x and 17x fewer parameters, respectively. The model is particularly effective at modeling nodes with high indegree, a feature common in complex knowledge graphs such as Freebase and YAGO3. Furthermore, when evaluated on robust datasets derived to prevent simple exploitation of inverse relations (addressing test set leakage), ConvE achieves state-of-the-art Mean Reciprocal Rank across most datasets.",
+    "keywords": [
+        "Link prediction",
+        "Knowledge graphs",
+        "Convolutional network",
+        "Multi-layer convolutional network",
+        "Dataset leakage",
+        "Mean Reciprocal Rank"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5067514564",
+            "name": "Tim Dettmers"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5019106673",
+            "name": "Pasquale Minervini"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5049427071",
+            "name": "Pontus Stenetorp"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5101404695",
+            "name": "Sebastian Riedel"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:06:13",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/knowledge-graphs",
+            "name": "Knowledge Graphs"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/other",
+        "name": "Other KGC technologies"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k",
+            "name": "FB15k"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k-237",
+            "name": "FB15k-237"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/wn18",
+            "name": "WN18"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/wn18rr",
+            "name": "WN18RR"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/yago3-10",
+            "name": "YAGO3-10"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1707.01476v6",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5067514564"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5019106673"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5049427071"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5101404695"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2728059831",
+        "url": "http://arxiv.org/abs/1707.01476v6"
+    },
+    "codeRepository": [
+        "https://github.com/uclmr/inferbeddings",
+        "https://github.com/TimDettmers/ConvE"
+    ]
+}

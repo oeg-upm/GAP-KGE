@@ -1,0 +1,103 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1802.04407",
+    "@type": "MLModel",
+    "name": "Adversarially Regularized Graph Autoencoder (ARGA)",
+    "description": "The model introduced is a novel adversarial graph embedding framework designed to address previous methods that ignored the data distribution of latent codes. This framework works by encoding both the topological structure and node content into a compact representation, which a decoder then trains on to reconstruct the graph structure. A key feature is that it enforces the latent representation to match a prior distribution through an adversarial training scheme. To achieve a robust embedding, two specific variants were developed: the adversarially regularized graph autoencoder (ARGA) and the adversarially regularized variational graph autoencoder (ARVGA). Experimental results validate this design, showing superior performance over baselines in link prediction, graph clustering, and graph visualization tasks on real-world graphs.",
+    "keywords": [
+        "Graph embedding",
+        "adversarial graph embedding framework",
+        "ARGA",
+        "ARVGA",
+        "link prediction",
+        "graph clustering",
+        "graph visualization"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5008056593",
+            "name": "Shirui Pan"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5048913577",
+            "name": "Ruiqi Hu"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5059227406",
+            "name": "Guodong Long"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5024040521",
+            "name": "Jing Jiang"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5051333714",
+            "name": "Lina Yao"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5038935672",
+            "name": "Chengqi Zhang"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:36:31",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/link-prediction",
+            "name": "Link Prediction"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/internal-side-information",
+        "name": "Internal side information inside KGs"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/citeseer",
+            "name": "Citeseer"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/cora",
+            "name": "Cora"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/pubmed",
+            "name": "PubMed"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1802.04407v2",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5008056593"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5059227406"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5052731721"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5065241505"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5100438525"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5057139422"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2808409763",
+        "url": "http://arxiv.org/abs/1802.04407v2"
+    },
+    "codeRepository": [
+        "https://github.com/"
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1711.11231",
+    "@type": "MLModel",
+    "name": "RUle-Guided Embedding (RUGE)",
+    "description": "Rule-Guided Embedding (RUGE) is introduced as a novel paradigm for Knowledge Graph (KG) embedding that uses iterative guidance from soft rules. It addresses previous methods by moving beyond one-time injections of hard rules and recognizing the interactive relationship between embedding learning and logical inference. RUGE learns simultaneously from three sources: 1) labeled triples observed in the KG; 2) unlabeled triples whose labels are predicted iteratively; and 3) soft rules with varying confidence levels, which are automatically extracted from the KG. The model operates through an iterative procedure where it queries rules to obtain soft labels for unlabeled triples, integrates these newly labeled triples, and uses them to update the embedding model, thereby improving the transfer of knowledge embodied in logic rules. Evaluation shows that RUGE achieves significant improvements over state-of-the-art baselines using iterative rule knowledge, proving that automatically extracted soft rules are highly beneficial even those with moderate confidence levels.",
+    "keywords": [
+        "Knowledge Graph embedding",
+        "soft rules",
+        "rule guidance",
+        "link prediction",
+        "iterative learning"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5101862837",
+            "name": "Shu Guo"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5004900127",
+            "name": "Quan Wang"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5003675662",
+            "name": "Lihong Wang"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5012222006",
+            "name": "Bin Wang"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5070771101",
+            "name": "Li Guo"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:43:32",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/link-prediction",
+            "name": "Link Prediction"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/task/graph-embedding",
+            "name": "Graph Embedding"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/external-extra-information",
+        "name": "External extra information outside KGs"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k",
+            "name": "FB15K"
+        },
+        {
+            "@id": "https://w3id.org/p2mc/dataset/yago37",
+            "name": "YAGO37"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1711.11231v1",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5112036093"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5100443578"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5100675165"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5100418245"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5108156794"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2771359908",
+        "url": "http://arxiv.org/abs/1711.11231v1"
+    },
+    "codeRepository": [
+        "https://github.com/ttrouill/complex",
+        "https://github.com/thunlp/KB2E"
+    ]
+}

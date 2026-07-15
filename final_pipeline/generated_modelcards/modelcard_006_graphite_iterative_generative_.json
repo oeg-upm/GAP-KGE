@@ -1,0 +1,95 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1803.10459",
+    "@type": "MLModel",
+    "name": "Graphite",
+    "description": "Graphite is an algorithmic framework proposed for the unsupervised learning of node representations over large graphs using deep latent variable generative models. It parameterizes variational autoencoders (VAE) with graph neural networks and employs a novel iterative graph refinement strategy inspired by low-rank approximations for decoding. On various datasets, Graphite outperforms competing approaches for density estimation, link prediction, and node classification. Additionally, the framework derives a theoretical connection between message passing in graph neural networks and mean-field variational inference.",
+    "keywords": [
+        "Graphite",
+        "unsupervised learning",
+        "deep latent variable generative models",
+        "variational autoencoders (VAE)",
+        "graph neural networks",
+        "link prediction",
+        "node classification"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5029939426",
+            "name": "Aditya Grover"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5089359278",
+            "name": "Aaron Zweig"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5091179481",
+            "name": "Stefano Ermon"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:13:37",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/link-prediction",
+            "name": "Link Prediction"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/task/node-classification",
+            "name": "Node Classification"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/internal-side-information",
+        "name": "Internal side information inside KGs"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/citeseer",
+            "name": "Citeseer"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/citeseer",
+            "name": "Citeseer*"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/cora",
+            "name": "Cora"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/cora",
+            "name": "Cora*"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/pubmed",
+            "name": "Pubmed"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/pubmed",
+            "name": "Pubmed*"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "https://arxiv.org/abs/1803.10459v4",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5091179481"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5085403945"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5014409944"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2962937159",
+        "url": "https://arxiv.org/abs/1803.10459v4"
+    },
+    "codeRepository": [
+        "arXiv:1803.10459v4 [stat.ML]"
+    ]
+}

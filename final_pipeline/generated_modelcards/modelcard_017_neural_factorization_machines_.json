@@ -1,0 +1,59 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1708.05027",
+    "@type": "MLModel",
+    "name": "Neural Factorization Machines (NFMs)",
+    "description": "Neural Factorization Machine (NFM) is a novel model proposed for prediction in sparse settings. It seamlessly combines the linearity of Factorization Machines (FMs) when modeling second-order feature interactions, with the non-linearity characteristic of neural networks when modeling higher-order feature interactions. Conceptually, NFM is more expressive than FM because FM can be viewed as a special case of NFM that lacks hidden layers. Empirically, NFM significantly outperforms FM on two regression tasks, showing a 7.3% relative improvement with just one hidden layer. Furthermore, compared to recent deep learning methods like Wide&Deep and DeepCross, NFM offers better performance while utilizing a shallower structure, making it much easier to train and tune in practice.",
+    "keywords": [
+        "Neural Factorization Machine",
+        "Factorization Machines",
+        "Sparse data",
+        "Non-linear feature interactions",
+        "Deep Neural Networks"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5038668215",
+            "name": "Xiangnan He"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5087041599",
+            "name": "Tat-Seng Chua"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:51:14",
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/other",
+        "name": "Other KGC technologies"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://w3id.org/p2mc/dataset/frappe",
+            "name": "Frappe"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/movielens",
+            "name": "MovieLens"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1708.05027v1",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5038668215"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5089404640"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2963323306",
+        "url": "http://arxiv.org/abs/1708.05027v1"
+    },
+    "codeRepository": [
+        "https://github.com/hexiangnan/neural-factorization-machine"
+    ]
+}

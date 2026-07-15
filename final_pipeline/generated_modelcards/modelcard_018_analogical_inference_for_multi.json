@@ -1,0 +1,74 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1705.02426",
+    "@type": "MLModel",
+    "name": "ANALOGY",
+    "description": "The paper introduces a novel framework that optimizes latent representations for entities and relations in large knowledge graphs with respect to their analogical properties. This model formulates its learning objective differentiably, which gives it both theoretical power and computational scalability. It significantly outperformed many baseline methods on benchmark datasets and offers an elegant unification of several well-known multi-relational embedding techniques.",
+    "keywords": [
+        "Large-scale multi-relational embedding",
+        "knowledge graphs",
+        "latent representations",
+        "knowledgebased inference",
+        "novel framework",
+        "differentiable learning objective"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5101981450",
+            "name": "Hanxiao Liu"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5044149187",
+            "name": "Yuexin Wu"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5100574885",
+            "name": "Yiming Yang"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:55:20",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/knowledge-graphs",
+            "name": "Knowledge Graphs"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/other",
+        "name": "Other KGC technologies"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k",
+            "name": "FB15K"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/wn18",
+            "name": "WN18"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1705.02426v2",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5101981450"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5082763858"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5041434096"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2612900438",
+        "url": "http://arxiv.org/abs/1705.02426v2"
+    },
+    "codeRepository": [
+        "https://github.com/quark0/ANALOGY"
+    ]
+}

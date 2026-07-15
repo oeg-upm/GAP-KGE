@@ -1,0 +1,93 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1802.09691",
+    "@type": "MLModel",
+    "name": "SEAL",
+    "description": "The text describes developing a novel $\\gamma$-decaying heuristic theory that unifies existing link prediction heuristics and proves they can be approximated using local subgraphs. Based on this theory, a new method is proposed to learn these heuristics directly from local subgraphs utilizing a graph neural network (GNN). This GNN-based approach achieves unprecedented performance across various problems.",
+    "keywords": [
+        "Link prediction",
+        "heuristic learning",
+        "local subgraphs",
+        "graph neural network",
+        "γ-decaying heuristic theory"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5103156859",
+            "name": "Muhan Zhang"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5114833151",
+            "name": "Yixin Chen"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:27:27",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/link-prediction",
+            "name": "Link Prediction"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/task/graph-neural-network",
+            "name": "Graph Neural Network"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/external-extra-information",
+        "name": "External extra information outside KGs"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://w3id.org/p2mc/dataset/cele",
+            "name": "Cele"
+        },
+        {
+            "@id": "https://w3id.org/p2mc/dataset/e-coli",
+            "name": "E.coli"
+        },
+        {
+            "@id": "https://w3id.org/p2mc/dataset/ns",
+            "name": "NS"
+        },
+        {
+            "@id": "https://w3id.org/p2mc/dataset/next",
+            "name": "Next"
+        },
+        {
+            "@id": "https://w3id.org/p2mc/dataset/pr",
+            "name": "PR"
+        },
+        {
+            "@id": "https://w3id.org/p2mc/dataset/power",
+            "name": "Power"
+        },
+        {
+            "@id": "https://w3id.org/p2mc/dataset/router",
+            "name": "Router"
+        },
+        {
+            "@id": "https://w3id.org/p2mc/dataset/usair",
+            "name": "USAir"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1802.09691v3",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5103156859"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5100393445"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2963757395",
+        "url": "http://arxiv.org/abs/1802.09691v3"
+    },
+    "codeRepository": [
+        "https://github.com/THUDM/SEAL"
+    ]
+}

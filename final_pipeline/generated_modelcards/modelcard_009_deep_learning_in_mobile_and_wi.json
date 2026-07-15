@@ -1,0 +1,81 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1803.04311",
+    "@type": "MLModel",
+    "name": "Unknown Model",
+    "description": "Deep learning is introduced as a powerful tool and potential solution for managing complex mobile environments, rising data volumes, and algorithm-driven applications in networking infrastructure. The paper aims to bridge the gap between deep learning and mobile/wireless networking research by:\n\n*   Introducing the essential background and state-of-the-art of deep learning techniques applicable to networking.\n*   Discussing techniques and platforms that facilitate the efficient deployment of deep learning onto mobile systems.\n*   Providing an encyclopedic review of mobile and wireless networking research that is based on deep learning, categorized by different domains.",
+    "keywords": [
+        "mobile devices",
+        "mobile applications",
+        "wireless networking infrastructure",
+        "5G systems",
+        "deep learning",
+        "machine learning techniques",
+        "network resources management",
+        "data volumes",
+        "analytics",
+        "mobile environments"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5034491627",
+            "name": "Chaoyun Zhang"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5048279197",
+            "name": "Paul Patras"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5096293730",
+            "name": "Hamed Haddadi"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:20:08",
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/other",
+        "name": "Other KGC technologies"
+    },
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1803.04311v3",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5048279197"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5043326652"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5030520880"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2962883549",
+        "url": "http://arxiv.org/abs/1803.04311v3"
+    },
+    "codeRepository": [
+        "http://storm.apache.org/",
+        "https://www.tensorflow.org/",
+        "https://www.movidius.com/",
+        "https://developer.android.com/guide/topics/renderscript/compute.html",
+        "https://redis.io/",
+        "https://www.qualcomm.com/news/releases/2016/05/02/qualcomm-helpsmake-your-mobile-devices-smarter-new-snapdragon-machine",
+        "https://mahout.apache.org/",
+        "https://hadoop.apache.org/docs/r1.2.1/hdfs design.html",
+        "https://www.tensorflow.org/guide/summaries and tensorboard",
+        "https://developer.apple.com/documentation/coreml",
+        "https://github.com/fchollet/keras",
+        "http://oozie.apache.org/",
+        "https://deepmind.com/blog/deepmind-ai-reduces-google-data-centre-coolingbill-40%",
+        "https://github.com/Tencent/ncnn",
+        "https://www.oracle.com/technetwork/database/mysql/index.html",
+        "https://github.com/tryolabs/luminoth",
+        "https://hive.apache.org/",
+        "https://pig.apache.org/",
+        "https://hbase.apache.org/",
+        "https://kafka.apache.org/"
+    ]
+}

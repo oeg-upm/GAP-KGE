@@ -1,0 +1,67 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1802.00543",
+    "@type": "MLModel",
+    "name": "Decagon",
+    "description": "Decagon is an approach developed for modeling polypharmacy side effects. It constructs a multimodal graph by integrating protein-protein interactions, drug-protein target interactions, and polypharmacy side effects, which are represented as distinct edge types within drug-drug interactions.\n\nThe model's core technology involves developing a new graph convolutional neural network specifically designed for multirelational link prediction in multimodal networks, allowing it to handle a large number of edge types. A key advantage is that Decagon can predict the exact side effect, if any, through which a given drug combination manifests clinically, surpassing approaches limited to predicting simple interaction values.\n\nDecagon demonstrates high accuracy in predicting polypharmacy side effects, outperforming baselines by up to 69%. It automatically learns representations indicative of polypharmacy co-occurrence and is particularly effective at modeling molecularly based side effects while maintaining good performance on non-molecular side effects through the effective sharing of model parameters across edge types. Ultimately, Decagon opens opportunities for using large pharmacogenomic and patient population data to flag and prioritize potential polypharmacy side effects for formal pharmacological studies.",
+    "keywords": [
+        "polypharmacy",
+        "drug combinations",
+        "adverse side effects",
+        "drug-drug interactions",
+        "Decagon",
+        "multimodal graph",
+        "graph convolutional neural network",
+        "multirelational link prediction",
+        "polypharmacy side effects"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5086052373",
+            "name": "Marinka Zitnik"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5036885938",
+            "name": "Monica Agrawal"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5107808013",
+            "name": "Jure Leskovec"
+        }
+    ],
+    "dateCreated": "2026-07-13T13:59:31",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/link-prediction",
+            "name": "Link Prediction"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/other",
+        "name": "Other KGC technologies"
+    },
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1802.00543v2",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5086052373"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5091272738"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5088961661"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2786016794",
+        "url": "http://arxiv.org/abs/1802.00543v2"
+    },
+    "codeRepository": [
+        "http://snap.stanford.edu/decagon"
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1802.04868",
+    "@type": "MLModel",
+    "name": "SimplE",
+    "description": "SimplE is a simple enhancement of Canonical Polyadic (CP) decomposition designed for link prediction in knowledge graphs, addressing CP’s limitation where it learns two independent embedding vectors for each entity when they should be tied. SimplE allows these two embeddings to be learned dependently. Its complexity grows linearly with the size of the embeddings. The model offers several advantages: its learned embeddings are interpretable, and background knowledge can be incorporated through weight tying. Furthermore, the authors prove that SimplE is fully expressive and derive a bound on its embedding size for full expressivity. Empirically, SimplE outperforms several state-of-the-art tensor factorization techniques. Its code is available at https://github.com/Mehran-k/SimplE.",
+    "keywords": [
+        "Knowledge graphs",
+        "Link prediction",
+        "Tensor factorization",
+        "CP decomposition",
+        "SimplE"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5065918431",
+            "name": "Seyed Mehran Kazemi"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5102986310",
+            "name": "David Poole"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:32:50",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/link-prediction",
+            "name": "Link Prediction"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/other",
+        "name": "Other KGC technologies"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k",
+            "name": "FB15k"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/wn18",
+            "name": "WN18"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1802.04868v2",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5065918431"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5102986310"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2785761199",
+        "url": "http://arxiv.org/abs/1802.04868v2"
+    },
+    "codeRepository": [
+        "https://github.com/"
+    ]
+}

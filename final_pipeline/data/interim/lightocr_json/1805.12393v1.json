@@ -1,0 +1,28 @@
+{
+  "documents": [
+    {
+      "tables": [
+        {
+          "caption": "Tabla de ejemplo",
+          "data": [
+            [
+              "FB15-k",
+              "WN18",
+              "WN18RR"
+            ],
+            [
+              "Dato 1",
+              "Dato 2",
+              "Dato 3"
+            ],
+            [
+              "Dato A",
+              "Dato B",
+              "Dato C"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

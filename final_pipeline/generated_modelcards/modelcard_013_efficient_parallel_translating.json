@@ -1,0 +1,89 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1703.10316",
+    "@type": "MLModel",
+    "name": "ParTrans-X",
+    "description": "An efficient parallel framework called ParTrans-X is proposed for translating embedding methods. This framework addresses the limitation of these state-of-the-art methods—their time-consuming training process—by enabling them to be paralleled without locks using the distinguished structures of knowledge graphs. Experiments validate that ParTrans-X significantly speeds up the training process, accelerating it by more than an order of magnitude when tested on two datasets using typical translating embedding methods like TransE and TransH.",
+    "keywords": [
+        "Knowledge graph embedding",
+        "Translating embedding methods",
+        "ParTrans-X",
+        "parallel framework"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5101638180",
+            "name": "Denghui Zhang"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5110074369",
+            "name": "Manling Li"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5109431867",
+            "name": "Yantao Jia"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5114230783",
+            "name": "Yuanzhuo Wang"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5093974026",
+            "name": "Xueqi Cheng"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:38:46",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/knowledge-graph-embedding",
+            "name": "Knowledge Graph Embedding"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/other",
+        "name": "Other KGC technologies"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k",
+            "name": "FB15k"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/wn18",
+            "name": "WN18"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1703.10316v4",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5100725719"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5101638181"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5052644952"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5057538607"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5029998682"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2604454537",
+        "url": "http://arxiv.org/abs/1703.10316v4"
+    },
+    "codeRepository": [
+        "https://github.com/zdh2292390/ParTrans-X",
+        "https://github.com/thunlp/KB2E"
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1702.06879",
+    "@type": "MLModel",
+    "name": "ComplEx",
+    "description": "The introduced approach utilizes complex-valued embeddings to reconcile expressiveness and complexity in knowledge graph completion, a process that predicts missing relationships or edges within large labeled directed graphs. Theoretically, this method explores the link between such embeddings and unitary diagonalization, corroborating that all real square matrices (and thus all possible relation/adjacency matrices) are the real part of some unitarily diagonalizable matrix. The approach is considered simple because it involves only a Hermitian dot product, which is the complex counterpart of the standard dot product for real vectors. It offers scalability by remaining linear in both space and time while consistently outperforming alternative approaches on standard link prediction benchmarks.",
+    "keywords": [
+        "Knowledge graph completion",
+        "complex-valued embeddings",
+        "link prediction",
+        "statistical relational learning",
+        "unitary diagonalization"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5040577184",
+            "name": "Théo Trouillon"
+        },
+        {
+            "@id": "https://w3id.org/p2mc/author/dance-750552315d",
+            "name": "Christopher R Dance"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5014352159",
+            "name": "Éric Gaussier"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5067022550",
+            "name": "Johannes Welbl"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5101404695",
+            "name": "Sebastian Riedel"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5090750283",
+            "name": "Guillaume Bouchard"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:46:54",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/knowledge-graph-completion",
+            "name": "Knowledge Graph Completion"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/task/link-prediction",
+            "name": "Link Prediction"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/other",
+        "name": "Other KGC technologies"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k",
+            "name": "FB15K"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/wn18",
+            "name": "WN18"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1702.06879v2",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5014352159"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5067022550"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5101404695"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5090750283"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5000827821"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5032987388"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2962936385",
+        "url": "http://arxiv.org/abs/1702.06879v2"
+    },
+    "codeRepository": [
+        "https://github.com/lmjohns3/downhill"
+    ]
+}

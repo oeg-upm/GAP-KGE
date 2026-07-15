@@ -1,0 +1,80 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1707.06690",
+    "@type": "MLModel",
+    "name": "DeepPath",
+    "description": "The model introduced is a novel reinforcement learning framework designed for learning multi-hop relational paths in large scale knowledge graphs (KGs). It operates using a policy-based agent with continuous states based on knowledge graph embeddings, reasoning within a KG vector space by sampling the most promising relation to extend its path. A distinguishing feature of this approach is its reward function, which takes accuracy, diversity, and efficiency into consideration.",
+    "keywords": [
+        "reinforcement learning",
+        "knowledge graphs",
+        "multi-hop relational paths",
+        "policy-based agent",
+        "KG vector space",
+        "Freebase",
+        "Never-Ending Language Learning datasets"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5102556396",
+            "name": "Wenhan Xiong"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5108868524",
+            "name": "Thien Hoang"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5100316297",
+            "name": "William Yang Wang"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:41:21",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/knowledge-graphs",
+            "name": "Knowledge Graphs"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/task/graph-embedding",
+            "name": "Graph Embedding"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/internal-side-information",
+        "name": "Internal side information inside KGs"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k-237",
+            "name": "FB15K-237"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/nell-995",
+            "name": "NELL-995"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1707.06690v3",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5110635444"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5036292565"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5100702485"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2962886429",
+        "url": "http://arxiv.org/abs/1707.06690v3"
+    },
+    "codeRepository": [
+        "https://github.com/thunlp/Fast-TransX",
+        "https://github.com/xwhan/DeepPath"
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1711.04071",
+    "@type": "MLModel",
+    "name": "KBGAN",
+    "description": "KBGAN is an adversarial learning framework designed to improve the performance of various existing knowledge graph embedding models. It addresses the difficulty of generating useful negative training examples, a problem because knowledge graphs typically only contain positive facts. Inspired by Generative Adversarial Networks (GANs), KBGAN utilizes one knowledge graph embedding model as a negative sample generator to assist in training a desired target model, which acts as the discriminator in the GAN structure. The framework is versatile and independent of the specific forms of the generator and discriminator, allowing it to utilize a wide variety of KGE models. In experiments, KBGAN was used to adversarially train translation-based models (TRANSE and TRANSD) with assistance from probability-based models (DISTMULT and COMPLEX). Its performance was evaluated on the link prediction task using three datasets: FB15k-237, WN18, and WN18RR. The results showed that this adversarial training substantially improves the performance of target embedding models under various settings.",
+    "keywords": [
+        "KBGAN",
+        "adversarial learning framework",
+        "knowledge graph embedding models",
+        "negative training examples",
+        "generative adversarial networks (GANs)",
+        "link prediction task",
+        "FB15k-237",
+        "WN18",
+        "WN18RR"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5088291592",
+            "name": "Liwei Cai"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5100316297",
+            "name": "William Yang Wang"
+        }
+    ],
+    "dateCreated": "2026-07-13T14:03:28",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/knowledge-graph-embedding",
+            "name": "Knowledge Graph Embedding"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/task/link-prediction",
+            "name": "Link Prediction"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/other",
+        "name": "Other KGC technologies"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k-237",
+            "name": "FB15k-237"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/wn18",
+            "name": "WN18"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/wn18rr",
+            "name": "WN18RR"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1711.04071v3",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5088291592"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5100702488"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2963485453",
+        "url": "http://arxiv.org/abs/1711.04071v3"
+    },
+    "codeRepository": [
+        "https://github.com/cai-lw/KBGAN"
+    ]
+}

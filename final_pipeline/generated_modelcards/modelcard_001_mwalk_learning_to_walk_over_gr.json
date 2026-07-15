@@ -1,0 +1,95 @@
+{
+    "@context": "https://w3id.org/p2mc",
+    "@id": "https://w3id.org/p2mc/model/1802.04394",
+    "@type": "MLModel",
+    "name": "M-Walk",
+    "description": "M-Walk is a graph-walking agent developed to solve knowledge base completion (KBC), formulated as an RL problem with a known state transition model. It consists of a deep recurrent neural network (RNN) and Monte Carlo Tree Search (MCTS). The RNN encodes the state (the history of the walked path) and outputs both a policy and Q-values separately. To overcome sparse rewards, M-Walk combines MCTS with the neural policy to generate trajectories that yield more positive rewards. The network is then improved in an off-policy manner using Q-learning on these trajectories, modifying the RNN policy via parameter sharing. The proposed RL algorithm learns by repeatedly applying this policy-improvement step. At test time, MCTS is combined with the neural policy to predict the target node. Experimental results show that M-Walk outperforms other RL-based methods (especially those based on policy gradients) and also surpasses traditional KBC baselines.",
+    "keywords": [
+        "graph-walking agent",
+        "knowledge base completion (KBC)",
+        "reinforcement learning (RL)",
+        "M-Walk",
+        "deep recurrent neural network (RNN)",
+        "Monte Carlo Tree Search (MCTS)",
+        "Q-learning"
+    ],
+    "version": "1.0.0",
+    "author": [
+        {
+            "@id": "https://semopenalex.org/author/A5101180037",
+            "name": "Yelong Shen"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5105911558",
+            "name": "Jianshu Chen"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5113913928",
+            "name": "Po-Sen Huang"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5010401819",
+            "name": "Yuqing Guo"
+        },
+        {
+            "@id": "https://semopenalex.org/author/A5018459086",
+            "name": "Jianfeng Gao"
+        }
+    ],
+    "dateCreated": "2026-07-13T13:55:21",
+    "mlTask": [
+        {
+            "@id": "https://linkedpaperswithcode.com/task/knowledge-graph-completion",
+            "name": "Knowledge Graph Completion"
+        }
+    ],
+    "modelCategory": {
+        "@id": "https://w3id.org/p2mc/category/internal-side-information",
+        "name": "Internal side information inside KGs"
+    },
+    "evaluatedOn": [
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/fb15k-237",
+            "name": "FB15K-237"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/nell-995",
+            "name": "NELL-995"
+        },
+        {
+            "@id": "https://linkedpaperswithcode.com/dataset/wn18rr",
+            "name": "WN18RR"
+        }
+    ],
+    "referencePublication": {
+        "@type": "ScholarlyArticle",
+        "@id": "http://arxiv.org/abs/1802.04394v5",
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5101180037"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5114910293"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5011601269"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5076474156"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://semopenalex.org/author/A5088339142"
+            }
+        ],
+        "schema:sameAs": "https://semopenalex.org/work/W2898632797",
+        "url": "http://arxiv.org/abs/1802.04394v5"
+    },
+    "codeRepository": [
+        "https://github.com/yelongshen/GraphWalk"
+    ]
+}
